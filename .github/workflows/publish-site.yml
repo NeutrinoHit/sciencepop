@@ -1,0 +1,48 @@
+name: Publish site
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-site
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Prepare static site
+        run: |
+          set -euo pipefail
+          site_dir="${RUNNER_TEMP}/sciencepop-site"
+          rm -rf "${site_dir}"
+          mkdir -p "${site_dir}"
+          git archive --format=tar HEAD | tar -x -C "${site_dir}"
+          rm -rf "${site_dir}/.github"
+          rm -f "${site_dir}/.gitignore"
+          touch "${site_dir}/.nojekyll"
+
+      - name: Publish static site to gh-pages
+        run: |
+          set -euo pipefail
+          site_dir="${RUNNER_TEMP}/sciencepop-site"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan gh-pages-deploy
+          git rm -rf . >/dev/null 2>&1 || true
+          git clean -fdx
+          cp -R "${site_dir}/." .
+          git add -A
+          git commit -m "Build site from ${GITHUB_SHA}" || exit 0
+          git push origin HEAD:gh-pages --force

@@ -1,0 +1,19 @@
+.DS_Store
+
+# Private source decks and archives
+*.key/
+*/*.pptx
+*/*.pdf
+*/*.zip
+
+# Local/generated scratch files
+media/
+img/
+*_files/
+*.qmd
+
+# Python/macOS/editor noise
+__pycache__/
+*.pyc
+.env
+.env.*
