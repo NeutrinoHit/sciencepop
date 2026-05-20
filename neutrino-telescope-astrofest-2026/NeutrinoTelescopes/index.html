@@ -1,1 +1,57 @@
-<!doctype html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Keynote</title><meta name="viewport" content="initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,width=device-width"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/></head><body id="body" bgcolor="black"><div id="stageArea"><div id="stage" class="stage"></div><div id="hyperlinkPlane" class="stage"></div></div><div id="slideshowNavigator"></div><div id="slideNumberControl"></div><div id="slideNumberDisplay"></div><div id="helpPlacard"></div><div id="waitingIndicator"><div id="waitingSpinner"></div></div><script src="assets/player/main.js"></script></body></html>
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Вселенная глазами нейтрино</title>
+  <meta name="viewport" content="initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,width=device-width"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <style>
+    .nh-slide-nav {
+      position: fixed;
+      top: 0.7rem;
+      left: 0.7rem;
+      z-index: 2147483647;
+      display: flex;
+      gap: 0.35rem;
+      font: 600 14px/1.2 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .nh-slide-nav a {
+      padding: 0.28rem 0.48rem;
+      border: 1px solid rgba(124, 199, 255, 0.55);
+      border-radius: 8px;
+      color: #eaf6ff;
+      background: rgba(0, 0, 0, 0.52);
+      text-decoration: none;
+    }
+
+    .nh-slide-nav a:hover {
+      color: #ffffff;
+      background: rgba(18, 92, 130, 0.78);
+    }
+
+    @media print {
+      .nh-slide-nav {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body id="body" bgcolor="black">
+  <nav class="nh-slide-nav" aria-label="Навигация">
+    <a href="https://neutrinohit.github.io/">NeutrinoHit</a>
+    <a href="../../">Научпоп</a>
+  </nav>
+  <div id="stageArea">
+    <div id="stage" class="stage"></div>
+    <div id="hyperlinkPlane" class="stage"></div>
+  </div>
+  <div id="slideshowNavigator"></div>
+  <div id="slideNumberControl"></div>
+  <div id="slideNumberDisplay"></div>
+  <div id="helpPlacard"></div>
+  <div id="waitingIndicator">
+    <div id="waitingSpinner"></div>
+  </div>
+  <script src="assets/player/main.js"></script>
+</body>
+</html>
