@@ -11,6 +11,7 @@ media/
 img/
 *_files/
 *.qmd
+!WaveOrParticle/*.qmd
 
 # Python/macOS/editor noise
 __pycache__/
