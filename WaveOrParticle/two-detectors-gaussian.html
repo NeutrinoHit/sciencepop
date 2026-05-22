@@ -1041,306 +1041,475 @@ display: none;
 </section>
 <section id="геометрия" class="slide level2">
 <h2>Геометрия</h2>
-<p>Работаем в двух пространственных измерениях:</p>
-<p>[ r=(x,y),. ]</p>
-<p>Падающий пакет летит слева направо:</p>
-<p>[ R_(t)=R_0+v t, v=(v,0). ]</p>
-<p>Детекторы локализованы около точек</p>
-<p>[ R_A,R_B. ]</p>
-<p>Расстояние между ними:</p>
-<p>[ L=|R_A-R_B|. ]</p>
+<p>Работаем в двух пространственных измерениях: <span class="math display">\[
+\mathbf r=(x,y),\qquad \hbar=1.
+\]</span> Падающий пакет летит слева направо: <span class="math display">\[
+\mathbf R_\gamma(t)=\mathbf R_0+\mathbf v t,
+\qquad
+\mathbf v=(v,0).
+\]</span> Детекторы локализованы около точек <span class="math display">\[
+\mathbf R_A,\qquad \mathbf R_B.
+\]</span> Расстояние между ними: <span class="math display">\[
+L=|\mathbf R_A-\mathbf R_B|.
+\]</span> —</p>
 </section>
 <section id="падающий-пакет" class="slide level2">
 <h2>Падающий пакет</h2>
-<p>Берём нормированный двумерный гауссов пакет:</p>
-<p>[ _(r,t)= . ]</p>
-<p>Проверка нормировки:</p>
-<p>[ d^2r,|_(r,t)|^2=1. ]</p>
-<p>Ширина пакета: <span class="math inline">\(\sigma_\gamma\)</span>.</p>
+<p>Берём нормированный двумерный гауссов пакет: <span class="math display">\[
+\psi_\gamma(\mathbf r,t)=
+\frac{1}{\sqrt\pi\,\sigma_\gamma}
+\exp\left[-\frac{(\mathbf r-\mathbf R_0-\mathbf v t)^2}{2\sigma_\gamma^2}\right]
+\exp\left[i\mathbf k_0\cdot\mathbf r-i\omega_0 t\right].
+\]</span> Проверка нормировки: <span class="math display">\[
+\int d^2r\,|\psi_\gamma(\mathbf r,t)|^2=1.
+\]</span> Ширина пакета: <span class="math inline">\(\sigma_\gamma\)</span>.</p>
 </section>
 <section id="начальное-состояние-детектора" class="slide level2">
 <h2>Начальное состояние детектора</h2>
-<p>Детектор <span class="math inline">\(j=A,B\)</span> описываем локализованным пакетом:</p>
-<p>[ _j(r,t)= . ]</p>
-<p>Проверка:</p>
-<p>[ d^2r,|_j(r,t)|^2=1. ]</p>
-<p>Ширина детектора: <span class="math inline">\(\sigma_D\)</span>.</p>
+<p>Детектор <span class="math inline">\(j=A,B\)</span> описываем локализованным пакетом: <span class="math display">\[
+\phi_j(\mathbf r,t)=
+\frac{1}{\sqrt\pi\,\sigma_D}
+\exp\left[-\frac{(\mathbf r-\mathbf R_j)^2}{2\sigma_D^2}\right]
+\exp\left[i\mathbf p_j\cdot(\mathbf r-\mathbf R_j)-iE_j t\right].
+\]</span> Проверка: <span class="math display">\[
+\int d^2r\,|\phi_j(\mathbf r,t)|^2=1.
+\]</span> Ширина детектора: <span class="math inline">\(\sigma_D\)</span>.</p>
 </section>
 <section id="финальное-состояние-детектора" class="slide level2">
 <h2>Финальное состояние детектора</h2>
-<p>Пусть детектор <span class="math inline">\(j\)</span> получил импульс <span class="math inline">\(\mathbf q_j\)</span>:</p>
-<p>[ _j^{(q_j)}(r,t)= . ]</p>
-<p>Обозначим энергию перехода:</p>
-<p>[ E_j(q_j)=E_j’-E_j. ]</p>
-<p>В апплете можно использовать модель, например:</p>
-<p>[ E_j(q_j)=, ]</p>
-<p>но в выводе оставляем <span class="math inline">\(\Delta E_j\)</span> произвольной.</p>
+<p>Пусть детектор <span class="math inline">\(j\)</span> получил импульс <span class="math inline">\(\mathbf q_j\)</span>: <span class="math display">\[
+\phi_j^{(\mathbf q_j)}(\mathbf r,t)=
+\frac{1}{\sqrt\pi\,\sigma_D}
+\exp\left[-\frac{(\mathbf r-\mathbf R_j)^2}{2\sigma_D^2}\right]
+\exp\left[i(\mathbf p_j+\mathbf q_j)\cdot(\mathbf r-\mathbf R_j)-iE_j&#39; t\right].
+\]</span> Обозначим энергию перехода: <span class="math display">\[
+\Delta E_j(\mathbf q_j)=E_j&#39;-E_j.
+\]</span> В апплете можно использовать модель, например: <span class="math display">\[
+\Delta E_j(q_j)=\frac{q_j^2}{2M_{\rm eff}},
+\]</span> но в выводе оставляем <span class="math inline">\(\Delta E_j\)</span> произвольной.</p>
 </section>
 <section id="локальный-матричный-элемент" class="slide level2">
 <h2>Локальный матричный элемент</h2>
-<p>Амплитуда взаимодействия падающего пакета с детектором <span class="math inline">\(j\)</span>:</p>
-<p>[ M_j(q_j)= M_j _{-}^{+}dtd^2r, ^* <em>j(r,t) </em>(r,t). ]</p>
-<p>Здесь <span class="math inline">\(\mathcal M_j\)</span> — короткое обозначение настоящего матричного элемента.</p>
+<p>Амплитуда взаимодействия падающего пакета с детектором <span class="math inline">\(j\)</span>: <span class="math display">\[
+M_j(\mathbf q_j)=
+\mathcal M_j
+\int_{-\infty}^{+\infty}dt\int d^2r\,
+\left[\phi_j^{(\mathbf q_j)}(\mathbf r,t)\right]^*
+\phi_j(\mathbf r,t)
+\psi_\gamma(\mathbf r,t).
+\]</span> Здесь <span class="math inline">\(\mathcal M_j\)</span> — короткое обозначение настоящего матричного элемента.</p>
 <p>В КЭД на его месте стояла бы структура типа тока и поля, но сейчас она не нужна.</p>
 </section>
 <section id="подстановка-фаз" class="slide level2">
 <h2>Подстановка фаз</h2>
-<p>Произведение детекторных пакетов:</p>
-<p>[ ^*_j = . ]</p>
-<p>Тогда</p>
-<p>[ M_j(q_j)= M_j N dt,d^2r, ]</p>
-<p>[ , ]</p>
-<p>где</p>
-<p>[ N=. ]</p>
+<p>Произведение детекторных пакетов: <span class="math display">\[
+\left[\phi_j^{(\mathbf q_j)}\right]^*\phi_j
+=
+\frac{1}{\pi\sigma_D^2}
+\exp\left[-\frac{(\mathbf r-\mathbf R_j)^2}{\sigma_D^2}\right]
+\exp\left[-i\mathbf q_j\cdot(\mathbf r-\mathbf R_j)+i\Delta E_jt\right].
+\]</span> Тогда <span class="math display">\[
+M_j(\mathbf q_j)=
+\mathcal M_j N
+\int dt\,d^2r\,
+\exp\left[-\frac{(\mathbf r-\mathbf R_0-\mathbf vt)^2}{2\sigma_\gamma^2}
+-\frac{(\mathbf r-\mathbf R_j)^2}{\sigma_D^2}\right]
+\]</span> <span class="math display">\[
+\times
+\exp\left[i(\mathbf k_0-\mathbf q_j)\cdot\mathbf r
+-i(\omega_0-\Delta E_j)t
++i\mathbf q_j\cdot\mathbf R_j\right],
+\]</span> где <span class="math display">\[
+N=\frac{1}{\pi^{3/2}\sigma_\gamma\sigma_D^2}.
+\]</span> —</p>
 </section>
 <section id="обозначения" class="slide level2">
 <h2>Обозначения</h2>
-<p>Введём</p>
-<p>[ a=, b=, A=a+b. ]</p>
-<p>Также</p>
-<p>[ K_j=k_0-q_j, _j=_0-E_j(q_j). ]</p>
-<p>Для ширин удобно определить</p>
-<p>[ <sup>2=_D</sup>2+2_^2. ]</p>
-<p>Тогда</p>
-<p>[ =, =. ]</p>
+<p>Введём <span class="math display">\[
+a=\frac{1}{2\sigma_\gamma^2},
+\qquad
+b=\frac{1}{\sigma_D^2},
+\qquad
+A=a+b.
+\]</span> Также <span class="math display">\[
+\mathbf K_j=\mathbf k_0-\mathbf q_j,
+\qquad
+\delta_j=\omega_0-\Delta E_j(\mathbf q_j).
+\]</span> Для ширин удобно определить <span class="math display">\[
+\Lambda^2=\sigma_D^2+2\sigma_\gamma^2.
+\]</span> Тогда <span class="math display">\[
+\frac{ab}{a+b}=\frac{1}{\Lambda^2},
+\qquad
+\frac{a}{a+b}=\frac{\sigma_D^2}{\Lambda^2}\equiv\eta.
+\]</span> —</p>
 </section>
 <section id="пространственный-гауссов-интеграл" class="slide level2">
 <h2>Пространственный гауссов интеграл</h2>
-<p>Используем стандартную формулу:</p>
-<p>[ d^2r, ]</p>
-</section>
-<section>
-<section id="section" class="title-slide slide level1 center">
-<h1>[</h1>
-<p>. ]</p>
-<p>В нашей задаче:</p>
-<p>[ X=R_0+vt, Y=R_j, K=K_j. ]</p>
+<p>Используем стандартную формулу: <span class="math display">\[
+\int d^2r\,
+\exp\left[-a(\mathbf r-\mathbf X)^2-b(\mathbf r-\mathbf Y)^2+i\mathbf K\cdot\mathbf r\right]
+\]</span> <span class="math display">\[
+=
+\frac{\pi}{a+b}
+\exp\left[-\frac{ab}{a+b}(\mathbf X-\mathbf Y)^2
+-\frac{\mathbf K^2}{4(a+b)}
++i\mathbf K\cdot\frac{a\mathbf X+b\mathbf Y}{a+b}
+\right].
+\]</span> В нашей задаче: <span class="math display">\[
+\mathbf X=\mathbf R_0+\mathbf vt,
+\qquad
+\mathbf Y=\mathbf R_j,
+\qquad
+\mathbf K=\mathbf K_j.
+\]</span> —</p>
 </section>
 <section id="после-интегрирования-по-пространству" class="slide level2">
 <h2>После интегрирования по пространству</h2>
-<p>Получаем</p>
-<p>[ M_j(q_j)= M_j N ]</p>
-<p>[ dt, ]</p>
-<p>[ . ]</p>
-<p>Это уже одномерный гауссов интеграл по времени.</p>
+<p>Получаем <span class="math display">\[
+M_j(\mathbf q_j)=
+\mathcal M_j N\frac{\pi}{A}
+\exp\left[i\mathbf q_j\cdot\mathbf R_j\right]
+\exp\left[-\frac{\mathbf K_j^2}{4A}\right]
+\]</span> <span class="math display">\[
+\times
+\int dt\,
+\exp\left[-\frac{ab}{A}(\mathbf R_0+\mathbf vt-\mathbf R_j)^2\right]
+\]</span> <span class="math display">\[
+\times
+\exp\left[i\mathbf K_j\cdot
+\frac{a(\mathbf R_0+\mathbf vt)+b\mathbf R_j}{A}
+-i\delta_jt\right].
+\]</span> Это уже одномерный гауссов интеграл по времени.</p>
 </section>
 <section id="геометрия-пролёта" class="slide level2">
 <h2>Геометрия пролёта</h2>
-<p>Обозначим</p>
-<p>[ d_j=R_j-R_0, n=. ]</p>
-<p>Момент максимального перекрытия пакета с детектором:</p>
-<p>[ t_j=. ]</p>
-<p>Поперечное расстояние от траектории пакета до детектора:</p>
-<p>[ d_{j}^2=d_j^2-(nd_j)^2. ]</p>
-<p>Тогда</p>
-<p>[ (vt-d_j)<sup>2=v</sup>2(t-t_j)<sup>2+d_{j}</sup>2. ]</p>
+<p>Обозначим <span class="math display">\[
+\mathbf d_j=\mathbf R_j-\mathbf R_0,
+\qquad
+\mathbf n=\frac{\mathbf v}{v}.
+\]</span> Момент максимального перекрытия пакета с детектором: <span class="math display">\[
+t_j=\frac{\mathbf n\cdot\mathbf d_j}{v}.
+\]</span> Поперечное расстояние от траектории пакета до детектора: <span class="math display">\[
+d_{j\perp}^2=\mathbf d_j^2-(\mathbf n\cdot\mathbf d_j)^2.
+\]</span> Тогда <span class="math display">\[
+(\mathbf vt-\mathbf d_j)^2=v^2(t-t_j)^2+d_{j\perp}^2.
+\]</span> —</p>
 </section>
 <section id="частотная-расстройка" class="slide level2">
 <h2>Частотная расстройка</h2>
-<p>Временная фаза после пространственного интеграла имеет вид</p>
-<p>[ , ]</p>
-<p>где</p>
-<p>[ _j(q_j)= K_jv-_j. ]</p>
-<p>То есть</p>
-<p>[ ]</p>
-<p>где</p>
-<p>[ =. ]</p>
+<p>Временная фаза после пространственного интеграла имеет вид <span class="math display">\[
+\exp\left[i\Omega_j t\right],
+\]</span> где <span class="math display">\[
+\Omega_j(\mathbf q_j)=
+\frac{a}{A}\mathbf K_j\cdot\mathbf v-\delta_j.
+\]</span> То есть <span class="math display">\[
+\boxed{
+\Omega_j(\mathbf q_j)=
+\eta(\mathbf k_0-\mathbf q_j)\cdot\mathbf v
+-
+\left[\omega_0-\Delta E_j(\mathbf q_j)\right]
+}
+\]</span> где <span class="math display">\[
+\eta=\frac{\sigma_D^2}{\Lambda^2}.
+\]</span> —</p>
 </section>
 <section id="временной-гауссов-интеграл" class="slide level2">
 <h2>Временной гауссов интеграл</h2>
-<p>Нужно вычислить</p>
-<p>[ _{-}^{+}dt, . ]</p>
-<p>Результат:</p>
-<p>[ dt, = . ]</p>
-<p>Важно: при конечной ширине пакета это <strong>гаусс</strong>, а не точная <span class="math inline">\(\delta\)</span>-функция.</p>
+<p>Нужно вычислить <span class="math display">\[
+\int_{-\infty}^{+\infty}dt\,
+\exp\left[-\frac{v^2(t-t_j)^2}{\Lambda^2}+i\Omega_jt\right].
+\]</span> Результат: <span class="math display">\[
+\int dt\,
+\exp\left[-\frac{v^2(t-t_j)^2}{\Lambda^2}+i\Omega_jt\right]
+=
+\frac{\sqrt\pi\Lambda}{|v|}
+\exp\left[-\frac{\Lambda^2\Omega_j^2}{4v^2}\right]
+\exp\left[i\Omega_jt_j\right].
+\]</span> Важно: при конечной ширине пакета это <strong>гаусс</strong>, а не точная <span class="math inline">\(\delta\)</span>-функция.</p>
 </section>
 <section id="итоговая-амплитуда-одного-детектора" class="slide level2">
 <h2>Итоговая амплитуда одного детектора</h2>
-<p>После интегрирования по <span class="math inline">\(d^2r\,dt\)</span>:</p>
-<p>[ ]</p>
-<p>где</p>
-<p>[ _j= (k_0-q_j)v - . ]</p>
+<p>После интегрирования по <span class="math inline">\(d^2r\,dt\)</span>: <span class="math display">\[
+\boxed{
+M_j(\mathbf q_j)=
+\mathcal M_j\frac{2\sigma_\gamma}{\Lambda |v|}
+\exp\left[-\frac{\sigma_\gamma^2\sigma_D^2}{2\Lambda^2}(\mathbf k_0-\mathbf q_j)^2\right]
+\exp\left[-\frac{d_{j\perp}^2}{\Lambda^2}\right]
+\exp\left[-\frac{\Lambda^2\Omega_j^2}{4v^2}\right]
+\exp\left[i\Phi_j\right]
+}
+\]</span> где <span class="math display">\[
+\Omega_j=
+\eta(\mathbf k_0-\mathbf q_j)\cdot\mathbf v
+-
+\left[\omega_0-\Delta E_j(\mathbf q_j)\right].
+\]</span> —</p>
 </section>
 <section id="фаза" class="slide level2">
 <h2>Фаза</h2>
 <p>Для весов <span class="math inline">\(|M_j|^2\)</span> фаза не нужна.</p>
-<p>Но для интерференции между <span class="math inline">\(A\)</span> и <span class="math inline">\(B\)</span> она нужна:</p>
-<p>[ _j= q_jR_j + K_j + _jt_j. ]</p>
-<p>Здесь</p>
-<p>[ K_j=k_0-q_j, =. ]</p>
-<p>Если <span class="math inline">\(\mathcal M_j\)</span> комплексно, его фазу надо добавить к этой фазе:</p>
-<p>[ _j_j+M_j. ]</p>
-<p>Ниже считаем <span class="math inline">\(\mathcal M_j\)</span> вещественным или включаем его фазу в <span class="math inline">\(\Phi_j\)</span>.</p>
+<p>Но для интерференции между <span class="math inline">\(A\)</span> и <span class="math inline">\(B\)</span> она нужна: <span class="math display">\[
+\Phi_j=
+\mathbf q_j\cdot\mathbf R_j
++
+\mathbf K_j\cdot
+\left[
+\eta\mathbf R_0+(1-\eta)\mathbf R_j
+\right]
++
+\Omega_jt_j.
+\]</span> Здесь <span class="math display">\[
+\mathbf K_j=\mathbf k_0-\mathbf q_j,
+\qquad
+\eta=\frac{\sigma_D^2}{\Lambda^2}.
+\]</span> Если <span class="math inline">\(\mathcal M_j\)</span> комплексно, его фазу надо добавить к этой фазе: <span class="math display">\[
+\Phi_j\to \Phi_j+\arg \mathcal M_j.
+\]</span> Ниже считаем <span class="math inline">\(\mathcal M_j\)</span> вещественным или включаем его фазу в <span class="math inline">\(\Phi_j\)</span>.</p>
 <p>Если фазы в апплете пока мешают, можно сделать первый режим с <span class="math inline">\(\cos(\Phi_A-\Phi_B)=1\)</span>, а затем добавить фазовый режим.</p>
 </section>
 <section id="что-учтено-автоматически" class="slide level2">
 <h2>Что учтено автоматически</h2>
 <p>Амплитуда содержит три гауссовых подавления:</p>
 <h3 id="поперечное-перекрытие">1. Поперечное перекрытие</h3>
-<p>[ . ]</p>
-<p>Детектор далеко от траектории — сигнала почти нет.</p>
+<p><span class="math display">\[
+\exp\left[-\frac{d_{j\perp}^2}{\Lambda^2}\right].
+\]</span> Детектор далеко от траектории — сигнала почти нет.</p>
 <h3 id="импульсное-согласование">2. Импульсное согласование</h3>
-<p>[ . ]</p>
-<p>Переданный импульс сильно не совпадает с <span class="math inline">\(\mathbf k_0\)</span> — канал подавлен.</p>
+<p><span class="math display">\[
+\exp\left[-\frac{\sigma_\gamma^2\sigma_D^2}{2\Lambda^2}(\mathbf k_0-\mathbf q_j)^2\right].
+\]</span> Переданный импульс сильно не совпадает с <span class="math inline">\(\mathbf k_0\)</span> — канал подавлен.</p>
 <h3 id="энергетическое-согласование">3. Энергетическое согласование</h3>
-<p>[ . ]</p>
-<p>Это гауссов аналог закона сохранения энергии для конечных пакетов.</p>
+<p><span class="math display">\[
+\exp\left[-\frac{\Lambda^2\Omega_j^2}{4v^2}\right].
+\]</span> Это гауссов аналог закона сохранения энергии для конечных пакетов.</p>
 </section>
 <section id="нет-точной-дельта-функции" class="slide level2">
 <h2>Нет точной дельта-функции</h2>
-<p>При конечной ширине пакетов:</p>
-<p>[ ]</p>
-<p>остаётся гауссом даже при интегрировании времени от <span class="math inline">\(-\infty\)</span> до <span class="math inline">\(+\infty\)</span>.</p>
-<p>Точная <span class="math inline">\(\delta(\Omega_j)\)</span> появляется только в сингулярном пределе</p>
-<p>[ . ]</p>
-<p>То есть при бесконечно длинном времени когерентного взаимодействия.</p>
-<p>Для конечного волнового пакета ширина энергетического согласования порядка</p>
-<p>[ E. ]</p>
+<p>При конечной ширине пакетов: <span class="math display">\[
+\exp\left[-\frac{\Lambda^2\Omega_j^2}{4v^2}\right]
+\]</span> остаётся гауссом даже при интегрировании времени от <span class="math inline">\(-\infty\)</span> до <span class="math inline">\(+\infty\)</span>.</p>
+<p>Точная <span class="math inline">\(\delta(\Omega_j)\)</span> появляется только в сингулярном пределе <span class="math display">\[
+\frac{\Lambda}{v}\to\infty.
+\]</span> То есть при бесконечно длинном времени когерентного взаимодействия.</p>
+<p>Для конечного волнового пакета ширина энергетического согласования порядка <span class="math display">\[
+\Delta E\sim \frac{v}{\Lambda}.
+\]</span> —</p>
 </section>
 <section id="перекрытие-spectator-детектора" class="slide level2">
 <h2>Перекрытие spectator-детектора</h2>
-<p>Если детектор <span class="math inline">\(j\)</span> не взаимодействовал, но мы проецируем его на состояние с импульсным сдвигом <span class="math inline">\(\mathbf q_j\)</span>, возникает перекрытие</p>
-<p>[ S_j(q_j)= _j^{(q_j)}|_j. ]</p>
-<p>По определению:</p>
-<p>[ S_j(q_j)= d^2r, ^* _j(r,t). ]</p>
-<p>Так как берём равновременное скалярное произведение, временная фаза не входит.</p>
+<p>Если детектор <span class="math inline">\(j\)</span> не взаимодействовал, но мы проецируем его на состояние с импульсным сдвигом <span class="math inline">\(\mathbf q_j\)</span>, возникает перекрытие <span class="math display">\[
+S_j(\mathbf q_j)=
+\langle \phi_j^{(\mathbf q_j)}|\phi_j\rangle.
+\]</span> По определению: <span class="math display">\[
+S_j(\mathbf q_j)=
+\int d^2r\,
+\left[\phi_j^{(\mathbf q_j)}(\mathbf r,t)\right]^*
+\phi_j(\mathbf r,t).
+\]</span> Так как берём равновременное скалярное произведение, временная фаза не входит.</p>
 </section>
 <section id="вычисление-spectator-overlap" class="slide level2">
 <h2>Вычисление spectator-overlap</h2>
-<p>Подстановка даёт</p>
-<p>[ S_j(q_j)= d^2r, . ]</p>
-<p>Это Фурье-образ гаусса:</p>
-<p>[ ]</p>
-<p>и</p>
-<p>[ ]</p>
+<p>Подстановка даёт <span class="math display">\[
+S_j(\mathbf q_j)=
+\frac{1}{\pi\sigma_D^2}
+\int d^2r\,
+\exp\left[-\frac{(\mathbf r-\mathbf R_j)^2}{\sigma_D^2}\right]
+\exp\left[-i\mathbf q_j\cdot(\mathbf r-\mathbf R_j)\right].
+\]</span> Это Фурье-образ гаусса: <span class="math display">\[
+\boxed{
+S_j(\mathbf q_j)=
+\exp\left[-\frac{\sigma_D^2\mathbf q_j^2}{4}\right]
+}
+\]</span> и <span class="math display">\[
+\boxed{
+|S_j(\mathbf q_j)|^2=
+\exp\left[-\frac{\sigma_D^2\mathbf q_j^2}{2}\right].
+}
+\]</span> —</p>
 </section>
 <section id="смысл-spectator-overlap" class="slide level2">
 <h2>Смысл spectator-overlap</h2>
-<p>Если</p>
-<p>[ |q_j|_D, ]</p>
-<p>то</p>
-<p>[ S_j. ]</p>
-<p>Состояние почти не изменилось. Это не хороший макроскопический клик.</p>
-<p>Если</p>
-<p>[ |q_j|_D, ]</p>
-<p>то</p>
-<p>[ S_j. ]</p>
-<p>Финальное состояние почти ортогонально исходному. Это различимый отклик.</p>
+<p>Если <span class="math display">\[
+|\mathbf q_j|\sigma_D\ll1,
+\]</span> то <span class="math display">\[
+S_j\simeq1.
+\]</span> Состояние почти не изменилось. Это не хороший макроскопический клик.</p>
+<p>Если <span class="math display">\[
+|\mathbf q_j|\sigma_D\gg1,
+\]</span> то <span class="math display">\[
+S_j\simeq0.
+\]</span> Финальное состояние почти ортогонально исходному. Это различимый отклик.</p>
 </section>
 <section id="два-детектора-первый-порядок" class="slide level2">
 <h2>Два детектора: первый порядок</h2>
-<p>Начальное состояние:</p>
-<p>[ |i=||A|B. ]</p>
-<p>Финальное состояние:</p>
-<p>[ |f=|A(q_A)|B(q_B). ]</p>
-<p>Здесь считаем, что падающий квант поглощён одним из детекторов. Если описывать рассеяние, в <span class="math inline">\(|f\rangle\)</span> нужно добавить финальное состояние кванта.</p>
-<p>В первом порядке локальное взаимодействие может быть с <span class="math inline">\(A\)</span> или с <span class="math inline">\(B\)</span>:</p>
-<p>[ ]</p>
-<p>Это центральная формула для апплета.</p>
+<p>Начальное состояние: <span class="math display">\[
+|i\rangle=|\gamma\rangle |A\rangle |B\rangle.
+\]</span> Финальное состояние: <span class="math display">\[
+|f\rangle=|A(\mathbf q_A)\rangle |B(\mathbf q_B)\rangle.
+\]</span> Здесь считаем, что падающий квант поглощён одним из детекторов. Если описывать рассеяние, в <span class="math inline">\(|f\rangle\)</span> нужно добавить финальное состояние кванта.</p>
+<p>В первом порядке локальное взаимодействие может быть с <span class="math inline">\(A\)</span> или с <span class="math inline">\(B\)</span>: <span class="math display">\[
+\boxed{
+C^{(1)}(\mathbf q_A,\mathbf q_B)=
+M_A(\mathbf q_A)S_B(\mathbf q_B)
++
+M_B(\mathbf q_B)S_A(\mathbf q_A).
+}
+\]</span> Это центральная формула для апплета.</p>
 </section>
 <section id="совместный-вес" class="slide level2">
 <h2>Совместный вес</h2>
-<p>Ненормированный вес финального канала:</p>
-<p>[ ]</p>
-<p>Раскрыто:</p>
-<p>[ W= |M_A(q_A)|^2|S_B(q_B)|^2 + |M_B(q_B)|^2|S_A(q_A)|^2 ]</p>
-<p>[ + 2. ]</p>
-<p>Последний член — интерференция двух путей амплитуды.</p>
+<p>Ненормированный вес финального канала: <span class="math display">\[
+\boxed{
+W(\mathbf q_A,\mathbf q_B)=
+\left|C^{(1)}(\mathbf q_A,\mathbf q_B)\right|^2.
+}
+\]</span> Раскрыто: <span class="math display">\[
+W=
+|M_A(\mathbf q_A)|^2|S_B(\mathbf q_B)|^2
++
+|M_B(\mathbf q_B)|^2|S_A(\mathbf q_A)|^2
+\]</span> <span class="math display">\[
++
+2\operatorname{Re}\left[
+M_A(\mathbf q_A)M_B^*(\mathbf q_B)
+S_B(\mathbf q_B)S_A^*(\mathbf q_A)
+\right].
+\]</span> Последний член — интерференция двух путей амплитуды.</p>
 </section>
 <section id="скалярное-упрощение-для-апплета" class="slide level2">
 <h2>Скалярное упрощение для апплета</h2>
-<p>Для первого апплета удобно взять импульсы вдоль <span class="math inline">\(x\)</span>:</p>
-<p>[ q_A=(q_A,0), q_B=(q_B,0), q_A,q_B. ]</p>
-<p>Тогда строим поверхность</p>
-<p>[ W(q_A,q_B). ]</p>
-<p>После нормировки на выбранном диапазоне <span class="math inline">\([0,q_{\max}]\)</span>:</p>
-<p>[ Z=<em>0<sup>{q_{}}dq_A_0</sup>{q</em>{}}dq_B,W(q_A,q_B), ]</p>
-<p>[ ]</p>
-<p>Это условная плотность внутри выбранного модельного пространства каналов.</p>
+<p>Для первого апплета удобно взять импульсы вдоль <span class="math inline">\(x\)</span>: <span class="math display">\[
+\mathbf q_A=(q_A,0),
+\qquad
+\mathbf q_B=(q_B,0),
+\qquad
+q_A,q_B\ge0.
+\]</span> Тогда строим поверхность <span class="math display">\[
+W(q_A,q_B).
+\]</span> После нормировки на выбранном диапазоне <span class="math inline">\([0,q_{\max}]\)</span>: <span class="math display">\[
+Z=\int_0^{q_{\max}}dq_A\int_0^{q_{\max}}dq_B\,W(q_A,q_B),
+\]</span> <span class="math display">\[
+\boxed{
+P(q_A,q_B)=\frac{W(q_A,q_B)}{Z}.
+}
+\]</span> Это условная плотность внутри выбранного модельного пространства каналов.</p>
 </section>
 <section id="маргинальные-распределения" class="slide level2">
 <h2>Маргинальные распределения</h2>
-<p>Из совместной плотности:</p>
-<p>[ P_A(q_A)= <em>0^{q</em>{}}dq_B,P(q_A,q_B), ]</p>
-<p>[ P_B(q_B)= <em>0^{q</em>{}}dq_A,P(q_A,q_B). ]</p>
-<p>Условные плотности:</p>
-<p>[ P(q_A|q_B)= , ]</p>
-<p>[ P(q_B|q_A)= . ]</p>
-<p>Важно:</p>
-<p>[ P(A|q_A)+P(B|q_B)=P(q_A,q_B) ]</p>
-<p>не является правильным соотношением.</p>
+<p>Из совместной плотности: <span class="math display">\[
+P_A(q_A)=
+\int_0^{q_{\max}}dq_B\,P(q_A,q_B),
+\]</span> <span class="math display">\[
+P_B(q_B)=
+\int_0^{q_{\max}}dq_A\,P(q_A,q_B).
+\]</span> Условные плотности: <span class="math display">\[
+P(q_A|q_B)=
+\frac{P(q_A,q_B)}{P_B(q_B)},
+\]</span> <span class="math display">\[
+P(q_B|q_A)=
+\frac{P(q_A,q_B)}{P_A(q_A)}.
+\]</span> Важно: <span class="math display">\[
+P(A|q_A)+P(B|q_B)=P(q_A,q_B)
+\]</span> не является правильным соотношением.</p>
 </section>
 <section id="события-через-порог-клика" class="slide level2">
 <h2>События через порог клика</h2>
-<p>Вводим порог различимого отклика:</p>
-<p>[ q_{}. ]</p>
-<p>Тогда четыре области:</p>
+<p>Вводим порог различимого отклика: <span class="math display">\[
+q_{\rm th}.
+\]</span> Тогда четыре области:</p>
 <h3 id="ни-один-не-сработал">Ни один не сработал</h3>
-<p>[ P_{00}=<em>0^{q</em>{}}dq_A <em>0^{q</em>{}}dq_B,P(q_A,q_B). ]</p>
-<h3 id="только-a">Только A</h3>
-<p>[ P_{A0}=<em>{q</em>{}}^{q_{}}dq_A <em>0^{q</em>{}}dq_B,P(q_A,q_B). ]</p>
+<p><span class="math display">\[
+P_{00}=\int_0^{q_{\rm th}}dq_A
+\int_0^{q_{\rm th}}dq_B\,P(q_A,q_B).
+\]</span> ### Только A <span class="math display">\[
+P_{A0}=\int_{q_{\rm th}}^{q_{\max}}dq_A
+\int_0^{q_{\rm th}}dq_B\,P(q_A,q_B).
+\]</span> —</p>
 </section>
 <section id="события-через-порог-клика-продолжение" class="slide level2">
 <h2>События через порог клика: продолжение</h2>
 <h3 id="только-b">Только B</h3>
-<p>[ P_{0B}=<em>0^{q</em>{}}dq_A <em>{q</em>{}}^{q_{}}dq_B,P(q_A,q_B). ]</p>
-<h3 id="оба">Оба</h3>
-<p>[ P_{AB}=<em>{q</em>{}}^{q_{}}dq_A <em>{q</em>{}}^{q_{}}dq_B,P(q_A,q_B). ]</p>
-<p>Проверка нормировки:</p>
-<p>[ ]</p>
-<p>Именно эти четыре числа должны быть главными в апплете.</p>
+<p><span class="math display">\[
+P_{0B}=\int_0^{q_{\rm th}}dq_A
+\int_{q_{\rm th}}^{q_{\max}}dq_B\,P(q_A,q_B).
+\]</span> ### Оба <span class="math display">\[
+P_{AB}=\int_{q_{\rm th}}^{q_{\max}}dq_A
+\int_{q_{\rm th}}^{q_{\max}}dq_B\,P(q_A,q_B).
+\]</span> Проверка нормировки: <span class="math display">\[
+\boxed{
+P_{00}+P_{A0}+P_{0B}+P_{AB}=1.
+}
+\]</span> Именно эти четыре числа должны быть главными в апплете.</p>
 </section>
 <section id="предел-1-оба-импульса-малы" class="slide level2">
 <h2>Предел 1: оба импульса малы</h2>
-<p>Пусть</p>
-<p>[ q_A, q_B. ]</p>
-<p>Тогда</p>
-<p>[ S_A(0)=S_B(0)=1. ]</p>
-<p>Значит</p>
-<p>[ C^{(1)}(0,0)=M_A(0)+M_B(0). ]</p>
-<p>Оба детектора входят в амплитуду.</p>
+<p>Пусть <span class="math display">\[
+\mathbf q_A\to0,
+\qquad
+\mathbf q_B\to0.
+\]</span> Тогда <span class="math display">\[
+S_A(0)=S_B(0)=1.
+\]</span> Значит <span class="math display">\[
+C^{(1)}(0,0)=M_A(0)+M_B(0).
+\]</span> Оба детектора входят в амплитуду.</p>
 <p>Но это не обязательно клик: при <span class="math inline">\(q=0\)</span> состояние детектора почти не отличается от исходного.</p>
 </section>
 <section id="предел-2-сработал-a" class="slide level2">
 <h2>Предел 2: сработал A</h2>
-<p>Пусть</p>
-<p>[ q_Ak_0, q_B. ]</p>
-<p>Если энергетическое согласование также хорошее,</p>
-<p>[ E_A(q_A)_0, ]</p>
-<p>то <span class="math inline">\(M_A(\mathbf q_A)\)</span> не подавлен, а</p>
-<p>[ S_B(0)=1. ]</p>
-<p>Первый вклад:</p>
-<p>[ M_A(q_A)S_B(0)M_A(q_A). ]</p>
-<p>Второй вклад содержит</p>
-<p>[ S_A(q_A)=. ]</p>
-<p>При сильном клике он мал.</p>
+<p>Пусть <span class="math display">\[
+\mathbf q_A\simeq\mathbf k_0,
+\qquad
+\mathbf q_B\simeq0.
+\]</span> Если энергетическое согласование также хорошее, <span class="math display">\[
+\Delta E_A(\mathbf q_A)\simeq\omega_0,
+\]</span> то <span class="math inline">\(M_A(\mathbf q_A)\)</span> не подавлен, а <span class="math display">\[
+S_B(0)=1.
+\]</span> Первый вклад: <span class="math display">\[
+M_A(\mathbf q_A)S_B(0)\simeq M_A(\mathbf q_A).
+\]</span> Второй вклад содержит <span class="math display">\[
+S_A(\mathbf q_A)=\exp\left[-\frac{\sigma_D^2\mathbf q_A^2}{4}\right].
+\]</span> При сильном клике он мал.</p>
 </section>
 <section id="предел-3-сработал-b" class="slide level2">
 <h2>Предел 3: сработал B</h2>
-<p>Аналогично, если</p>
-<p>[ q_Bk_0, q_A, ]</p>
-<p>и</p>
-<p>[ E_B(q_B)_0, ]</p>
-<p>то доминирует</p>
-<p>[ M_B(q_B)S_A(0) M_B(q_B). ]</p>
-<p>Это канал “сработал <span class="math inline">\(B\)</span>, <span class="math inline">\(A\)</span> почти не изменился”.</p>
+<p>Аналогично, если <span class="math display">\[
+\mathbf q_B\simeq\mathbf k_0,
+\qquad
+\mathbf q_A\simeq0,
+\]</span> и <span class="math display">\[
+\Delta E_B(\mathbf q_B)\simeq\omega_0,
+\]</span> то доминирует <span class="math display">\[
+M_B(\mathbf q_B)S_A(0)
+\simeq
+M_B(\mathbf q_B).
+\]</span> Это канал “сработал <span class="math inline">\(B\)</span>, <span class="math inline">\(A\)</span> почти не изменился”.</p>
 </section>
 <section id="предел-4-оба-сильно-сработали" class="slide level2">
 <h2>Предел 4: оба сильно сработали</h2>
-<p>Пусть</p>
-<p>[ |q_A|_D, |q_B|_D. ]</p>
-<p>Тогда</p>
-<p>[ S_A(q_A), S_B(q_B). ]</p>
-<p>Поэтому в первом порядке</p>
-<p>[ C^{(1)}(q_A,q_B) = M_A S_B+M_B S_A . ]</p>
-<p>Один квант не даёт два сильных независимых клика в этом первом порядке.</p>
+<p>Пусть <span class="math display">\[
+|\mathbf q_A|\sigma_D\gg1,
+\qquad
+|\mathbf q_B|\sigma_D\gg1.
+\]</span> Тогда <span class="math display">\[
+S_A(\mathbf q_A)\simeq0,
+\qquad
+S_B(\mathbf q_B)\simeq0.
+\]</span> Поэтому в первом порядке <span class="math display">\[
+C^{(1)}(\mathbf q_A,\mathbf q_B)
+=
+M_A S_B+M_B S_A
+\simeq0.
+\]</span> Один квант не даёт два сильных независимых клика в этом первом порядке.</p>
 <p>Не потому, что квант был точкой, а потому что таковы перекрытия финальных волновых пакетов.</p>
 </section>
 <section id="настоящий-двойной-отклик" class="slide level2">
 <h2>Настоящий двойной отклик</h2>
-<p>Если оба детектора динамически получили импульс, это следующий канал:</p>
-<p>[ C(q_A,q_B)= M_A S_B+M_B S_A + M_{AB}^{(2)}(q_A,q_B)+. ]</p>
-<p>Здесь <span class="math inline">\(M_{AB}^{(2)}\)</span> — двухвершинный или коллективный процесс.</p>
+<p>Если оба детектора динамически получили импульс, это следующий канал: <span class="math display">\[
+C(\mathbf q_A,\mathbf q_B)=
+M_A S_B+M_B S_A
++
+M_{AB}^{(2)}(\mathbf q_A,\mathbf q_B)+\cdots.
+\]</span> Здесь <span class="math inline">\(M_{AB}^{(2)}\)</span> — двухвершинный или коллективный процесс.</p>
 <p>В текущем апплете v1 его не включаем.</p>
 <p>Поэтому честная подпись:</p>
 <blockquote>
@@ -1349,39 +1518,55 @@ display: none;
 </section>
 <section id="что-должен-считать-апплет" class="slide level2">
 <h2>Что должен считать апплет</h2>
-<p>Для заданных параметров:</p>
-<p>[ <em>, <em>D, L, k_0, q</em>{}, q</em>{}, E(q), ]</p>
-<p>он строит:</p>
-<p>[ M_A(q_A),M_B(q_B), ]</p>
-<p>[ S_A(q_A),S_B(q_B), ]</p>
-<p>[ W(q_A,q_B)=|M_A(q_A)S_B(q_B)+M_B(q_B)S_A(q_A)|^2, ]</p>
-<p>[ P(q_A,q_B)=W/Z. ]</p>
+<p>Для заданных параметров: <span class="math display">\[
+\sigma_\gamma,
+\quad
+\sigma_D,
+\quad
+L,
+\quad
+k_0,
+\quad
+q_{\rm th},
+\quad
+q_{\max},
+\quad
+\Delta E(q),
+\]</span> он строит: <span class="math display">\[
+M_A(q_A),\qquad M_B(q_B),
+\]</span> <span class="math display">\[
+S_A(q_A),\qquad S_B(q_B),
+\]</span> <span class="math display">\[
+W(q_A,q_B)=|M_A(q_A)S_B(q_B)+M_B(q_B)S_A(q_A)|^2,
+\]</span> <span class="math display">\[
+P(q_A,q_B)=W/Z.
+\]</span> —</p>
 </section>
 <section id="что-должен-показывать-апплет" class="slide level2">
 <h2>Что должен показывать апплет</h2>
 <ol type="1">
 <li><p>2D-геометрия гауссов: <span class="math inline">\(\psi_\gamma\)</span>, <span class="math inline">\(\phi_A\)</span>, <span class="math inline">\(\phi_B\)</span>.</p></li>
-<li><p>Heatmap:</p></li>
+<li><p>Heatmap: <span class="math display">\[
+P(q_A,q_B).
+\]</span></p></li>
+<li><p>Маргинальные распределения: <span class="math display">\[
+P_A(q_A),\qquad P_B(q_B).
+\]</span></p></li>
+<li><p>Условные сечения: <span class="math display">\[
+P(q_A|q_B^*),
+\qquad
+P(q_B|q_A^*).
+\]</span></p></li>
+<li><p>Четыре интегральные вероятности: <span class="math display">\[
+P_{00},\quad P_{A0},\quad P_{0B},\quad P_{AB}.
+\]</span> —</p></li>
 </ol>
-<p>[ P(q_A,q_B). ]</p>
-<ol start="3" type="1">
-<li>Маргинальные распределения:</li>
-</ol>
-<p>[ P_A(q_A),P_B(q_B). ]</p>
-<ol start="4" type="1">
-<li>Условные сечения:</li>
-</ol>
-<p>[ P(q_A|q_B^<em>), P(q_B|q_A^</em>). ]</p>
-<ol start="5" type="1">
-<li>Четыре интегральные вероятности:</li>
-</ol>
-<p>[ P_{00},P_{A0},P_{0B},P_{AB}. ]</p>
 </section>
 <section id="главный-педагогический-вывод" class="slide level2">
 <h2>Главный педагогический вывод</h2>
-<p>Формула</p>
-<p>[ C^{(1)}(q_A,q_B)=M_A(q_A)S_B(q_B)+M_B(q_B)S_A(q_A) ]</p>
-<p>показывает три режима:</p>
+<p>Формула <span class="math display">\[
+C^{(1)}(q_A,q_B)=M_A(q_A)S_B(q_B)+M_B(q_B)S_A(q_A)
+\]</span> показывает три режима:</p>
 <ul>
 <li>малые <span class="math inline">\(q_A,q_B\)</span>: оба детектора входят в амплитуду;</li>
 <li>большой <span class="math inline">\(q_A\)</span>, малый <span class="math inline">\(q_B\)</span>: доминирует канал <span class="math inline">\(A\)</span>;</li>
@@ -1390,7 +1575,7 @@ display: none;
 </ul>
 <p>Это волновая картина. Точечный клик возникает как предельный режим перекрытий, а не как исходное свойство частицы.</p>
 
-</section></section>
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
