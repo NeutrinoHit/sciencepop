@@ -75,50 +75,38 @@ execute:
 ## Геометрия
 
 Работаем в двух пространственных измерениях:
-
-\[
+$$
 \mathbf r=(x,y),\qquad \hbar=1.
-\]
-
+$$
 Падающий пакет летит слева направо:
-
-\[
+$$
 \mathbf R_\gamma(t)=\mathbf R_0+\mathbf v t,
 \qquad
 \mathbf v=(v,0).
-\]
-
+$$
 Детекторы локализованы около точек
-
-\[
+$$
 \mathbf R_A,\qquad \mathbf R_B.
-\]
-
+$$
 Расстояние между ними:
-
-\[
+$$
 L=|\mathbf R_A-\mathbf R_B|.
-\]
-
+$$
 ---
 
 ## Падающий пакет
 
 Берём нормированный двумерный гауссов пакет:
-
-\[
+$$
 \psi_\gamma(\mathbf r,t)=
 \frac{1}{\sqrt\pi\,\sigma_\gamma}
 \exp\left[-\frac{(\mathbf r-\mathbf R_0-\mathbf v t)^2}{2\sigma_\gamma^2}\right]
 \exp\left[i\mathbf k_0\cdot\mathbf r-i\omega_0 t\right].
-\]
-
+$$
 Проверка нормировки:
-
-\[
+$$
 \int d^2r\,|\psi_\gamma(\mathbf r,t)|^2=1.
-\]
-
+$$
 Ширина пакета: $\sigma_\gamma$.
 
 ---
@@ -126,20 +114,16 @@ L=|\mathbf R_A-\mathbf R_B|.
 ## Начальное состояние детектора
 
 Детектор $j=A,B$ описываем локализованным пакетом:
-
-\[
+$$
 \phi_j(\mathbf r,t)=
 \frac{1}{\sqrt\pi\,\sigma_D}
 \exp\left[-\frac{(\mathbf r-\mathbf R_j)^2}{2\sigma_D^2}\right]
 \exp\left[i\mathbf p_j\cdot(\mathbf r-\mathbf R_j)-iE_j t\right].
-\]
-
+$$
 Проверка:
-
-\[
+$$
 \int d^2r\,|\phi_j(\mathbf r,t)|^2=1.
-\]
-
+$$
 Ширина детектора: $\sigma_D$.
 
 ---
@@ -147,26 +131,20 @@ L=|\mathbf R_A-\mathbf R_B|.
 ## Финальное состояние детектора
 
 Пусть детектор $j$ получил импульс $\mathbf q_j$:
-
-\[
+$$
 \phi_j^{(\mathbf q_j)}(\mathbf r,t)=
 \frac{1}{\sqrt\pi\,\sigma_D}
 \exp\left[-\frac{(\mathbf r-\mathbf R_j)^2}{2\sigma_D^2}\right]
 \exp\left[i(\mathbf p_j+\mathbf q_j)\cdot(\mathbf r-\mathbf R_j)-iE_j' t\right].
-\]
-
+$$
 Обозначим энергию перехода:
-
-\[
+$$
 \Delta E_j(\mathbf q_j)=E_j'-E_j.
-\]
-
+$$
 В апплете можно использовать модель, например:
-
-\[
+$$
 \Delta E_j(q_j)=\frac{q_j^2}{2M_{\rm eff}},
-\]
-
+$$
 но в выводе оставляем $\Delta E_j$ произвольной.
 
 ---
@@ -174,16 +152,14 @@ L=|\mathbf R_A-\mathbf R_B|.
 ## Локальный матричный элемент
 
 Амплитуда взаимодействия падающего пакета с детектором $j$:
-
-\[
+$$
 M_j(\mathbf q_j)=
 \mathcal M_j
 \int_{-\infty}^{+\infty}dt\int d^2r\,
 \left[\phi_j^{(\mathbf q_j)}(\mathbf r,t)\right]^*
 \phi_j(\mathbf r,t)
 \psi_\gamma(\mathbf r,t).
-\]
-
+$$
 Здесь $\mathcal M_j$ — короткое обозначение настоящего матричного элемента.
 
 В КЭД на его месте стояла бы структура типа тока и поля, но сейчас она не нужна.
@@ -193,130 +169,106 @@ M_j(\mathbf q_j)=
 ## Подстановка фаз
 
 Произведение детекторных пакетов:
-
-\[
+$$
 \left[\phi_j^{(\mathbf q_j)}\right]^*\phi_j
 =
 \frac{1}{\pi\sigma_D^2}
 \exp\left[-\frac{(\mathbf r-\mathbf R_j)^2}{\sigma_D^2}\right]
 \exp\left[-i\mathbf q_j\cdot(\mathbf r-\mathbf R_j)+i\Delta E_jt\right].
-\]
-
+$$
 Тогда
-
-\[
+$$
 M_j(\mathbf q_j)=
 \mathcal M_j N
 \int dt\,d^2r\,
 \exp\left[-\frac{(\mathbf r-\mathbf R_0-\mathbf vt)^2}{2\sigma_\gamma^2}
 -\frac{(\mathbf r-\mathbf R_j)^2}{\sigma_D^2}\right]
-\]
-
-\[
+$$
+$$
 \times
 \exp\left[i(\mathbf k_0-\mathbf q_j)\cdot\mathbf r
 -i(\omega_0-\Delta E_j)t
 +i\mathbf q_j\cdot\mathbf R_j\right],
-\]
-
+$$
 где
-
-\[
+$$
 N=\frac{1}{\pi^{3/2}\sigma_\gamma\sigma_D^2}.
-\]
-
+$$
 ---
 
 ## Обозначения
 
 Введём
-
-\[
+$$
 a=\frac{1}{2\sigma_\gamma^2},
 \qquad
 b=\frac{1}{\sigma_D^2},
 \qquad
 A=a+b.
-\]
-
+$$
 Также
-
-\[
+$$
 \mathbf K_j=\mathbf k_0-\mathbf q_j,
 \qquad
 \delta_j=\omega_0-\Delta E_j(\mathbf q_j).
-\]
-
+$$
 Для ширин удобно определить
-
-\[
+$$
 \Lambda^2=\sigma_D^2+2\sigma_\gamma^2.
-\]
-
+$$
 Тогда
-
-\[
+$$
 \frac{ab}{a+b}=\frac{1}{\Lambda^2},
 \qquad
 \frac{a}{a+b}=\frac{\sigma_D^2}{\Lambda^2}\equiv\eta.
-\]
-
+$$
 ---
 
 ## Пространственный гауссов интеграл
 
 Используем стандартную формулу:
-
-\[
+$$
 \int d^2r\,
 \exp\left[-a(\mathbf r-\mathbf X)^2-b(\mathbf r-\mathbf Y)^2+i\mathbf K\cdot\mathbf r\right]
-\]
-
-\[
+$$
+$$
 =
 \frac{\pi}{a+b}
 \exp\left[-\frac{ab}{a+b}(\mathbf X-\mathbf Y)^2
 -\frac{\mathbf K^2}{4(a+b)}
 +i\mathbf K\cdot\frac{a\mathbf X+b\mathbf Y}{a+b}
 \right].
-\]
-
+$$
 В нашей задаче:
-
-\[
+$$
 \mathbf X=\mathbf R_0+\mathbf vt,
 \qquad
 \mathbf Y=\mathbf R_j,
 \qquad
 \mathbf K=\mathbf K_j.
-\]
-
+$$
 ---
 
 ## После интегрирования по пространству
 
 Получаем
-
-\[
+$$
 M_j(\mathbf q_j)=
 \mathcal M_j N\frac{\pi}{A}
 \exp\left[i\mathbf q_j\cdot\mathbf R_j\right]
 \exp\left[-\frac{\mathbf K_j^2}{4A}\right]
-\]
-
-\[
+$$
+$$
 \times
 \int dt\,
 \exp\left[-\frac{ab}{A}(\mathbf R_0+\mathbf vt-\mathbf R_j)^2\right]
-\]
-
-\[
+$$
+$$
 \times
 \exp\left[i\mathbf K_j\cdot
 \frac{a(\mathbf R_0+\mathbf vt)+b\mathbf R_j}{A}
 -i\delta_jt\right].
-\]
-
+$$
 Это уже одномерный гауссов интеграл по времени.
 
 ---
@@ -324,87 +276,67 @@ M_j(\mathbf q_j)=
 ## Геометрия пролёта
 
 Обозначим
-
-\[
+$$
 \mathbf d_j=\mathbf R_j-\mathbf R_0,
 \qquad
 \mathbf n=\frac{\mathbf v}{v}.
-\]
-
+$$
 Момент максимального перекрытия пакета с детектором:
-
-\[
+$$
 t_j=\frac{\mathbf n\cdot\mathbf d_j}{v}.
-\]
-
+$$
 Поперечное расстояние от траектории пакета до детектора:
-
-\[
+$$
 d_{j\perp}^2=\mathbf d_j^2-(\mathbf n\cdot\mathbf d_j)^2.
-\]
-
+$$
 Тогда
-
-\[
+$$
 (\mathbf vt-\mathbf d_j)^2=v^2(t-t_j)^2+d_{j\perp}^2.
-\]
-
+$$
 ---
 
 ## Частотная расстройка
 
 Временная фаза после пространственного интеграла имеет вид
-
-\[
+$$
 \exp\left[i\Omega_j t\right],
-\]
-
+$$
 где
-
-\[
+$$
 \Omega_j(\mathbf q_j)=
 \frac{a}{A}\mathbf K_j\cdot\mathbf v-\delta_j.
-\]
-
+$$
 То есть
-
-\[
+$$
 \boxed{
 \Omega_j(\mathbf q_j)=
 \eta(\mathbf k_0-\mathbf q_j)\cdot\mathbf v
 -
 \left[\omega_0-\Delta E_j(\mathbf q_j)\right]
 }
-\]
-
+$$
 где
-
-\[
+$$
 \eta=\frac{\sigma_D^2}{\Lambda^2}.
-\]
-
+$$
 ---
 
 ## Временной гауссов интеграл
 
 Нужно вычислить
-
-\[
+$$
 \int_{-\infty}^{+\infty}dt\,
 \exp\left[-\frac{v^2(t-t_j)^2}{\Lambda^2}+i\Omega_jt\right].
-\]
-
+$$
 Результат:
-
-\[
+$$
 \int dt\,
 \exp\left[-\frac{v^2(t-t_j)^2}{\Lambda^2}+i\Omega_jt\right]
 =
 \frac{\sqrt\pi\Lambda}{|v|}
 \exp\left[-\frac{\Lambda^2\Omega_j^2}{4v^2}\right]
 \exp\left[i\Omega_jt_j\right].
-\]
-
+$$
 Важно: при конечной ширине пакета это **гаусс**, а не точная $\delta$-функция.
 
 ---
@@ -412,8 +344,7 @@ d_{j\perp}^2=\mathbf d_j^2-(\mathbf n\cdot\mathbf d_j)^2.
 ## Итоговая амплитуда одного детектора
 
 После интегрирования по $d^2r\,dt$:
-
-\[
+$$
 \boxed{
 M_j(\mathbf q_j)=
 \mathcal M_j\frac{2\sigma_\gamma}{\Lambda |v|}
@@ -422,17 +353,14 @@ M_j(\mathbf q_j)=
 \exp\left[-\frac{\Lambda^2\Omega_j^2}{4v^2}\right]
 \exp\left[i\Phi_j\right]
 }
-\]
-
+$$
 где
-
-\[
+$$
 \Omega_j=
 \eta(\mathbf k_0-\mathbf q_j)\cdot\mathbf v
 -
 \left[\omega_0-\Delta E_j(\mathbf q_j)\right].
-\]
-
+$$
 ---
 
 ## Фаза
@@ -440,8 +368,7 @@ M_j(\mathbf q_j)=
 Для весов $|M_j|^2$ фаза не нужна.
 
 Но для интерференции между $A$ и $B$ она нужна:
-
-\[
+$$
 \Phi_j=
 \mathbf q_j\cdot\mathbf R_j
 +
@@ -451,22 +378,17 @@ M_j(\mathbf q_j)=
 \right]
 +
 \Omega_jt_j.
-\]
-
+$$
 Здесь
-
-\[
+$$
 \mathbf K_j=\mathbf k_0-\mathbf q_j,
 \qquad
 \eta=\frac{\sigma_D^2}{\Lambda^2}.
-\]
-
+$$
 Если $\mathcal M_j$ комплексно, его фазу надо добавить к этой фазе:
-
-\[
+$$
 \Phi_j\to \Phi_j+\arg \mathcal M_j.
-\]
-
+$$
 Ниже считаем $\mathcal M_j$ вещественным или включаем его фазу в $\Phi_j$.
 
 Если фазы в апплете пока мешают, можно сделать первый режим с $\cos(\Phi_A-\Phi_B)=1$, а затем добавить фазовый режим.
@@ -478,27 +400,21 @@ M_j(\mathbf q_j)=
 Амплитуда содержит три гауссовых подавления:
 
 ### 1. Поперечное перекрытие
-
-\[
+$$
 \exp\left[-\frac{d_{j\perp}^2}{\Lambda^2}\right].
-\]
-
+$$
 Детектор далеко от траектории — сигнала почти нет.
 
 ### 2. Импульсное согласование
-
-\[
+$$
 \exp\left[-\frac{\sigma_\gamma^2\sigma_D^2}{2\Lambda^2}(\mathbf k_0-\mathbf q_j)^2\right].
-\]
-
+$$
 Переданный импульс сильно не совпадает с $\mathbf k_0$ — канал подавлен.
 
 ### 3. Энергетическое согласование
-
-\[
+$$
 \exp\left[-\frac{\Lambda^2\Omega_j^2}{4v^2}\right].
-\]
-
+$$
 Это гауссов аналог закона сохранения энергии для конечных пакетов.
 
 ---
@@ -506,47 +422,37 @@ M_j(\mathbf q_j)=
 ## Нет точной дельта-функции
 
 При конечной ширине пакетов:
-
-\[
+$$
 \exp\left[-\frac{\Lambda^2\Omega_j^2}{4v^2}\right]
-\]
-
+$$
 остаётся гауссом даже при интегрировании времени от $-\infty$ до $+\infty$.
 
 Точная $\delta(\Omega_j)$ появляется только в сингулярном пределе
-
-\[
+$$
 \frac{\Lambda}{v}\to\infty.
-\]
-
+$$
 То есть при бесконечно длинном времени когерентного взаимодействия.
 
 Для конечного волнового пакета ширина энергетического согласования порядка
-
-\[
+$$
 \Delta E\sim \frac{v}{\Lambda}.
-\]
-
+$$
 ---
 
 ## Перекрытие spectator-детектора
 
 Если детектор $j$ не взаимодействовал, но мы проецируем его на состояние с импульсным сдвигом $\mathbf q_j$, возникает перекрытие
-
-\[
+$$
 S_j(\mathbf q_j)=
 \langle \phi_j^{(\mathbf q_j)}|\phi_j\rangle.
-\]
-
+$$
 По определению:
-
-\[
+$$
 S_j(\mathbf q_j)=
 \int d^2r\,
 \left[\phi_j^{(\mathbf q_j)}(\mathbf r,t)\right]^*
 \phi_j(\mathbf r,t).
-\]
-
+$$
 Так как берём равновременное скалярное произведение, временная фаза не входит.
 
 ---
@@ -554,63 +460,49 @@ S_j(\mathbf q_j)=
 ## Вычисление spectator-overlap
 
 Подстановка даёт
-
-\[
+$$
 S_j(\mathbf q_j)=
 \frac{1}{\pi\sigma_D^2}
 \int d^2r\,
 \exp\left[-\frac{(\mathbf r-\mathbf R_j)^2}{\sigma_D^2}\right]
 \exp\left[-i\mathbf q_j\cdot(\mathbf r-\mathbf R_j)\right].
-\]
-
+$$
 Это Фурье-образ гаусса:
-
-\[
+$$
 \boxed{
 S_j(\mathbf q_j)=
 \exp\left[-\frac{\sigma_D^2\mathbf q_j^2}{4}\right]
 }
-\]
-
+$$
 и
-
-\[
+$$
 \boxed{
 |S_j(\mathbf q_j)|^2=
 \exp\left[-\frac{\sigma_D^2\mathbf q_j^2}{2}\right].
 }
-\]
-
+$$
 ---
 
 ## Смысл spectator-overlap
 
 Если
-
-\[
+$$
 |\mathbf q_j|\sigma_D\ll1,
-\]
-
+$$
 то
-
-\[
+$$
 S_j\simeq1.
-\]
-
+$$
 Состояние почти не изменилось. Это не хороший макроскопический клик.
 
 Если
-
-\[
+$$
 |\mathbf q_j|\sigma_D\gg1,
-\]
-
+$$
 то
-
-\[
+$$
 S_j\simeq0.
-\]
-
+$$
 Финальное состояние почти ортогонально исходному. Это различимый отклик.
 
 ---
@@ -618,31 +510,25 @@ S_j\simeq0.
 ## Два детектора: первый порядок
 
 Начальное состояние:
-
-\[
+$$
 |i\rangle=|\gamma\rangle |A\rangle |B\rangle.
-\]
-
+$$
 Финальное состояние:
-
-\[
+$$
 |f\rangle=|A(\mathbf q_A)\rangle |B(\mathbf q_B)\rangle.
-\]
-
+$$
 Здесь считаем, что падающий квант поглощён одним из детекторов.
 Если описывать рассеяние, в $|f\rangle$ нужно добавить финальное состояние кванта.
 
 В первом порядке локальное взаимодействие может быть с $A$ или с $B$:
-
-\[
+$$
 \boxed{
 C^{(1)}(\mathbf q_A,\mathbf q_B)=
 M_A(\mathbf q_A)S_B(\mathbf q_B)
 +
 M_B(\mathbf q_B)S_A(\mathbf q_A).
 }
-\]
-
+$$
 Это центральная формула для апплета.
 
 ---
@@ -650,31 +536,26 @@ M_B(\mathbf q_B)S_A(\mathbf q_A).
 ## Совместный вес
 
 Ненормированный вес финального канала:
-
-\[
+$$
 \boxed{
 W(\mathbf q_A,\mathbf q_B)=
 \left|C^{(1)}(\mathbf q_A,\mathbf q_B)\right|^2.
 }
-\]
-
+$$
 Раскрыто:
-
-\[
+$$
 W=
 |M_A(\mathbf q_A)|^2|S_B(\mathbf q_B)|^2
 +
 |M_B(\mathbf q_B)|^2|S_A(\mathbf q_A)|^2
-\]
-
-\[
+$$
+$$
 +
 2\operatorname{Re}\left[
 M_A(\mathbf q_A)M_B^*(\mathbf q_B)
 S_B(\mathbf q_B)S_A^*(\mathbf q_A)
 \right].
-\]
-
+$$
 Последний член — интерференция двух путей амплитуды.
 
 ---
@@ -682,33 +563,26 @@ S_B(\mathbf q_B)S_A^*(\mathbf q_A)
 ## Скалярное упрощение для апплета
 
 Для первого апплета удобно взять импульсы вдоль $x$:
-
-\[
+$$
 \mathbf q_A=(q_A,0),
 \qquad
 \mathbf q_B=(q_B,0),
 \qquad
 q_A,q_B\ge0.
-\]
-
+$$
 Тогда строим поверхность
-
-\[
+$$
 W(q_A,q_B).
-\]
-
+$$
 После нормировки на выбранном диапазоне $[0,q_{\max}]$:
-
-\[
+$$
 Z=\int_0^{q_{\max}}dq_A\int_0^{q_{\max}}dq_B\,W(q_A,q_B),
-\]
-
-\[
+$$
+$$
 \boxed{
 P(q_A,q_B)=\frac{W(q_A,q_B)}{Z}.
 }
-\]
-
+$$
 Это условная плотность внутри выбранного модельного пространства каналов.
 
 ---
@@ -716,35 +590,27 @@ P(q_A,q_B)=\frac{W(q_A,q_B)}{Z}.
 ## Маргинальные распределения
 
 Из совместной плотности:
-
-\[
+$$
 P_A(q_A)=
 \int_0^{q_{\max}}dq_B\,P(q_A,q_B),
-\]
-
-\[
+$$
+$$
 P_B(q_B)=
 \int_0^{q_{\max}}dq_A\,P(q_A,q_B).
-\]
-
+$$
 Условные плотности:
-
-\[
+$$
 P(q_A|q_B)=
 \frac{P(q_A,q_B)}{P_B(q_B)},
-\]
-
-\[
+$$
+$$
 P(q_B|q_A)=
 \frac{P(q_A,q_B)}{P_A(q_A)}.
-\]
-
+$$
 Важно:
-
-\[
+$$
 P(A|q_A)+P(B|q_B)=P(q_A,q_B)
-\]
-
+$$
 не является правильным соотношением.
 
 ---
@@ -752,53 +618,41 @@ P(A|q_A)+P(B|q_B)=P(q_A,q_B)
 ## События через порог клика
 
 Вводим порог различимого отклика:
-
-\[
+$$
 q_{\rm th}.
-\]
-
+$$
 Тогда четыре области:
 
 ### Ни один не сработал
-
-\[
+$$
 P_{00}=\int_0^{q_{\rm th}}dq_A
 \int_0^{q_{\rm th}}dq_B\,P(q_A,q_B).
-\]
-
+$$
 ### Только A
-
-\[
+$$
 P_{A0}=\int_{q_{\rm th}}^{q_{\max}}dq_A
 \int_0^{q_{\rm th}}dq_B\,P(q_A,q_B).
-\]
-
+$$
 ---
 
 ## События через порог клика: продолжение
 
 ### Только B
-
-\[
+$$
 P_{0B}=\int_0^{q_{\rm th}}dq_A
 \int_{q_{\rm th}}^{q_{\max}}dq_B\,P(q_A,q_B).
-\]
-
+$$
 ### Оба
-
-\[
+$$
 P_{AB}=\int_{q_{\rm th}}^{q_{\max}}dq_A
 \int_{q_{\rm th}}^{q_{\max}}dq_B\,P(q_A,q_B).
-\]
-
+$$
 Проверка нормировки:
-
-\[
+$$
 \boxed{
 P_{00}+P_{A0}+P_{0B}+P_{AB}=1.
 }
-\]
-
+$$
 Именно эти четыре числа должны быть главными в апплете.
 
 ---
@@ -806,25 +660,19 @@ P_{00}+P_{A0}+P_{0B}+P_{AB}=1.
 ## Предел 1: оба импульса малы
 
 Пусть
-
-\[
+$$
 \mathbf q_A\to0,
 \qquad
 \mathbf q_B\to0.
-\]
-
+$$
 Тогда
-
-\[
+$$
 S_A(0)=S_B(0)=1.
-\]
-
+$$
 Значит
-
-\[
+$$
 C^{(1)}(0,0)=M_A(0)+M_B(0).
-\]
-
+$$
 Оба детектора входят в амплитуду.
 
 Но это не обязательно клик: при $q=0$ состояние детектора почти не отличается от исходного.
@@ -834,37 +682,27 @@ C^{(1)}(0,0)=M_A(0)+M_B(0).
 ## Предел 2: сработал A
 
 Пусть
-
-\[
+$$
 \mathbf q_A\simeq\mathbf k_0,
 \qquad
 \mathbf q_B\simeq0.
-\]
-
+$$
 Если энергетическое согласование также хорошее,
-
-\[
+$$
 \Delta E_A(\mathbf q_A)\simeq\omega_0,
-\]
-
+$$
 то $M_A(\mathbf q_A)$ не подавлен, а
-
-\[
+$$
 S_B(0)=1.
-\]
-
+$$
 Первый вклад:
-
-\[
+$$
 M_A(\mathbf q_A)S_B(0)\simeq M_A(\mathbf q_A).
-\]
-
+$$
 Второй вклад содержит
-
-\[
+$$
 S_A(\mathbf q_A)=\exp\left[-\frac{\sigma_D^2\mathbf q_A^2}{4}\right].
-\]
-
+$$
 При сильном клике он мал.
 
 ---
@@ -872,27 +710,21 @@ S_A(\mathbf q_A)=\exp\left[-\frac{\sigma_D^2\mathbf q_A^2}{4}\right].
 ## Предел 3: сработал B
 
 Аналогично, если
-
-\[
+$$
 \mathbf q_B\simeq\mathbf k_0,
 \qquad
 \mathbf q_A\simeq0,
-\]
-
+$$
 и
-
-\[
+$$
 \Delta E_B(\mathbf q_B)\simeq\omega_0,
-\]
-
+$$
 то доминирует
-
-\[
+$$
 M_B(\mathbf q_B)S_A(0)
 \simeq
 M_B(\mathbf q_B).
-\]
-
+$$
 Это канал “сработал $B$, $A$ почти не изменился”.
 
 ---
@@ -900,30 +732,24 @@ M_B(\mathbf q_B).
 ## Предел 4: оба сильно сработали
 
 Пусть
-
-\[
+$$
 |\mathbf q_A|\sigma_D\gg1,
 \qquad
 |\mathbf q_B|\sigma_D\gg1.
-\]
-
+$$
 Тогда
-
-\[
+$$
 S_A(\mathbf q_A)\simeq0,
 \qquad
 S_B(\mathbf q_B)\simeq0.
-\]
-
+$$
 Поэтому в первом порядке
-
-\[
+$$
 C^{(1)}(\mathbf q_A,\mathbf q_B)
 =
 M_A S_B+M_B S_A
 \simeq0.
-\]
-
+$$
 Один квант не даёт два сильных независимых клика в этом первом порядке.
 
 Не потому, что квант был точкой, а потому что таковы перекрытия финальных волновых пакетов.
@@ -933,14 +759,12 @@ M_A S_B+M_B S_A
 ## Настоящий двойной отклик
 
 Если оба детектора динамически получили импульс, это следующий канал:
-
-\[
+$$
 C(\mathbf q_A,\mathbf q_B)=
 M_A S_B+M_B S_A
 +
 M_{AB}^{(2)}(\mathbf q_A,\mathbf q_B)+\cdots.
-\]
-
+$$
 Здесь $M_{AB}^{(2)}$ — двухвершинный или коллективный процесс.
 
 В текущем апплете v1 его не включаем.
@@ -954,8 +778,7 @@ M_{AB}^{(2)}(\mathbf q_A,\mathbf q_B)+\cdots.
 ## Что должен считать апплет
 
 Для заданных параметров:
-
-\[
+$$
 \sigma_\gamma,
 \quad
 \sigma_D,
@@ -969,26 +792,20 @@ q_{\rm th},
 q_{\max},
 \quad
 \Delta E(q),
-\]
-
+$$
 он строит:
-
-\[
+$$
 M_A(q_A),\qquad M_B(q_B),
-\]
-
-\[
+$$
+$$
 S_A(q_A),\qquad S_B(q_B),
-\]
-
-\[
+$$
+$$
 W(q_A,q_B)=|M_A(q_A)S_B(q_B)+M_B(q_B)S_A(q_A)|^2,
-\]
-
-\[
+$$
+$$
 P(q_A,q_B)=W/Z.
-\]
-
+$$
 ---
 
 ## Что должен показывать апплет
@@ -997,41 +814,31 @@ P(q_A,q_B)=W/Z.
    $\psi_\gamma$, $\phi_A$, $\phi_B$.
 
 2. Heatmap:
-
-\[
+$$
 P(q_A,q_B).
-\]
-
+$$
 3. Маргинальные распределения:
-
-\[
+$$
 P_A(q_A),\qquad P_B(q_B).
-\]
-
+$$
 4. Условные сечения:
-
-\[
+$$
 P(q_A|q_B^*),
 \qquad
 P(q_B|q_A^*).
-\]
-
+$$
 5. Четыре интегральные вероятности:
-
-\[
+$$
 P_{00},\quad P_{A0},\quad P_{0B},\quad P_{AB}.
-\]
-
+$$
 ---
 
 ## Главный педагогический вывод
 
 Формула
-
-\[
+$$
 C^{(1)}(q_A,q_B)=M_A(q_A)S_B(q_B)+M_B(q_B)S_A(q_A)
-\]
-
+$$
 показывает три режима:
 
 - малые $q_A,q_B$: оба детектора входят в амплитуду;
