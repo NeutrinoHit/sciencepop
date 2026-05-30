@@ -1,7 +1,7 @@
 .DS_Store
 
-# Private source decks and archives
-*.key/
+# Private source decks and local archives.
+*.key
 */*.pptx
 */*.pdf
 */*.zip

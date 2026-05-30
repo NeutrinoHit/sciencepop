@@ -1,0 +1,27 @@
+format:
+  revealjs:
+    include-in-header:
+      text: |
+        <style>
+          .reveal .slides {
+            text-align: left;
+          }
+
+          .reveal h1,
+          .reveal h2,
+          .reveal h3 {
+            text-transform: none;
+          }
+
+          .reveal .math.display {
+            font-size: 0.86em;
+          }
+
+          .reveal p,
+          .reveal li {
+            line-height: 1.32;
+          }
+        </style>
+    include-after-body:
+      text: |
+        <script data-external="1" data-context-home="../" data-context-home-label="Каталог научпоп-лекций" src="../shared/reveal/neutrinohit-reveal-footer.js"></script>

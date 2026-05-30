@@ -1,0 +1,1004 @@
+---
+title: "Что такое частица в квантовой теории поля?"
+subtitle: "Рассеяние квантовой волны на двух мишенях"
+author: "Д. В. Наумов"
+lang: ru-RU
+format:
+  revealjs:
+    theme: black
+    html-math-method: mathjax
+    embed-resources: true
+    slide-number: true
+    toc: true
+    toc-depth: 1
+    toc-title: "План лекции"
+    chalkboard: false
+    preview-links: false
+    width: 1280
+    height: 720
+    margin: 0.06
+    transition: fade
+    incremental: false
+execute:
+  echo: false
+---
+
+# Введение
+
+## Простые, но фундаментальные вопросы
+
+::: incremental
+- Частица — это волна или точка?
+- Почему волна иногда даёт один локальный сигнал?
+- Где в формулах появляется картина: сработала одна мишень, а другая нет?
+:::
+
+## Главные утверждения
+
+::: incremental
+- Частица в КТП — квантовое состояние поля, то есть квантовая волна.
+- Мишень и детектор — тоже квантовые системы.
+- Точечный сигнал — не исходное свойство частицы, а предельный режим взаимодействия.
+:::
+
+## Модель, которую будем считать
+
+Берём падающий пучок как плоскую волну. Две мишени — нетождественные тяжёлые фермионы, описанные волновыми пакетами.
+
+$$
+|i\rangle = |A,B;k\rangle
+$$
+
+$$
+S = 1+iT
+$$
+
+$$
+|\Psi_f\rangle = iT|A,B;k\rangle
+$$
+
+# Начальные состояния
+
+## Нормировка одночастичных состояний
+
+Используем ковариантную нормировку.
+
+$$
+\langle p'|p\rangle=(2\pi)^3 2E_p\,\delta^{(3)}(\mathbf p-\mathbf p')
+$$
+
+$$
+|A\rangle=
+\int\frac{d^3p_A}{(2\pi)^3}
+\frac{\psi_A(\mathbf p_A)}{\sqrt{2E_A}}
+|p_A\rangle
+$$
+
+$$
+\langle A|A\rangle=
+\int\frac{d^3p_A}{(2\pi)^3}|\psi_A(\mathbf p_A)|^2
+$$
+
+## Две нетождественные мишени
+
+Мишени различимы. Антисимметризации между A и B нет.
+
+$$
+|A,B\rangle=
+\int\frac{d^3p_A}{(2\pi)^3}
+\frac{d^3p_B}{(2\pi)^3}
+\frac{\psi_A(\mathbf p_A)\psi_B(\mathbf p_B)}{\sqrt{2E_A\,2E_B}}
+|p_A,p_B\rangle
+$$
+
+$$
+|A,B;k\rangle=|A,B\rangle\otimes |k\rangle
+$$
+
+## Что хотим получить
+
+Нас интересует сектор, где падающая частица поглощена, а в финале остались две мишени.
+
+$$
+|\Psi_f\rangle=
+\int\frac{d^3p'_A}{(2\pi)^3}
+\frac{d^3p'_B}{(2\pi)^3}
+\frac{\Psi_{AB}(\mathbf p'_A,\mathbf p'_B)}{\sqrt{2E'_A\,2E'_B}}
+|p'_A,p'_B\rangle
+$$
+
+$$
+\Psi_{AB}(\mathbf p'_A,\mathbf p'_B)=
+\frac{\langle p'_A,p'_B;0|iT|A,B;k\rangle}{\sqrt{2E'_A\,2E'_B}}
+$$
+
+# Первый порядок
+
+## Локальное взаимодействие с двумя мишенями
+
+В первом порядке взаимодействие — сумма двух независимых вкладов.
+
+$$
+iT^{(1)}=-i\int d^4x\,\left(H_A(x)+H_B(x)\right)
+$$
+
+$$
+iT^{(1)}=iT_A+iT_B
+$$
+
+$$
+T_A\ \text{действует на}\ A\ \text{и пучок, но не действует на}\ B
+$$
+
+## Матричный элемент A-канала
+
+Если фотон поглощается A, то B — spectator.
+
+$$
+\langle p'_A,p'_B;0|iT_A|p_A,p_B;k\rangle
+=
+K_A(p'_A;p_A,k)\,\langle p'_B|p_B\rangle
+$$
+
+$$
+\langle p'_B|p_B\rangle=(2\pi)^3 2E_B\,\delta^{(3)}(\mathbf p'_B-\mathbf p_B)
+$$
+
+$$
+\langle p'_A,p'_B;0|iT_A|p_A,p_B;k\rangle
+=
+K_A(p'_A;p_A,k)(2\pi)^3 2E_B\delta^{(3)}(\mathbf p'_B-\mathbf p_B)
+$$
+
+## Матричный элемент B-канала
+
+Если фотон поглощается B, то A — spectator.
+
+$$
+\langle p'_A,p'_B;0|iT_B|p_A,p_B;k\rangle
+=
+K_B(p'_B;p_B,k)\,\langle p'_A|p_A\rangle
+$$
+
+$$
+\langle p'_A|p_A\rangle=(2\pi)^3 2E_A\,\delta^{(3)}(\mathbf p'_A-\mathbf p_A)
+$$
+
+$$
+\langle p'_A,p'_B;0|iT_B|p_A,p_B;k\rangle
+=
+K_B(p'_B;p_B,k)(2\pi)^3 2E_A\delta^{(3)}(\mathbf p'_A-\mathbf p_A)
+$$
+
+## В первом порядке нет третьего слагаемого
+
+Connected-вклад, в котором обе мишени реально участвуют в одном акте, не возникает из независимого первого порядка.
+
+$$
+iT^{(1)}=iT_A+iT_B
+$$
+
+$$
+iT^{(1)}\neq iT_A+iT_B+iT_{AB}^{\rm conn}
+$$
+
+$$
+T_{AB}^{\rm conn}\ \text{возникает в более высоком порядке или как эффективный коллективный ток}
+$$
+
+# Вычисление финальной волновой функции
+
+## A-канал до использования дельта-функции
+
+Подставляем начальные пакеты и spectator-фактор.
+
+$$
+\Psi_{AB}^{(A)}(\mathbf p'_A,\mathbf p'_B)=
+\frac{1}{\sqrt{2E'_A\,2E'_B}}
+\int\frac{d^3p_A}{(2\pi)^3}\frac{d^3p_B}{(2\pi)^3}
+\frac{\psi_A(\mathbf p_A)\psi_B(\mathbf p_B)}{\sqrt{2E_A\,2E_B}}
+$$
+
+$$
+\times K_A(p'_A;p_A,k)(2\pi)^3 2E_B\delta^{(3)}(\mathbf p'_B-\mathbf p_B)
+$$
+
+## A-канал после spectator-интеграла
+
+Интеграл по импульсу B берётся сразу.
+
+$$
+\Psi_{AB}^{(A)}(\mathbf p'_A,\mathbf p'_B)=
+\frac{\psi_B(\mathbf p'_B)}{\sqrt{2E'_A}}
+\int\frac{d^3p_A}{(2\pi)^3}
+\frac{\psi_A(\mathbf p_A)}{\sqrt{2E_A}}
+K_A(p'_A;p_A,k)
+$$
+
+$$
+\Psi_{AB}^{(A)}(\mathbf p'_A,\mathbf p'_B)
+=
+\Psi_A^{\rm hit}(\mathbf p'_A)\,\psi_B(\mathbf p'_B)
+$$
+
+## B-канал после spectator-интеграла
+
+Аналогично для поглощения на B.
+
+$$
+\Psi_{AB}^{(B)}(\mathbf p'_A,\mathbf p'_B)=
+\frac{\psi_A(\mathbf p'_A)}{\sqrt{2E'_B}}
+\int\frac{d^3p_B}{(2\pi)^3}
+\frac{\psi_B(\mathbf p_B)}{\sqrt{2E_B}}
+K_B(p'_B;p_B,k)
+$$
+
+$$
+\Psi_{AB}^{(B)}(\mathbf p'_A,\mathbf p'_B)
+=
+\psi_A(\mathbf p'_A)\,\Psi_B^{\rm hit}(\mathbf p'_B)
+$$
+
+## Финальная волновая функция
+
+В первом порядке получаем сумму двух spectator-каналов.
+
+$$
+\Psi_{AB}^{(1)}(\mathbf p'_A,\mathbf p'_B)
+=
+\Psi_A^{\rm hit}(\mathbf p'_A)\psi_B(\mathbf p'_B)
++
+\psi_A(\mathbf p'_A)\Psi_B^{\rm hit}(\mathbf p'_B)
+$$
+
+$$
+\text{первое слагаемое:}\quad A\ \text{изменился},\ B\ \text{остался spectator}
+$$
+
+$$
+\text{второе слагаемое:}\quad B\ \text{изменился},\ A\ \text{остался spectator}
+$$
+
+# Что находится внутри K
+
+## Матричный элемент поглощения на A
+
+Теперь раскрываем K через матричный элемент и законы сохранения.
+
+$$
+K_A(p'_A;p_A,k)=
+\langle p'_A;0|iT_A|p_A;k\rangle
+$$
+
+$$
+K_A(p'_A;p_A,k)=
+i(2\pi)^4\delta^{(4)}(p_A+k-p'_A)\mathcal{M}_A(p'_A;p_A,k)
+$$
+
+## A-канал: вычисляем интеграл
+
+Пространственная дельта-функция даёт импульс начального пакета A.
+
+$$
+\mathbf p_A=\mathbf p'_A-\mathbf k
+$$
+
+$$
+\Psi_A^{\rm hit}(\mathbf p'_A)=
+i(2\pi)
+\frac{\psi_A(\mathbf p'_A-\mathbf k)}{\sqrt{2E'_A\,2E_A(\mathbf p'_A-\mathbf k)}}
+$$
+
+$$
+\times
+\delta\!\left(E_A(\mathbf p'_A-\mathbf k)+\omega-E'_A(\mathbf p'_A)\right)
+\mathcal{M}_A(p'_A;p'_A-k,k)
+$$
+
+## B-канал: вычисляем интеграл
+
+Полностью аналогично.
+
+$$
+\mathbf p_B=\mathbf p'_B-\mathbf k
+$$
+
+$$
+\Psi_B^{\rm hit}(\mathbf p'_B)=
+i(2\pi)
+\frac{\psi_B(\mathbf p'_B-\mathbf k)}{\sqrt{2E'_B\,2E_B(\mathbf p'_B-\mathbf k)}}
+$$
+
+$$
+\times
+\delta\!\left(E_B(\mathbf p'_B-\mathbf k)+\omega-E'_B(\mathbf p'_B)\right)
+\mathcal{M}_B(p'_B;p'_B-k,k)
+$$
+
+## Итоговая явная форма
+
+Именно здесь видно: одно слагаемое сдвигает A, другое — B.
+
+$$
+\Psi_{AB}^{(1)}=
+\Psi_A^{\rm hit}(\mathbf p'_A)\psi_B(\mathbf p'_B)
++
+\psi_A(\mathbf p'_A)\Psi_B^{\rm hit}(\mathbf p'_B)
+$$
+
+$$
+\Psi_A^{\rm hit}\sim \psi_A(\mathbf p'_A-\mathbf k)
+$$
+
+$$
+\Psi_B^{\rm hit}\sim \psi_B(\mathbf p'_B-\mathbf k)
+$$
+
+# Тяжёлый детектор
+
+## Зачем нужно внутреннее возбуждение
+
+Свободная тяжёлая частица не может просто поглотить реальный фотон. Детектор должен иметь внутренние степени свободы.
+
+$$
+E_A(\mathbf p)=M_A+\frac{\mathbf p^2}{2M_A}
+$$
+
+$$
+E'_A(\mathbf p)=M_A+\varepsilon_A+\frac{\mathbf p^2}{2M_A}
+$$
+
+$$
+\varepsilon_A\ \text{кодирует ионизацию, фононы, тепло или другой внутренний отклик}
+$$
+
+## Энергетическая дельта-функция
+
+Подставляем тяжёлый предел в A-канал.
+
+$$
+E_A(\mathbf p'_A-\mathbf k)+\omega-E'_A(\mathbf p'_A)
+=
+\omega-\varepsilon_A
+-\frac{\mathbf p'_A\cdot\mathbf k}{M_A}
++\frac{\mathbf k^2}{2M_A}
+$$
+
+$$
+\delta\!\left(E_A(\mathbf p'_A-\mathbf k)+\omega-E'_A(\mathbf p'_A)\right)
+=
+\delta\!\left(\omega-\varepsilon_A-\frac{\mathbf p'_A\cdot\mathbf k}{M_A}+\frac{\mathbf k^2}{2M_A}\right)
+$$
+
+## Бесконечно тяжёлый предел
+
+Если отдача мала, энергетическое условие сводится к резонансу внутреннего отклика.
+
+$$
+M_A\to\infty
+$$
+
+$$
+\delta\!\left(\omega-\varepsilon_A-\frac{\mathbf p'_A\cdot\mathbf k}{M_A}+\frac{\mathbf k^2}{2M_A}\right)
+\to
+\delta(\omega-\varepsilon_A)
+$$
+
+$$
+\text{фотон поглощается детектором, если энергия уходит во внутреннюю степень свободы}
+$$
+
+# Где возникает «точечный сигнал»
+
+## Сработал A, но не B
+
+Если финальный пакет A сдвинут на импульс k, а B остался исходным, доминирует первый член.
+
+$$
+\Psi_{AB}^{(1)}
+=
+\Psi_A^{\rm hit}\psi_B+
+\psi_A\Psi_B^{\rm hit}
+$$
+
+$$
+\Psi_A^{\rm hit}\sim\psi_A(\mathbf p'_A-\mathbf k),
+\qquad
+\psi_B\sim\psi_B(\mathbf p'_B)
+$$
+
+$$
+\text{это и есть канал:}\quad A\ \text{получил сигнал},\ B\ \text{не изменился}
+$$
+
+## Сработал B, но не A
+
+Аналогично доминирует второй член.
+
+$$
+\Psi_{AB}^{(1)}
+=
+\Psi_A^{\rm hit}\psi_B+
+\psi_A\Psi_B^{\rm hit}
+$$
+
+$$
+\Psi_B^{\rm hit}\sim\psi_B(\mathbf p'_B-\mathbf k),
+\qquad
+\psi_A\sim\psi_A(\mathbf p'_A)
+$$
+
+$$
+\text{это канал:}\quad B\ \text{получил сигнал},\ A\ \text{не изменился}
+$$
+
+## Оба сильно сработали?
+
+В первом порядке независимого взаимодействия такого канала нет.
+
+$$
+\Psi_{AB}^{(1)}=
+\Psi_A^{\rm hit}\psi_B+
+\psi_A\Psi_B^{\rm hit}
+$$
+
+$$
+\text{нет слагаемого}\quad \Psi_A^{\rm hit}\Psi_B^{\rm hit}
+$$
+
+$$
+\text{сильный двойной сигнал требует connected-вклада или более высокого порядка}
+$$
+
+# Режим перекрытия
+
+## Вектор состояния и две альтернативы
+
+Перепишем результат в компактной форме.
+
+$$
+|\Psi_f^{(1)}\rangle
+=
+|\chi_A\rangle |B\rangle
++
+|A\rangle |\chi_B\rangle
+$$
+
+$$
+|\chi_A\rangle=iT_A|A;k\rangle
+$$
+
+$$
+|\chi_B\rangle=iT_B|B;k\rangle
+$$
+
+## Вероятность: где появляется интерференция
+
+Интерференция появляется не как новое слагаемое в состоянии, а как cross term в норме.
+
+$$
+\langle\Psi_f^{(1)}|\Psi_f^{(1)}\rangle
+=
+\langle\chi_A|\chi_A\rangle
++
+\langle\chi_B|\chi_B\rangle
++
+2\operatorname{Re}\!\left[\langle\chi_A|A\rangle\langle B|\chi_B\rangle\right]
+$$
+
+$$
+\text{если cross term исчезает,}\quad P\simeq P_A+P_B
+$$
+
+$$
+\text{если cross term заметен, отклик когерентный}
+$$
+
+## Гауссов пакет мишени
+
+Для проверки берём простой импульсный гаусс.
+
+$$
+\psi_j(\mathbf p)=
+N\exp\!\left[-\frac{(\mathbf p-\bar{\mathbf p}_j)^2}{4\sigma_p^2}\right]
+\exp\!\left[-i\mathbf p\cdot\mathbf R_j\right]
+$$
+
+$$
+\chi_j(\mathbf p)\simeq C_j\psi_j(\mathbf p-\mathbf k)
+$$
+
+## Перекрытие «сработал» и «не сработал»
+
+Для гауссовых пакетов перекрытие вычисляется сразу.
+
+$$
+\langle j|\chi_j\rangle
+\simeq
+C_j\exp\!\left[-\frac{\mathbf k^2}{8\sigma_p^2}\right]
+\exp\!\left[i\mathbf k\cdot\mathbf R_j\right]
+$$
+
+$$
+\langle \chi_j|j\rangle
+\simeq
+C_j^*\exp\!\left[-\frac{\mathbf k^2}{8\sigma_p^2}\right]
+\exp\!\left[-i\mathbf k\cdot\mathbf R_j\right]
+$$
+
+## Интерференционный член
+
+Подставляем перекрытия в cross term.
+
+$$
+P_{\rm int}
+=
+2\operatorname{Re}\!\left[
+C_A^*C_B
+\exp\!\left(-\frac{\mathbf k^2}{4\sigma_p^2}\right)
+\exp\!\left(i\mathbf k\cdot(\mathbf R_B-\mathbf R_A)\right)
+\right]
+$$
+
+$$
+|\mathbf k|\gg \sigma_p
+\quad\Rightarrow\quad
+P_{\rm int}\simeq 0
+$$
+
+$$
+|\mathbf R_A-\mathbf R_B|\ll \lambda
+\quad\Rightarrow\quad
+\text{фаза почти общая}
+$$
+
+## Что значит «детекторы перекрываются»
+
+Для различимых мишеней это не означает, что надо отождествить A и B. Это означает, что два конечных слагаемых не являются хорошо различимыми.
+
+$$
+\langle\chi_A|A\rangle\langle B|\chi_B\rangle\neq 0
+$$
+
+$$
+\Psi_A^{\rm hit}\psi_B
+\quad\text{и}\quad
+\psi_A\Psi_B^{\rm hit}
+\quad\text{могут интерферировать}
+$$
+
+$$
+\text{тогда нельзя честно говорить: сработал строго A или строго B}
+$$
+
+
+# Интерактивная проверка
+
+## Апплет: два слагаемых финальной волновой функции
+
+В апплете ниже используется ровно та модель, которую мы вывели:
+
+$$
+\Psi(p_A,p_B)=\chi_A(p_A)\psi_B(p_B)+\psi_A(p_A)\chi_B(p_B)
+$$
+
+$$
+\psi_R(p)=N\exp\left[-\frac{p^2}{4\sigma_p^2}\right]e^{-ipR},
+\qquad
+\chi_R(p)=\psi_R(p-k)
+$$
+
+На двумерной карте показана плотность $|\Psi(p_A,p_B)|^2$ в импульсах двух мишеней. Два естественных центра этой картины:
+
+$$
+A\ \text{сработал:}\quad (p_A,p_B)\simeq(k,0),
+\qquad
+B\ \text{сработал:}\quad (p_A,p_B)\simeq(0,k).
+$$
+
+Здесь $p_A,p_B$ — финальные импульсы мишеней, то есть сокращённая запись для $p'_A,p'_B$.
+
+## {.applet-slide}
+::: {.target-widget}
+```{ojs}
+//| echo: false
+
+viewof sigmaP = Inputs.range([0.15, 2.50], {
+  value: 0.65,
+  step: 0.01,
+  label: "ширина пакета в импульсе σₚ"
+})
+
+viewof separation = Inputs.range([0.0, 18.0], {
+  value: 6.0,
+  step: 0.05,
+  label: "расстояние между мишенями L"
+})
+
+viewof kTransfer = Inputs.range([0.0, 6.0], {
+  value: 3.0,
+  step: 0.02,
+  label: "переданный импульс k"
+})
+
+// Fixed numerical grid in momentum space.
+nGrid = 96
+pPad = 5.0 * sigmaP
+pMin = Math.min(-pPad, kTransfer - pPad)
+pMax = Math.max(pPad, kTransfer + pPad)
+dp = (pMax - pMin) / (nGrid - 1)
+pValues = Array.from({length: nGrid}, (_, i) => pMin + i * dp)
+
+RA = -separation / 2
+RB = +separation / 2
+sigmaX = 1 / (2 * sigmaP)
+
+// Real normalized envelope. The common normalization cancels after normalizing |Ψ|².
+function envelope(p, center) {
+  const z = (p - center) / sigmaP;
+  return Math.exp(-0.25 * z * z);
+}
+
+// Complex packet ψ_R(p)=g(p) exp(-ipR).
+function packet(p, R) {
+  const a = envelope(p, 0.0);
+  const phase = -p * R;
+  return {re: a * Math.cos(phase), im: a * Math.sin(phase)};
+}
+
+// Hit packet χ_R(p)=ψ_R(p-k)=g(p-k) exp[-i(p-k)R].
+function hitPacket(p, R) {
+  const pp = p - kTransfer;
+  const a = envelope(pp, 0.0);
+  const phase = -pp * R;
+  return {re: a * Math.cos(phase), im: a * Math.sin(phase)};
+}
+
+function cmul(a, b) {
+  return {re: a.re * b.re - a.im * b.im, im: a.re * b.im + a.im * b.re};
+}
+
+function cadd(a, b) {
+  return {re: a.re + b.re, im: a.im + b.im};
+}
+
+function abs2(a) {
+  return a.re * a.re + a.im * a.im;
+}
+
+function psiFinal(pA, pB) {
+  const termA = cmul(hitPacket(pA, RA), packet(pB, RB));
+  const termB = cmul(packet(pA, RA), hitPacket(pB, RB));
+  return cadd(termA, termB);
+}
+
+rhoRaw = {
+  const rows = [];
+  for (const pA of pValues) {
+    for (const pB of pValues) {
+      rows.push({pA, pB, rho: abs2(psiFinal(pA, pB))});
+    }
+  }
+  return rows;
+}
+
+Z = Math.max(1e-300, rhoRaw.reduce((s, d) => s + d.rho, 0))
+rhoMax = Math.max(1e-300, rhoRaw.reduce((m, d) => Math.max(m, d.rho), 0))
+rho = rhoRaw.map(d => ({
+  ...d,
+  prob: d.rho / Z,
+  density: d.rho / rhoMax,
+  x1: d.pA - 0.5 * dp,
+  x2: d.pA + 0.5 * dp,
+  y1: d.pB - 0.5 * dp,
+  y2: d.pB + 0.5 * dp
+}))
+
+meanA = rho.reduce((s, d) => s + d.pA * d.prob, 0)
+meanB = rho.reduce((s, d) => s + d.pB * d.prob, 0)
+varA = rho.reduce((s, d) => s + (d.pA - meanA) * (d.pA - meanA) * d.prob, 0)
+varB = rho.reduce((s, d) => s + (d.pB - meanB) * (d.pB - meanB) * d.prob, 0)
+
+margA = pValues.map(pA => ({
+  p: pA,
+  P: rho.filter(d => Math.abs(d.pA - pA) < 0.5 * dp).reduce((s, d) => s + d.prob, 0)
+}))
+
+margB = pValues.map(pB => ({
+  p: pB,
+  P: rho.filter(d => Math.abs(d.pB - pB) < 0.5 * dp).reduce((s, d) => s + d.prob, 0)
+}))
+
+// Analytic overlaps from the same Gaussian packets.
+overlapHitUnhit = Math.exp(-(kTransfer * kTransfer) / (8 * sigmaP * sigmaP))
+interferenceRaw = 2 * overlapHitUnhit * overlapHitUnhit * Math.cos(kTransfer * separation)
+normalizationAnalytic = 2 + interferenceRaw
+
+branchMarkers = [
+  {pA: kTransfer, pB: 0, label: "A получил k", color: "#6fffc2"},
+  {pA: 0, pB: kTransfer, label: "B получил k", color: "#ffb25e"}
+]
+
+function gaussianX(x, R) {
+  const z = (x - R) / sigmaX;
+  return Math.exp(-0.5 * z * z);
+}
+
+geometrySvg = {
+  const width = 440;
+  const height = 132;
+  const xHalfRange = 11.5;
+  const xmin = -xHalfRange;
+  const xmax = xHalfRange;
+  const xmap = x => 34 + (x - xmin) / (xmax - xmin) * (width - 68);
+  const ybase = 94;
+  const yscale = 56;
+  const xs = Array.from({length: 180}, (_, i) => xmin + (xmax - xmin) * i / 179);
+  const pathA = xs.map((x, i) => `${i === 0 ? 'M' : 'L'} ${xmap(x).toFixed(2)} ${(ybase - yscale * gaussianX(x, RA)).toFixed(2)}`).join(' ');
+  const pathB = xs.map((x, i) => `${i === 0 ? 'M' : 'L'} ${xmap(x).toFixed(2)} ${(ybase - yscale * gaussianX(x, RB)).toFixed(2)}`).join(' ');
+  const xA = xmap(RA);
+  const xB = xmap(RB);
+  return html`<svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
+    <rect x="0" y="0" width="${width}" height="${height}" rx="14" fill="rgba(255,255,255,0.035)" stroke="rgba(220,235,255,0.14)"/>
+    <line x1="24" y1="${ybase}" x2="${width-24}" y2="${ybase}" stroke="rgba(255,255,255,0.35)"/>
+    <path d="${pathA}" fill="none" stroke="#6fffc2" stroke-width="2.8"/>
+    <path d="${pathB}" fill="none" stroke="#ffb25e" stroke-width="2.8"/>
+    <line x1="${xA}" y1="${ybase}" x2="${xA}" y2="28" stroke="#6fffc2" stroke-opacity="0.45" stroke-dasharray="5 5"/>
+    <line x1="${xB}" y1="${ybase}" x2="${xB}" y2="28" stroke="#ffb25e" stroke-opacity="0.45" stroke-dasharray="5 5"/>
+    <text x="${xA-8}" y="22" fill="#6fffc2" font-size="13" font-weight="700">A</text>
+    <text x="${xB-8}" y="22" fill="#ffb25e" font-size="13" font-weight="700">B</text>
+    <text x="16" y="118" fill="#a9b7d0" font-size="11">пространственные профили: σₓ = 1/(2σₚ) = ${sigmaX.toFixed(2)}</text>
+  </svg>`;
+}
+
+heatmap = Plot.plot({
+  width: 440,
+  height: 282,
+  marginLeft: 48,
+  marginBottom: 36,
+  x: {label: "pₐ", domain: [pMin, pMax]},
+  y: {label: "pᵦ", domain: [pMin, pMax]},
+  color: {type: "sqrt", scheme: "magma", domain: [0, 1], label: "relative |Ψ|²"},
+  marks: [
+    Plot.rect(rho, {x1: "x1", x2: "x2", y1: "y1", y2: "y2", fill: "density"}),
+    Plot.ruleX([meanA], {stroke: "#8ec5ff", strokeWidth: 2}),
+    Plot.ruleY([meanB], {stroke: "#8ec5ff", strokeWidth: 2}),
+    Plot.dot(branchMarkers, {x: "pA", y: "pB", fill: d => d.color, stroke: "#ffffff", strokeWidth: 1.3, r: 4.5}),
+    Plot.text([branchMarkers[0]], {x: "pA", y: "pB", text: "label", fill: d => d.color, dy: -12, fontSize: 12, fontWeight: 700}),
+    Plot.text([branchMarkers[1]], {x: "pA", y: "pB", text: "label", fill: d => d.color, dy: 14, fontSize: 12, fontWeight: 700}),
+    Plot.dot([{pA: meanA, pB: meanB}], {x: "pA", y: "pB", fill: "#8ec5ff", stroke: "white", r: 4})
+  ]
+})
+
+marginals = Plot.plot({
+  width: 440,
+  height: 156,
+  marginLeft: 42,
+  marginBottom: 32,
+  x: {label: "p", domain: [pMin, pMax]},
+  y: {label: "маргинальная вероятность"},
+  grid: true,
+  marks: [
+    Plot.line(margA, {x: "p", y: "P", stroke: "#6fffc2", strokeWidth: 2.5}),
+    Plot.line(margB, {x: "p", y: "P", stroke: "#ffb25e", strokeWidth: 2.5}),
+    Plot.ruleX([meanA], {stroke: "#6fffc2", strokeDasharray: "5 4"}),
+    Plot.ruleX([meanB], {stroke: "#ffb25e", strokeDasharray: "5 4"})
+  ]
+})
+
+widgetStyle = html`<style>
+.reveal .slides section.applet-slide {
+  font-size: 22px;
+}
+.reveal .slides section.applet-slide h2 {
+  font-size: 1.45em;
+  margin: 0 0 0.25rem;
+}
+.reveal .slides section.applet-slide .slide-number {
+  font-size: 0.65em !important;
+}
+.target-widget {
+  max-width: 940px;
+  margin: 0 auto;
+  font: 15px/1.2 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+.target-widget,
+.target-widget * {
+  box-sizing: border-box;
+}
+.target-widget .observablehq--inspect { display: none !important; }
+.target-widget .observablehq {
+  margin: 0;
+}
+.target-widget .observablehq:has(input[type="range"]) {
+  display: inline-block;
+  width: 31.7%;
+  margin: 0 1.2% 0.35rem 0;
+  vertical-align: top;
+}
+.target-widget label {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: center;
+  gap: 0.24rem;
+  margin: 0;
+  color: #f2f2f2;
+  font-size: 15px;
+  line-height: 1.12;
+}
+.target-widget label > span:first-child {
+  min-width: 0;
+}
+.target-widget input[type="range"] {
+  width: 100% !important;
+  accent-color: #ffb347;
+}
+.target-widget input[type="number"] {
+  width: 7.2rem !important;
+  min-width: 0 !important;
+  height: 1.45rem;
+  padding: 0.08rem 0.24rem;
+  border: 1px solid rgba(220,235,255,0.36);
+  border-radius: 6px;
+  background: rgba(255,255,255,0.06);
+  color: #f2f2f2;
+  font: 600 13px/1 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+.target-widget .layout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.45rem;
+  align-items: start;
+  margin-top: 0.1rem;
+}
+.target-widget figure { margin: 0; }
+.target-widget .panel {
+  border: 1px solid rgba(220,235,255,0.12);
+  background: rgba(255,255,255,0.035);
+  border-radius: 12px;
+  padding: 0.38rem;
+}
+.target-widget .plot-title {
+  margin: 0 0 0.2rem;
+  color: #f2f2f2;
+  font-size: 13px;
+  font-weight: 700;
+}
+.target-widget .plot-note {
+  margin: 0.1rem 0 0;
+  color: #a9b7d0;
+  font-size: 11.5px;
+  line-height: 1.2;
+}
+.target-widget .math-inline {
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  white-space: nowrap;
+}
+.target-widget .math-inline sub {
+  font-size: 0.72em;
+  line-height: 0;
+}
+.target-widget .numbers {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.25rem;
+  margin-top: 0.28rem;
+  font-size: 12px;
+}
+.target-widget .num {
+  background: rgba(255,255,255,0.055);
+  border-radius: 8px;
+  padding: 0.28rem 0.4rem;
+}
+.target-widget .explain {
+  font-size: 13px;
+  line-height: 1.27;
+}
+.target-widget .muted { color: #a9b7d0; }
+.target-widget .green { color: #6fffc2; font-weight: 700; }
+.target-widget .orange { color: #ffb25e; font-weight: 700; }
+.target-widget .blue { color: #8ec5ff; font-weight: 700; }
+.target-widget .violet { color: #c39bff; font-weight: 700; }
+</style>`
+
+html`${widgetStyle}
+<div class="layout">
+  <div class="panel">
+    ${geometrySvg}
+    <div class="numbers">
+      <div class="num"><span class="muted">⟨<span class="math-inline">p<sub>A</sub></span>⟩ полного состояния</span><br><span class="green">${meanA.toFixed(3)}</span></div>
+      <div class="num"><span class="muted">⟨<span class="math-inline">p<sub>B</sub></span>⟩ полного состояния</span><br><span class="orange">${meanB.toFixed(3)}</span></div>
+      <div class="num"><span class="muted">перекрытие hit/unhit</span><br><span class="blue">${overlapHitUnhit.toFixed(4)}</span></div>
+      <div class="num"><span class="muted">интерференция raw</span><br><span class="violet">${interferenceRaw.toFixed(4)}</span></div>
+      <div class="num"><span class="muted">ветвь A: (<span class="math-inline">p<sub>A</sub>,p<sub>B</sub></span>)</span><br><span class="green">(${kTransfer.toFixed(2)}, 0)</span></div>
+      <div class="num"><span class="muted">ветвь B: (<span class="math-inline">p<sub>A</sub>,p<sub>B</sub></span>)</span><br><span class="orange">(0, ${kTransfer.toFixed(2)})</span></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="plot-title">|Ψ(<span class="math-inline">p<sub>A</sub>,p<sub>B</sub></span>)|²: два канала в импульсах мишеней</div>
+    ${heatmap}
+    <div class="plot-note">Цвет показывает относительную плотность ρ/max(ρ); вероятности и средние считаются по нормированной ρ.</div>
+  </div>
+  <div class="panel">
+    <div class="plot-title">маргинальные распределения по <span class="math-inline">p<sub>A</sub></span> и <span class="math-inline">p<sub>B</sub></span></div>
+    ${marginals}
+  </div>
+  <div class="panel explain">
+    <b>Что проверять:</b><br>
+    1. При <b>k ≫ σ<sub>p</sub></b> две области на карте отделяются: это режим «сработал A» или «сработал B».<br>
+    2. При малом k или большой σ<sub>p</sub> перекрытие hit/unhit заметно, и два слагаемых интерферируют.<br>
+    3. Расстояние L входит только через фазу: интерференционный вклад ∝ cos(kL).<br><br>
+    <span class="muted">Никаких дополнительных вероятностных правил в апплете нет: строится только |χ<sub>A</sub>ψ<sub>B</sub> + ψ<sub>A</sub>χ<sub>B</sub>|².</span>
+  </div>
+</div>`
+```
+:::
+
+
+# Физический вывод
+
+## Когда возникает обычная картина
+
+Если сигнал сильный, состояния «сработал» и «не сработал» почти ортогональны.
+
+$$
+\langle\chi_A|A\rangle\simeq0,
+\qquad
+\langle B|\chi_B\rangle\simeq0
+$$
+
+$$
+\langle\Psi_f^{(1)}|\Psi_f^{(1)}\rangle
+\simeq
+\langle\chi_A|\chi_A\rangle+
+\langle\chi_B|\chi_B\rangle
+$$
+
+$$
+P\simeq P_A+P_B
+$$
+
+## Когда возникает когерентный отклик
+
+Если изменения малы или мишени работают как один протяжённый объект, cross term сохраняется.
+
+$$
+\langle\chi_A|A\rangle\langle B|\chi_B\rangle\neq0
+$$
+
+$$
+P\neq P_A+P_B
+$$
+
+$$
+\text{это режим когерентного рассеяния, дифракции и интерференции}
+$$
+
+## Главный урок
+
+Точечная картина не была заложена в начало. Она появилась как предел.
+
+$$
+\text{частица}\neq\text{точка}
+$$
+
+$$
+\text{один сильный сигнал}\Rightarrow\text{почти ортогональные конечные состояния}
+$$
+
+$$
+\text{волновое описание само даёт предел: сработал A или сработал B}
+$$
+
+# Финал
+
+## Короткое резюме
+
+::: incremental
+- В первом порядке есть два spectator-канала: поглощение на A или поглощение на B.
+- Финальная волновая функция содержит оба слагаемых.
+- Если слагаемые не перекрываются, вероятности складываются как независимые альтернативы.
+- Если слагаемые перекрываются, возникает когерентный отклик.
+- Никакого превращения волны в точку в формулах не появилось.
+:::

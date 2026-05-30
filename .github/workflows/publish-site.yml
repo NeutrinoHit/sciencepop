@@ -30,7 +30,11 @@ jobs:
           mkdir -p "${site_dir}"
           git archive --format=tar HEAD | tar -x -C "${site_dir}"
           rm -rf "${site_dir}/.github"
-          rm -f "${site_dir}/.gitignore"
+          rm -rf "${site_dir}/ModernPhysics/slides"
+          rm -rf "${site_dir}/WaveOrParticle/obsolete"
+          find "${site_dir}" -type d -name "*.key" -prune -exec rm -rf {} +
+          find "${site_dir}" -type f \( -name "*.key" -o -name "*.qmd" \) -delete
+          rm -f "${site_dir}/.gitignore" "${site_dir}/.gitattributes"
           touch "${site_dir}/.nojekyll"
 
       - name: Publish static site to gh-pages
