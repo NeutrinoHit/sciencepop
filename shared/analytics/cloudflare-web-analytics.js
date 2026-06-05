@@ -1,0 +1,18 @@
+(() => {
+  const token = "0b70c86ad46f4e9686d31b45b98002ac";
+
+  if (!token || token.startsWith("REPLACE_WITH_")) {
+    return;
+  }
+
+  if (document.querySelector("script[data-neutrinohit-cloudflare-web-analytics]")) {
+    return;
+  }
+
+  const script = document.createElement("script");
+  script.defer = true;
+  script.src = "https://static.cloudflareinsights.com/beacon.min.js";
+  script.dataset.cfBeacon = JSON.stringify({ token });
+  script.dataset.neutrinohitCloudflareWebAnalytics = "1";
+  document.head.appendChild(script);
+})();
