@@ -1,0 +1,10 @@
+project:
+  type: website
+  resources:
+    - "shared/reveal/**"
+
+format:
+  html:
+    include-after-body:
+      - text: |
+          <script defer src="https://neutrinohit.github.io/assets/analytics/cloudflare-web-analytics.js"></script>
