@@ -1,0 +1,6 @@
+format:
+  revealjs:
+    include-after-body:
+      text: |
+        <script src="assets/universe-lecture.js"></script>
+        <script data-external="1" data-context-home="../" data-context-home-label="Каталог научпоп-лекций" src="../shared/reveal/neutrinohit-reveal-footer.js"></script>
