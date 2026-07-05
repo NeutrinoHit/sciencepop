@@ -24,4 +24,4 @@ format:
         </style>
     include-after-body:
       text: |
-        <script data-external="1" data-context-home="../" data-context-home-label="Каталог научпоп-лекций" src="../shared/reveal/neutrinohit-reveal-footer.js"></script>
+        <script data-external="1" data-context-home="https://neutrinohit.github.io/ru/outreach.html#wave-or-particle" data-context-home-label="Карта лекции" src="../shared/reveal/neutrinohit-reveal-footer.js"></script>
