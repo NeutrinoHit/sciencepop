@@ -1145,6 +1145,24 @@ $$
 
 ::::
 
+## Игра Синтезируй сам лёгкие элементы {.bbn-qr-slide}
+
+```{=html}
+<div class="bbn-qr-layout">
+  <div class="bbn-qr-copy">
+    <div class="kicker">аплет для телефона</div>
+    <p>Подберите плотность обычного вещества, скорость расширения и время жизни нейтрона.</p>
+    <p>Цель: провести четыре маркера через ворота для гелия-4, дейтерия, гелия-3 и лития-7.</p>
+    <a class="bbn-qr-link" href="https://neutrinohit.github.io/sciencepop/BirthAndLifeUniverse/bbn-game/bbn_applet.html">
+      neutrinohit.github.io/sciencepop/BirthAndLifeUniverse/bbn-game/bbn_applet.html
+    </a>
+  </div>
+  <figure class="bbn-qr-card">
+    <img src="assets/figures/bbn-game-qr.png" alt="QR-код для игры Синтезируй сам лёгкие элементы">
+  </figure>
+</div>
+```
+
 ## {.bbn-applet-slide}
 
 ```{ojs}
@@ -1161,12 +1179,12 @@ bbnLectureApp = {
   }
   const app = window.BBNUI.createApp(bbnLectureGrid, {
     className: "bbn-game-slide",
-    showUniverseButton: false,
+    showUniverseButton: true,
     showAutoButtons: true,
-    initial: {eta10: 2.0, S: 2.0, tau_n: 1000},
+    initial: {eta10: 3.0, S: 0.82, tau_n: 800},
     footerHtml: `
       <a href="https://neutrinohit.github.io/sciencepop/BirthAndLifeUniverse/bbn-game/bbn_applet.html">Открыть аплет</a>
-      <a href="https://github.com/NeutrinoHit/sciencepop/tree/main/BirthAndLifeUniverse/bbn-game">Source code</a>
+      <span>Вычисления основаны на пакете <a href="https://github.com/vallima/PRyMordial">PRyMordial</a></span>
     `
   });
   invalidation.then(() => {
@@ -1728,3 +1746,5 @@ JWST — космический телескоп, запущенный в дек
 :::
 
 :::
+
+# Глава 10. Вопросы?

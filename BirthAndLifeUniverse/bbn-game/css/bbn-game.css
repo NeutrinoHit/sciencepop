@@ -83,7 +83,7 @@
 
 .reveal .bbn-layout {
   display: grid;
-  grid-template-columns: minmax(300px, 0.82fr) minmax(520px, 1.18fr);
+  grid-template-columns: minmax(300px, 0.78fr) minmax(540px, 1.22fr);
   gap: 24px;
   align-items: start;
 }
@@ -175,7 +175,7 @@
 }
 
 .reveal .bbn-scale {
-  margin-bottom: 26px;
+  margin-bottom: 22px;
 }
 
 .reveal .bbn-scale-head {
@@ -230,8 +230,13 @@
   width: 4px;
   height: 40px;
   transform: translateX(-50%);
-  background: #7cefbd;
+  background: #ff8c67;
   border-radius: 3px;
+  box-shadow: 0 0 0 5px rgba(255, 140, 103, 0.14);
+}
+
+.reveal .bbn-marker.is-hit {
+  background: #7cefbd;
   box-shadow: 0 0 0 5px rgba(124, 239, 189, 0.14);
 }
 
@@ -246,39 +251,8 @@
   font-variant-numeric: tabular-nums;
 }
 
-.reveal .bbn-values {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 8px;
-  margin-top: 8px;
-}
-
-.reveal .bbn-values div {
-  min-width: 0;
-  padding: 10px 10px 11px;
-  background: rgba(255, 255, 255, 0.055);
-  border: 1px solid rgba(210, 225, 245, 0.12);
-  border-radius: 8px;
-}
-
-.reveal .bbn-values span {
-  display: block;
-  color: #9fb0c1;
-  font-size: 13px;
-  font-weight: 760;
-}
-
-.reveal .bbn-values strong {
-  display: block;
-  white-space: nowrap;
-  color: #ffffff;
-  font-size: 17px;
-  font-weight: 800;
-  font-variant-numeric: tabular-nums;
-}
-
 .reveal .bbn-verdict {
-  margin-top: 18px;
+  margin-top: 4px;
   padding: 16px 18px;
   border-left: 5px solid #ff8c67;
   border-radius: 8px;
@@ -369,9 +343,5 @@
   .reveal .bbn-layout {
     grid-template-columns: 1fr;
     gap: 14px;
-  }
-
-  .reveal .bbn-values {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
