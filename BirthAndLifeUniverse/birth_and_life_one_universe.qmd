@@ -1131,7 +1131,7 @@ $$
   loop
   preload="metadata"
   controls>
-  <source src="assets/figures/bbn-nucleosynthesis-manim.mp4" type="video/mp4">
+  <source src="assets/figures/bbn-nucleosynthesis-manim.mp4?v=bb0fd7d" type="video/mp4">
 </video>
 ```
 
