@@ -1,0 +1,55 @@
+---
+title: "Синтезируй лёгкие элементы"
+subtitle: "BBN-игра для лекции «Рождение и жизнь одной вселенной»"
+author: "Д. В. Наумов"
+lang: ru-RU
+format:
+  revealjs:
+    theme: black
+    html-math-method: mathjax
+    embed-resources: false
+    slide-number: true
+    chalkboard: false
+    preview-links: false
+    width: 1280
+    height: 720
+    margin: 0.04
+    transition: fade
+    incremental: false
+    css: css/bbn-game.css
+    include-in-header:
+      text: |
+        <script src="js/bbn-grid.js"></script>
+        <script src="js/bbn-ui.js"></script>
+    include-after-body:
+      text: |
+        <script data-external="1" data-context-home="https://neutrinohit.github.io/ru/outreach.html#birth-life-universe" data-context-home-label="Карта лекции" src="../../shared/reveal/neutrinohit-reveal-footer.js"></script>
+execute:
+  echo: false
+---
+
+## {.bbn-slide}
+
+```{ojs}
+//| echo: false
+
+bbnGridData = FileAttachment("data/bbn_grid.json").json()
+
+bbnApp = {
+  if (!window.BBNGrid || !window.BBNUI) {
+    const node = document.createElement("div");
+    node.className = "bbn-game bbn-game-error";
+    node.innerHTML = "<div class='bbn-error-title'>JS-модули не загрузились</div><p class='bbn-error-text'>Проверь js/bbn-grid.js и js/bbn-ui.js.</p>";
+    return node;
+  }
+  const app = window.BBNUI.createApp(bbnGridData, {
+    showUniverseButton: false,
+    showAutoButtons: true,
+    initial: {eta10: 2.0, S: 2.0, tau_n: 1000}
+  });
+  invalidation.then(() => {
+    if (app.cleanup) app.cleanup();
+  });
+  return app;
+}
+```

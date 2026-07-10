@@ -10,8 +10,12 @@
 media/
 img/
 *_files/
+_site/
 *.qmd
 !WaveOrParticle/*.qmd
+!BirthAndLifeUniverse/*.qmd
+!BirthAndLifeUniverse/bbn-game/*.qmd
+external/
 in-a-nutshell/assets/
 in-a-nutshell/ideas.md
 
@@ -20,3 +24,6 @@ __pycache__/
 *.pyc
 .env
 .env.*
+
+/.quarto/
+**/*.quarto_ipynb
