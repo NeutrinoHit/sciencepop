@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Синтезируй лёгкие элементы</title>
+  <link rel="stylesheet" href="css/bbn-game.css">
+  <script src="js/bbn-grid.js"></script>
+  <script src="js/bbn-ui.js"></script>
+</head>
+<body class="bbn-public-page">
+  <main class="reveal bbn-public-shell">
+    <div id="bbn-public-root" class="bbn-public-root" aria-live="polite"></div>
+  </main>
+
+  <script>
+    (async function () {
+      const root = document.getElementById("bbn-public-root");
+      function showError(message) {
+        root.innerHTML = "";
+        const node = document.createElement("div");
+        node.className = "bbn-game bbn-game-error";
+        node.innerHTML = `<div class="bbn-error-title">Аплет не загрузился</div><p class="bbn-error-text">${message}</p>`;
+        root.append(node);
+      }
+
+      try {
+        const response = await fetch("data/bbn_grid.json", {cache: "no-store"});
+        if (!response.ok) {
+          throw new Error(`data/bbn_grid.json: HTTP ${response.status}`);
+        }
+        const grid = await response.json();
+        const app = window.BBNUI.createApp(grid, {
+          className: "bbn-game-public",
+          showUniverseButton: false,
+          showAutoButtons: false,
+          initial: {eta10: 2.0, S: 2.0, tau_n: 1000},
+          footerHtml: `<a href="https://github.com/NeutrinoHit/sciencepop/tree/main/BirthAndLifeUniverse/bbn-game">Source code</a>`
+        });
+        root.innerHTML = "";
+        root.append(app);
+      } catch (error) {
+        showError(error.message);
+      }
+    })();
+  </script>
+  <script defer src="https://neutrinohit.github.io/assets/analytics/cloudflare-web-analytics.js"></script>
+</body>
+</html>

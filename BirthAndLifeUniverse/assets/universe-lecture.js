@@ -1,5 +1,6 @@
 (function () {
   const NS = "http://www.w3.org/2000/svg";
+  let slideVideoPlaybackReady = false;
 
   function escapeHtml(value) {
     return String(value).replace(/[&<>"']/g, (char) => ({
@@ -73,6 +74,39 @@
     return out;
   }
 
+  function wavePath(x, y, width, amp, cycles) {
+    const segments = cycles * 2;
+    const step = width / segments;
+    let d = `M ${x} ${y}`;
+    for (let i = 0; i < segments; i += 1) {
+      const sign = i % 2 === 0 ? -1 : 1;
+      const x1 = x + step * i;
+      d += ` Q ${(x1 + step / 2).toFixed(1)} ${(y + sign * amp).toFixed(1)} ${(x1 + step).toFixed(1)} ${y}`;
+    }
+    return d;
+  }
+
+  function radialWavePath(x1, y1, x2, y2, amp, cycles) {
+    const segments = cycles * 2;
+    const dx = x2 - x1;
+    const dy = y2 - y1;
+    const length = Math.hypot(dx, dy) || 1;
+    const nx = -dy / length;
+    const ny = dx / length;
+    let d = `M ${x1.toFixed(1)} ${y1.toFixed(1)}`;
+    for (let i = 0; i < segments; i += 1) {
+      const t1 = (i + 0.5) / segments;
+      const t2 = (i + 1) / segments;
+      const sign = i % 2 === 0 ? 1 : -1;
+      const cx = x1 + dx * t1 + nx * amp * sign;
+      const cy = y1 + dy * t1 + ny * amp * sign;
+      const ex = x1 + dx * t2;
+      const ey = y1 + dy * t2;
+      d += ` Q ${cx.toFixed(1)} ${cy.toFixed(1)} ${ex.toFixed(1)} ${ey.toFixed(1)}`;
+    }
+    return d;
+  }
+
   const viz = {
     titleUniverse() {
       const rand = hash(2107);
@@ -144,6 +178,94 @@
         ${nodes}
         <text x="470" y="254" text-anchor="middle" class="u-small">нет центра внутри</text>
       `, "Expansion of space");
+    },
+
+    redBlueShift() {
+      return svg(`
+        <text x="58" y="70" class="u-title">Одна идея, два направления</text>
+        <text x="58" y="104" class="u-subtitle">Сравниваем линии спектра с лабораторным образцом и видим, куда они уехали.</text>
+
+        <rect x="72" y="130" width="796" height="130" rx="16" class="u-panel"></rect>
+        <rect x="72" y="290" width="796" height="130" rx="16" class="u-panel"></rect>
+
+        <g transform="translate(204 195)">
+          <circle cx="0" cy="0" r="34" fill="url(#u-hot)" filter="url(#u-glow)" class="u-pulse"></circle>
+          <path d="M -12 -52 L -24 -76 M 12 -52 L 24 -76 M -48 -12 L -72 -22 M 48 -12 L 72 -22 M -44 25 L -66 42 M 44 25 L 66 42" class="u-line gold" opacity="0.72"></path>
+        </g>
+        <line x1="184" y1="236" x2="132" y2="236" class="u-line green u-flow" marker-end="url(#u-arrow)"></line>
+        <path d="${wavePath(278, 195, 410, 29, 4)}" class="u-line u-draw" style="stroke:#ff4d4d;stroke-width:7;animation-duration:4.8s"></path>
+        <g transform="translate(760 195)">
+          <circle cx="0" cy="0" r="28" fill="rgba(244,247,251,0.12)" stroke="rgba(244,247,251,0.68)" stroke-width="3"></circle>
+          <circle cx="-8" cy="-5" r="5" fill="#f4f7fb"></circle>
+          <path d="M 20 18 L 54 44" class="u-line"></path>
+        </g>
+        <text x="108" y="160" class="u-label">удаляется</text>
+        <text x="610" y="242" class="u-rose u-label">волна длиннее: краснее</text>
+
+        <g transform="translate(204 355)">
+          <circle cx="0" cy="0" r="34" fill="url(#u-hot)" filter="url(#u-glow)" class="u-pulse" style="animation-delay:-1.2s"></circle>
+          <path d="M -12 -52 L -24 -76 M 12 -52 L 24 -76 M -48 -12 L -72 -22 M 48 -12 L 72 -22 M -44 25 L -66 42 M 44 25 L 66 42" class="u-line gold" opacity="0.72"></path>
+        </g>
+        <line x1="224" y1="396" x2="276" y2="396" class="u-line green u-flow" marker-end="url(#u-arrow)"></line>
+        <path d="${wavePath(278, 355, 410, 29, 8)}" class="u-line u-draw" style="stroke:#4d7dff;stroke-width:7;animation-duration:4.0s"></path>
+        <g transform="translate(760 355)">
+          <circle cx="0" cy="0" r="28" fill="rgba(244,247,251,0.12)" stroke="rgba(244,247,251,0.68)" stroke-width="3"></circle>
+          <circle cx="-8" cy="-5" r="5" fill="#f4f7fb"></circle>
+          <path d="M 20 18 L 54 44" class="u-line"></path>
+        </g>
+        <text x="108" y="320" class="u-label">приближается</text>
+        <text x="600" y="402" class="u-blue u-label">волна короче: синее</text>
+      `, "Redshift and blueshift");
+    },
+
+    hubbleLaw() {
+      const points = [
+        [190, 348, 12, "#f4f7fb", "близко"],
+        [310, 306, 15, "#ffb3b3", ""],
+        [445, 260, 18, "#ff7777", ""],
+        [600, 205, 21, "#ff4d4d", ""],
+        [765, 148, 24, "#ff2424", "далеко"]
+      ];
+      const galaxies = points.map(([x, y, r, color, label], i) => `
+        <g class="u-pulse" style="animation-delay:${-i * 0.32}s">
+          <circle cx="${x}" cy="${y}" r="${r}" fill="${color}" opacity="0.9" filter="url(#u-glow)"></circle>
+          <path d="M ${x - r * 1.6} ${y} C ${x - r * 0.5} ${y - r * 0.7}, ${x + r * 0.5} ${y + r * 0.7}, ${x + r * 1.6} ${y}" fill="none" stroke="rgba(244,247,251,0.75)" stroke-width="2"></path>
+          ${label ? `<text x="${x}" y="${y + 46}" text-anchor="middle" class="u-small">${label}</text>` : ""}
+        </g>
+      `).join("");
+      return svg(`
+        <text x="58" y="70" class="u-title">Чем дальше, тем быстрее</text>
+        <text x="58" y="104" class="u-subtitle">Это выглядит так, как будто масштаб пространства растет всюду.</text>
+
+        <line x1="118" y1="390" x2="835" y2="390" class="u-line" marker-end="url(#u-arrow)"></line>
+        <line x1="118" y1="390" x2="118" y2="118" class="u-line" marker-end="url(#u-arrow)"></line>
+        <path d="M 154 360 L 804 128" class="u-line rose u-flow" opacity="0.85"></path>
+        ${galaxies}
+
+        <text x="470" y="462" text-anchor="middle" class="u-label">расстояние до галактики</text>
+        <text x="58" y="235" transform="rotate(-90 58 235)" text-anchor="middle" class="u-label">скорость удаления</text>
+        <text x="555" y="344" class="u-title" style="font-size:38px;fill:#ffcf70">v = H₀ d</text>
+        <text x="555" y="380" class="u-small">закон Хаббла - первый рабочий спидометр расширения</text>
+      `, "Hubble law");
+    },
+
+    sphereSurface() {
+      const sphereRadius = 186;
+      return svg(`
+        <text x="58" y="58" class="u-title">Центр карты выбирает наблюдатель</text>
+        <text x="58" y="90" class="u-subtitle">«Мы» стартуем в центре. Через четверть оборота на этом месте оказывается «Они».</text>
+
+        <g data-sphere-surface="1" data-radius="${sphereRadius}" transform="translate(470 296)">
+          <circle cx="0" cy="0" r="${sphereRadius}" fill="rgba(118,199,255,0.075)" stroke="rgba(118,199,255,0.58)" stroke-width="3.2"></circle>
+          <circle cx="-58" cy="-54" r="96" fill="rgba(244,247,251,0.045)"></circle>
+          <line x1="0" y1="${-sphereRadius - 20}" x2="0" y2="${sphereRadius + 20}" class="u-line u-dashed" opacity="0.2"></line>
+          <text x="14" y="${-sphereRadius - 10}" class="u-small" style="fill:rgba(197,207,221,0.72)">ось Z</text>
+          <g data-sphere-grid="1"></g>
+          <g data-sphere-galaxies="1"></g>
+          <g data-sphere-observers="1"></g>
+        </g>
+
+      `, "Rotating sphere surface with relative observers");
     },
 
     cooling() {
@@ -439,11 +561,246 @@
     });
   }
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", renderAll);
-  } else {
-    renderAll();
+  function setupSphereSurfaceAnimations() {
+    document.querySelectorAll("[data-sphere-surface]").forEach((surface) => {
+      if (surface.__sphereSurfaceReady) {
+        return;
+      }
+      surface.__sphereSurfaceReady = true;
+
+      const radius = Number(surface.getAttribute("data-radius")) || 186;
+      const gridLayer = surface.querySelector("[data-sphere-grid]");
+      const galaxiesLayer = surface.querySelector("[data-sphere-galaxies]");
+      const observersLayer = surface.querySelector("[data-sphere-observers]");
+      const palette = ["#76c7ff", "#c3a5ff", "#ff8f9f", "#ffcf70", "#8fe3a2", "#7dd3fc"];
+
+      const normalize = (v) => {
+        const length = Math.hypot(v.x, v.y, v.z) || 1;
+        return { x: v.x / length, y: v.y / length, z: v.z / length };
+      };
+
+      const fibonacciSphere = (count) => {
+        const points = [];
+        const golden = Math.PI * (3 - Math.sqrt(5));
+        for (let i = 0; i < count; i += 1) {
+          const z = 1 - 2 * ((i + 0.5) / count);
+          const r = Math.sqrt(Math.max(0, 1 - z * z));
+          const theta = golden * i;
+          points.push(normalize({
+            x: Math.cos(theta) * r,
+            y: Math.sin(theta) * r,
+            z
+          }));
+        }
+        return points;
+      };
+
+      const rotateAndProject = (dir, angle, currentRadius) => {
+        const c = Math.cos(angle);
+        const s = Math.sin(angle);
+        const depth = dir.x * c - dir.y * s;
+        const horizontal = dir.x * s + dir.y * c;
+        return {
+          x: horizontal * currentRadius,
+          y: -dir.z * currentRadius,
+          depth
+        };
+      };
+
+      const pathFor = (dirs, angle, currentRadius) => dirs.map((dir, i) => {
+        const p = rotateAndProject(dir, angle, currentRadius);
+        return `${i === 0 ? "M" : "L"} ${p.x.toFixed(1)} ${p.y.toFixed(1)}`;
+      }).join(" ");
+
+      const circleDirs = (pointForAngle, steps = 96) => {
+        const dirs = [];
+        for (let i = 0; i <= steps; i += 1) {
+          dirs.push(pointForAngle(i / steps * Math.PI * 2));
+        }
+        return dirs;
+      };
+
+      const latitudes = [-60, -35, 0, 35, 60].map((deg) => {
+        const lat = deg * Math.PI / 180;
+        const z = Math.sin(lat);
+        const r = Math.cos(lat);
+        return circleDirs((angle) => ({ x: r * Math.cos(angle), y: r * Math.sin(angle), z }));
+      });
+
+      const meridians = [0, 30, 60, 90, 120, 150].map((deg) => {
+        const lon = deg * Math.PI / 180;
+        return circleDirs((angle) => ({
+          x: Math.cos(angle) * Math.cos(lon),
+          y: Math.cos(angle) * Math.sin(lon),
+          z: Math.sin(angle)
+        }));
+      });
+
+      const galaxies = fibonacciSphere(58).map((dir, i) => ({
+        dir,
+        color: palette[i % palette.length],
+        size: 3.5 + (i % 5) * 0.55
+      }));
+
+      const observers = [
+        ["Мы", 0, "#ffcf70"],
+        ["Они", -Math.PI / 2, "#8fe3a2"],
+        ["Они", -Math.PI, "#c3a5ff"],
+        ["Они", -3 * Math.PI / 2, "#ff8f9f"]
+      ].map(([label, angle, color]) => ({
+        label,
+        color,
+        dir: { x: Math.cos(angle), y: Math.sin(angle), z: 0 }
+      }));
+
+      const easedQuarterAngle = (elapsed) => {
+        const segment = 3600;
+        const hold = 1050;
+        const local = elapsed % segment;
+        const turn = Math.floor(elapsed / segment);
+        if (local < hold) {
+          return turn * Math.PI / 2;
+        }
+        const t = Math.min(1, (local - hold) / (segment - hold));
+        const smooth = t * t * (3 - 2 * t);
+        return (turn + smooth) * Math.PI / 2;
+      };
+
+      const draw = (elapsed) => {
+        const angle = easedQuarterAngle(elapsed);
+        const currentRadius = radius * (1 + 0.025 * Math.sin(elapsed / 1350));
+
+        gridLayer.innerHTML = `
+          ${latitudes.map((dirs) => `<path d="${pathFor(dirs, angle, currentRadius)}" fill="none" stroke="rgba(244,247,251,0.13)" stroke-width="1.5"></path>`).join("")}
+          ${meridians.map((dirs) => `<path d="${pathFor(dirs, angle, currentRadius)}" fill="none" stroke="rgba(244,247,251,0.16)" stroke-width="1.5"></path>`).join("")}
+        `;
+
+        galaxiesLayer.innerHTML = galaxies
+          .map((galaxy) => {
+            const p = rotateAndProject(galaxy.dir, angle, currentRadius * 1.01);
+            return { ...galaxy, ...p };
+          })
+          .sort((a, b) => a.depth - b.depth)
+          .map((galaxy) => {
+            const front = (galaxy.depth + 1) / 2;
+            const opacity = 0.18 + 0.72 * front;
+            const r = galaxy.size + 4.2 * front;
+            return `<circle cx="${galaxy.x.toFixed(1)}" cy="${galaxy.y.toFixed(1)}" r="${r.toFixed(1)}" fill="${galaxy.color}" opacity="${opacity.toFixed(2)}" stroke="rgba(244,247,251,${(0.18 + front * 0.42).toFixed(2)})" stroke-width="1.1"></circle>`;
+          })
+          .join("");
+
+        observersLayer.innerHTML = observers
+          .map((observer) => {
+            const p = rotateAndProject(observer.dir, angle, currentRadius * 1.035);
+            return { ...observer, ...p };
+          })
+          .filter((observer) => observer.depth > -0.12)
+          .sort((a, b) => a.depth - b.depth)
+          .map((observer) => {
+            const front = Math.max(0, observer.depth);
+            const r = 11 + 7 * front;
+            const opacity = 0.45 + 0.55 * front;
+            return `
+              <g opacity="${opacity.toFixed(2)}">
+                <circle cx="${observer.x.toFixed(1)}" cy="${observer.y.toFixed(1)}" r="${(r + 9).toFixed(1)}" fill="${observer.color}" opacity="0.18"></circle>
+                <circle cx="${observer.x.toFixed(1)}" cy="${observer.y.toFixed(1)}" r="${r.toFixed(1)}" fill="${observer.color}" stroke="rgba(244,247,251,0.86)" stroke-width="2.4"></circle>
+                <text x="${observer.x.toFixed(1)}" y="${(observer.y - r - 12).toFixed(1)}" text-anchor="middle" class="u-title" style="font-size:${(22 + 7 * front).toFixed(1)}px;fill:${observer.color}">${observer.label}</text>
+              </g>
+            `;
+          })
+          .join("");
+      };
+
+      let elapsed = 0;
+      let lastVisibleNow = null;
+      draw(0);
+
+      const animate = (now) => {
+        if (!document.documentElement.contains(surface)) {
+          return;
+        }
+        const section = surface.closest("section");
+        if (section && !section.classList.contains("present")) {
+          lastVisibleNow = null;
+          window.requestAnimationFrame(animate);
+          return;
+        }
+        if (lastVisibleNow === null) {
+          lastVisibleNow = now;
+        }
+        elapsed += now - lastVisibleNow;
+        lastVisibleNow = now;
+        draw(elapsed);
+        window.requestAnimationFrame(animate);
+      };
+
+      window.requestAnimationFrame(animate);
+    });
   }
 
-  window.addEventListener("load", renderAll, { once: true });
+  function slideVideoStart(video) {
+    const start = Number.parseFloat(video.dataset.videoStart || "0");
+    return Number.isFinite(start) && start > 0 ? start : 0;
+  }
+
+  function seekSlideVideoStart(video) {
+    const start = slideVideoStart(video);
+    try {
+      if (Math.abs(video.currentTime - start) > 0.2) {
+        video.currentTime = start;
+      }
+    } catch (error) {
+      // Some browsers disallow seeking before metadata is ready.
+    }
+  }
+
+  function syncSlideVideos() {
+    document.querySelectorAll("video[data-slide-video]").forEach((video) => {
+      const isCurrent = Boolean(video.closest("section.present"));
+      const start = slideVideoStart(video);
+      if (isCurrent) {
+        if (video.currentTime < start - 0.15) {
+          seekSlideVideoStart(video);
+        }
+        video.play().catch(() => {});
+      } else {
+        video.pause();
+        seekSlideVideoStart(video);
+      }
+    });
+  }
+
+  function setupSlideVideoPlayback() {
+    if (slideVideoPlaybackReady) {
+      syncSlideVideos();
+      return;
+    }
+    slideVideoPlaybackReady = true;
+
+    if (window.Reveal && typeof window.Reveal.on === "function") {
+      window.Reveal.on("ready", syncSlideVideos);
+      window.Reveal.on("slidechanged", syncSlideVideos);
+    } else if (window.Reveal && typeof window.Reveal.addEventListener === "function") {
+      window.Reveal.addEventListener("ready", syncSlideVideos);
+      window.Reveal.addEventListener("slidechanged", syncSlideVideos);
+    }
+
+    window.addEventListener("hashchange", syncSlideVideos);
+    setTimeout(syncSlideVideos, 250);
+    setTimeout(syncSlideVideos, 900);
+  }
+
+  function boot() {
+    renderAll();
+    setupSphereSurfaceAnimations();
+    setupSlideVideoPlayback();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", boot);
+  } else {
+    boot();
+  }
+
+  window.addEventListener("load", boot, { once: true });
 })();

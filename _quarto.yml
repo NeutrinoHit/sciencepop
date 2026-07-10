@@ -1,7 +1,18 @@
 project:
   type: website
+  render:
+    - "BirthAndLifeUniverse/birth_and_life_one_universe.qmd"
+    - "WaveOrParticle/two_targets_qft_particle_wave_with_applet.qmd"
   resources:
     - "shared/reveal/**"
+    - "BirthAndLifeUniverse/assets/figures/**"
+    - "BirthAndLifeUniverse/bbn-game/bbn_applet.html"
+    - "BirthAndLifeUniverse/bbn-game/css/**"
+    - "BirthAndLifeUniverse/bbn-game/data/**"
+    - "BirthAndLifeUniverse/bbn-game/js/**"
+
+website:
+  search: false
 
 format:
   html:

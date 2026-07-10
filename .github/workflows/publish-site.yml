@@ -22,6 +22,12 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Render Quarto pages
+        run: quarto render
+
       - name: Prepare static site
         run: |
           set -euo pipefail
@@ -29,6 +35,7 @@ jobs:
           rm -rf "${site_dir}"
           mkdir -p "${site_dir}"
           git archive --format=tar HEAD | tar -x -C "${site_dir}"
+          cp -R _site/. "${site_dir}/"
           rm -rf "${site_dir}/.github"
           rm -rf "${site_dir}/ModernPhysics/slides"
           rm -rf "${site_dir}/WaveOrParticle/obsolete"
