@@ -345,3 +345,116 @@
     gap: 14px;
   }
 }
+
+@media (max-height: 700px) and (min-width: 901px) {
+  .bbn-public-shell {
+    padding: 10px;
+  }
+
+  .bbn-public-shell .bbn-game {
+    width: min(1000px, 100%);
+    min-height: 0;
+    padding: 14px 18px;
+  }
+
+  .bbn-public-shell .bbn-header {
+    gap: 16px;
+  }
+
+  .bbn-public-shell .bbn-kicker {
+    font-size: 15px;
+  }
+
+  .bbn-public-shell .bbn-title {
+    font-size: 34px;
+  }
+
+  .bbn-public-shell .bbn-subtitle {
+    max-width: none;
+    margin: 8px 0 12px;
+    font-size: 17px;
+    line-height: 1.2;
+  }
+
+  .bbn-public-shell .bbn-layout {
+    grid-template-columns: minmax(270px, 0.68fr) minmax(500px, 1.32fr);
+    gap: 14px;
+  }
+
+  .bbn-public-shell .bbn-controls,
+  .bbn-public-shell .bbn-results {
+    padding: 12px;
+  }
+
+  .bbn-public-shell .bbn-control {
+    margin-bottom: 12px;
+  }
+
+  .bbn-public-shell .bbn-control-top,
+  .bbn-public-shell .bbn-scale-head {
+    margin-bottom: 3px;
+  }
+
+  .bbn-public-shell .bbn-control-label,
+  .bbn-public-shell .bbn-control-value {
+    font-size: 17px;
+  }
+
+  .bbn-public-shell .bbn-scale {
+    margin-bottom: 6px;
+  }
+
+  .bbn-public-shell .bbn-scale-title {
+    font-size: 18px;
+  }
+
+  .bbn-public-shell .bbn-scale-range {
+    font-size: 14px;
+  }
+
+  .bbn-public-shell .bbn-scale-track {
+    height: 34px;
+  }
+
+  .bbn-public-shell .bbn-scale-track::before {
+    top: 12px;
+    height: 10px;
+  }
+
+  .bbn-public-shell .bbn-target-band {
+    top: 8px;
+    height: 20px;
+  }
+
+  .bbn-public-shell .bbn-marker {
+    top: 2px;
+    height: 30px;
+  }
+
+  .bbn-public-shell .bbn-marker-label {
+    top: 29px;
+    font-size: 12px;
+  }
+
+  .bbn-public-shell .bbn-verdict {
+    margin-top: 0;
+    padding: 10px 13px;
+  }
+
+  .bbn-public-shell .bbn-verdict strong,
+  .bbn-public-shell .bbn-error-title {
+    font-size: 20px;
+  }
+
+  .bbn-public-shell .bbn-verdict span,
+  .bbn-public-shell .bbn-error-text {
+    margin-top: 4px;
+    font-size: 15px;
+  }
+
+  .bbn-public-shell .bbn-app-footer {
+    gap: 12px;
+    margin-top: 6px;
+    font-size: 12px;
+  }
+}
