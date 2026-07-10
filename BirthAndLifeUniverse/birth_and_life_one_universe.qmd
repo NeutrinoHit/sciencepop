@@ -1118,13 +1118,30 @@ $$
 \mathrm{D}\rightarrow {}^3\mathrm{He},\,{}^3\mathrm{H}\rightarrow {}^4\mathrm{He}
 $$
 
-## Что двигает результат?
+## Первичный нуклеосинтез: окно синтеза {.bbn-video-slide}
+
+```{=html}
+<video
+  class="slide-video media-width-full media-height-lg"
+  style="--media-max-height: 590px;"
+  data-slide-video
+  data-autoplay
+  muted
+  playsinline
+  loop
+  preload="metadata"
+  controls>
+  <source src="assets/figures/bbn-nucleosynthesis-manim.mp4" type="video/mp4">
+</video>
+```
+
+## От чего зависят количества лёгких ядер?
 
 :::: {.slide-split}
 
 ::: {.slide-copy}
 
-**Гелий-4** почти напрямую считает, сколько нейтронов дожило до открытия дейтериевого горлышка:
+**Гелий-4** показывает, сколько нейтронов дожило до открытия дейтериевого горлышка:
 
 $$
 Y_p \simeq \frac{2(n/p)}{1+(n/p)}.
