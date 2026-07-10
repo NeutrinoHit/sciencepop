@@ -1,10 +1,66 @@
 (function () {
   "use strict";
 
-  const TARGET_R_HE = [0.3, 0.36];
-  const TARGET_D_H = [2.2e-5, 2.8e-5];
-  const D_H_RANGE = [1e-6, 1e-4];
-  const R_HE_RANGE = [0, 1];
+  const PARAM_RANGES = {
+    eta10: [3.0, 10.0],
+    S: [0.82, 1.35],
+    tau_n: [800, 960],
+  };
+
+  const STANDARD_PARAMS = {
+    eta10: 6.1,
+    S: 1.0,
+    tau_n: 880,
+  };
+
+  const DEFAULT_INITIAL = {
+    eta10: 3.0,
+    S: 0.82,
+    tau_n: 800,
+  };
+
+  const GOALS = [
+    {
+      key: "R_He",
+      titleHtml: "R<sub>He</sub> = M(<sup>4</sup>He)/M(H)",
+      rangeHtml: "0–1",
+      range: [0, 1],
+      gate: [0.3, 0.36],
+      scale: "linear",
+      markerText: "R_He marker",
+      format: (value) => formatFixed(value, 3),
+    },
+    {
+      key: "D_H",
+      titleHtml: "D/H по числу",
+      rangeHtml: "10<sup>−6</sup>–10<sup>−4</sup>",
+      range: [1e-6, 1e-4],
+      gate: [2.2e-5, 2.8e-5],
+      scale: "log",
+      markerText: "D/H marker",
+      format: (value) => formatScientific(value),
+    },
+    {
+      key: "He3_H",
+      titleHtml: "<sup>3</sup>He/H по числу",
+      rangeHtml: "10<sup>−6</sup>–10<sup>−4</sup>",
+      range: [1e-6, 1e-4],
+      gate: [0.8e-5, 1.3e-5],
+      scale: "log",
+      markerText: "He3/H marker",
+      format: (value) => formatScientific(value),
+    },
+    {
+      key: "Li7_H",
+      titleHtml: "<sup>7</sup>Li/H по числу",
+      rangeHtml: "10<sup>−11</sup>–10<sup>−8</sup>",
+      range: [1e-11, 1e-8],
+      gate: [3e-10, 7e-10],
+      scale: "log",
+      markerText: "Li7/H marker",
+      format: (value) => formatScientific(value),
+    },
+  ];
 
   function el(tag, className, text) {
     const node = document.createElement(tag);
@@ -63,9 +119,22 @@
     return 100 * window.BBNGrid.clamp((logValue - logMin) / (logMax - logMin), 0, 1);
   }
 
+  function goalPercent(value, goal) {
+    if (goal.scale === "log") return logPercent(value, goal.range);
+    return linearPercent(value, goal.range);
+  }
+
+  function isInside(value, gate) {
+    return value >= gate[0] && value <= gate[1];
+  }
+
   function setRangeValue(input, value) {
     input.value = String(value);
     input.dispatchEvent(new Event("input", { bubbles: true }));
+  }
+
+  function axisCovers(axis, range) {
+    return Array.isArray(axis) && axis.length >= 2 && axis[0] <= range[0] && axis[axis.length - 1] >= range[1];
   }
 
   function createControl(labelHtml, min, max, step, value, formatter) {
@@ -88,18 +157,18 @@
     return { wrap, input, valueNode };
   }
 
-  function createScale(titleHtml, rangeHtml, target, markerText) {
+  function createGoalScale(goal) {
     const scale = el("div", "bbn-scale");
     const head = el("div", "bbn-scale-head");
-    head.append(htmlEl("span", "bbn-scale-title", titleHtml), htmlEl("span", "bbn-scale-range", rangeHtml));
+    head.append(htmlEl("span", "bbn-scale-title", goal.titleHtml), htmlEl("span", "bbn-scale-range", goal.rangeHtml));
     const track = el("div", "bbn-scale-track");
     const band = el("div", "bbn-target-band");
     const marker = el("div", "bbn-marker");
-    marker.setAttribute("aria-label", markerText);
+    marker.setAttribute("aria-label", goal.markerText);
     const label = el("div", "bbn-marker-label", "—");
     track.append(band, marker, label);
     scale.append(head, track);
-    return { scale, band, marker, label };
+    return { goal, scale, band, marker, label };
   }
 
   function setBand(element, leftPct, rightPct) {
@@ -107,31 +176,31 @@
     element.style.width = `${Math.max(0, rightPct - leftPct)}%`;
   }
 
-  function setMarker(marker, label, percent, text) {
-    marker.style.left = `${percent}%`;
-    label.style.left = `${percent}%`;
-    label.textContent = text;
+  function setGoalMarker(view, percent, text, hit) {
+    view.marker.style.left = `${percent}%`;
+    view.label.style.left = `${percent}%`;
+    view.label.textContent = text;
+    view.marker.classList.toggle("is-hit", hit);
+    view.marker.classList.toggle("is-off", !hit);
+    view.label.classList.toggle("is-hit", hit);
+    view.label.classList.toggle("is-off", !hit);
+    view.scale.classList.toggle("is-hit", hit);
+    view.scale.classList.toggle("is-off", !hit);
   }
 
-  function classify(rHe, dH) {
-    const heliumOk = rHe >= TARGET_R_HE[0] && rHe <= TARGET_R_HE[1];
-    const deuteriumOk = dH >= TARGET_D_H[0] && dH <= TARGET_D_H[1];
-    if (heliumOk && deuteriumOk) {
-      return {
-        ok: true,
-        title: "Похоже на нашу Вселенную",
-        details: "R<sub>He</sub> и D/H попали в целевые полосы.",
-      };
-    }
-    const parts = [];
-    if (rHe < TARGET_R_HE[0]) parts.push("гелия мало");
-    if (rHe > TARGET_R_HE[1]) parts.push("гелия много");
-    if (dH < TARGET_D_H[0]) parts.push("дейтерия мало");
-    if (dH > TARGET_D_H[1]) parts.push("дейтерия много");
+  function evaluate(point) {
+    const values = {
+      R_He: point.Yp / (1 - point.Yp),
+      D_H: point.D_H,
+      He3_H: point.He3_H,
+      Li7_H: point.Li7_H,
+    };
+    const hits = GOALS.reduce((count, goal) => count + (isInside(values[goal.key], goal.gate) ? 1 : 0), 0);
     return {
-      ok: false,
-      title: "Не наша Вселенная",
-      details: parts.join(", "),
+      values,
+      hits,
+      total: GOALS.length,
+      ok: hits === GOALS.length,
     };
   }
 
@@ -159,26 +228,29 @@
     if (!validation.ok) return renderError(grid, validation);
 
     const axes = grid.axes;
-    const etaMin = axes.eta10[0];
-    const etaMax = axes.eta10[axes.eta10.length - 1];
-    const tauMin = axes.tau_n[0];
-    const tauMax = axes.tau_n[axes.tau_n.length - 1];
     const sAxis = Array.isArray(axes.S) && axes.S.length === axes.DeltaNeff.length
       ? axes.S
       : axes.DeltaNeff.map(window.BBNGrid.sFromDeltaNeff);
-    const sMin = sAxis[0];
-    const sMax = sAxis[sAxis.length - 1];
+
+    if (
+      !axisCovers(axes.eta10, PARAM_RANGES.eta10) ||
+      !axisCovers(sAxis, PARAM_RANGES.S) ||
+      !axisCovers(axes.tau_n, PARAM_RANGES.tau_n)
+    ) {
+      return renderError(grid, {
+        ok: false,
+        message:
+          "Сетка PRyMordial не покрывает игровые диапазоны: η10 = 3.0–10.0, S = 0.82–1.35, τn = 800–960 s.",
+      });
+    }
+
     const config = {
       className: "",
       kicker: "Большой взрыв: нуклеосинтез",
       title: "Синтезируй лёгкие элементы",
       subtitle:
-        "Настрой плотность барионов, скорость расширения и время жизни нейтрона так, чтобы попасть в наблюдаемые полосы.",
-      initial: {
-        eta10: etaMin,
-        S: sMax,
-        tau_n: tauMax,
-      },
+        "Настрой плотность барионов, скорость расширения и время жизни нейтрона так, чтобы все четыре маркера прошли через ворота.",
+      initial: DEFAULT_INITIAL,
       showUniverseButton: true,
       showAutoButtons: true,
       showDeltaNeff: false,
@@ -186,9 +258,7 @@
       ...options,
     };
     config.initial = {
-      eta10: etaMin,
-      S: sMax,
-      tau_n: tauMax,
+      ...DEFAULT_INITIAL,
       ...(options.initial || {}),
     };
 
@@ -206,27 +276,27 @@
 
     const eta = createControl(
       "η<sub>10</sub> = 10<sup>10</sup>η",
-      etaMin,
-      etaMax,
+      PARAM_RANGES.eta10[0],
+      PARAM_RANGES.eta10[1],
       0.01,
-      window.BBNGrid.clamp(config.initial.eta10, etaMin, etaMax),
-      (v) => formatFixed(v, 2)
+      window.BBNGrid.clamp(config.initial.eta10, PARAM_RANGES.eta10[0], PARAM_RANGES.eta10[1]),
+      (value) => formatFixed(value, 2)
     );
     const s = createControl(
       "S = H/H<sub>std</sub>",
-      sMin,
-      sMax,
+      PARAM_RANGES.S[0],
+      PARAM_RANGES.S[1],
       0.001,
-      window.BBNGrid.clamp(config.initial.S, sMin, sMax),
-      (v) => formatFixed(v, 3)
+      window.BBNGrid.clamp(config.initial.S, PARAM_RANGES.S[0], PARAM_RANGES.S[1]),
+      (value) => formatFixed(value, 3)
     );
     const tau = createControl(
       "τ<sub>n</sub>",
-      tauMin,
-      tauMax,
+      PARAM_RANGES.tau_n[0],
+      PARAM_RANGES.tau_n[1],
       0.1,
-      window.BBNGrid.clamp(config.initial.tau_n, tauMin, tauMax),
-      (v) => `${formatFixed(v, 1)} с`
+      window.BBNGrid.clamp(config.initial.tau_n, PARAM_RANGES.tau_n[0], PARAM_RANGES.tau_n[1]),
+      (value) => `${formatFixed(value, 1)} с`
     );
     controls.append(eta.wrap, s.wrap, tau.wrap);
 
@@ -248,22 +318,18 @@
     const params = el("div", "bbn-param-readout");
     if (config.showDeltaNeff) controls.append(params);
 
-    const rScale = createScale("R<sub>He</sub> = M(<sup>4</sup>He)/M(H)", "0–1", TARGET_R_HE, "R_He marker");
-    setBand(
-      rScale.band,
-      linearPercent(TARGET_R_HE[0], R_HE_RANGE),
-      linearPercent(TARGET_R_HE[1], R_HE_RANGE)
-    );
-    const dScale = createScale("D/H по числу", "10<sup>−6</sup>–10<sup>−4</sup>", TARGET_D_H, "D/H marker");
-    setBand(
-      dScale.band,
-      logPercent(TARGET_D_H[0], D_H_RANGE),
-      logPercent(TARGET_D_H[1], D_H_RANGE)
-    );
+    const goalViews = GOALS.map(createGoalScale);
+    for (const view of goalViews) {
+      setBand(
+        view.band,
+        goalPercent(view.goal.gate[0], view.goal),
+        goalPercent(view.goal.gate[1], view.goal)
+      );
+      results.append(view.scale);
+    }
 
-    const values = el("div", "bbn-values");
     const verdict = el("div", "bbn-verdict");
-    results.append(rScale.scale, dScale.scale, values, verdict);
+    results.append(verdict);
     layout.append(controls, results);
     root.append(header, subtitle, layout);
     if (config.footerHtml) {
@@ -293,24 +359,21 @@
           DeltaNeff: deltaNeff,
           tau_n: tauN,
         });
-        const rHe = point.Yp / (1 - point.Yp);
-        const state = classify(rHe, point.D_H);
+        const state = evaluate(point);
 
-        setMarker(rScale.marker, rScale.label, linearPercent(rHe, R_HE_RANGE), formatFixed(rHe, 3));
-        setMarker(dScale.marker, dScale.label, logPercent(point.D_H, D_H_RANGE), formatScientific(point.D_H));
+        for (const view of goalViews) {
+          const value = state.values[view.goal.key];
+          const hit = isInside(value, view.goal.gate);
+          setGoalMarker(view, goalPercent(value, view.goal), view.goal.format(value), hit);
+        }
 
         if (config.showDeltaNeff) {
           params.innerHTML = `ΔN<sub>eff</sub> = ${formatFixed(deltaNeff, 3)}`;
         }
-        values.innerHTML = `
-          <div><span>Y<sub>p</sub></span><strong>${formatFixed(point.Yp, 4)}</strong></div>
-          <div><span>R<sub>He</sub></span><strong>${formatFixed(rHe, 3)}</strong></div>
-          <div><span>D/H</span><strong>${formatScientific(point.D_H)}</strong></div>
-          <div><span><sup>3</sup>He/H</span><strong>${formatScientific(point.He3_H)}</strong></div>
-          <div><span><sup>7</sup>Li/H</span><strong>${formatScientific(point.Li7_H)}</strong></div>
-        `;
         verdict.className = `bbn-verdict ${state.ok ? "is-ok" : "is-off"}`;
-        verdict.innerHTML = `<strong>${state.title}</strong><span>${state.details}</span>`;
+        verdict.innerHTML = state.ok
+          ? "<strong>Попали в первичный состав нашей Вселенной</strong>"
+          : `<strong>попаданий: ${state.hits}/${state.total}</strong>`;
       } catch (error) {
         verdict.className = "bbn-verdict is-off";
         verdict.innerHTML = `<strong>Ошибка интерполяции</strong><span>${error.message}</span>`;
@@ -319,9 +382,21 @@
 
     function autoTick(now) {
       const t = (now - autoStartedAt) / 1000;
-      const etaValue = window.BBNGrid.clamp(6.1 + 1.2 * Math.sin(t), etaMin, etaMax);
-      const sValue = window.BBNGrid.clamp(1.0 + 0.18 * Math.sin(0.7 * t + 1), sMin, sMax);
-      const tauValue = window.BBNGrid.clamp(880 + 6 * Math.sin(0.45 * t + 2), tauMin, tauMax);
+      const etaValue = window.BBNGrid.clamp(
+        STANDARD_PARAMS.eta10 + 1.2 * Math.sin(t),
+        PARAM_RANGES.eta10[0],
+        PARAM_RANGES.eta10[1]
+      );
+      const sValue = window.BBNGrid.clamp(
+        STANDARD_PARAMS.S + 0.18 * Math.sin(0.7 * t + 1),
+        PARAM_RANGES.S[0],
+        PARAM_RANGES.S[1]
+      );
+      const tauValue = window.BBNGrid.clamp(
+        STANDARD_PARAMS.tau_n + 6 * Math.sin(0.45 * t + 2),
+        PARAM_RANGES.tau_n[0],
+        PARAM_RANGES.tau_n[1]
+      );
       setRangeValue(eta.input, etaValue);
       setRangeValue(s.input, sValue);
       setRangeValue(tau.input, tauValue);
@@ -336,9 +411,9 @@
     if (universeButton) {
       universeButton.addEventListener("click", () => {
         stopAuto();
-        setRangeValue(eta.input, 6.1);
-        setRangeValue(s.input, 1.0);
-        setRangeValue(tau.input, 880);
+        setRangeValue(eta.input, STANDARD_PARAMS.eta10);
+        setRangeValue(s.input, STANDARD_PARAMS.S);
+        setRangeValue(tau.input, STANDARD_PARAMS.tau_n);
         update();
       });
     }
@@ -362,6 +437,6 @@
 
   window.BBNUI = {
     createApp,
-    classify,
+    evaluate,
   };
 })();

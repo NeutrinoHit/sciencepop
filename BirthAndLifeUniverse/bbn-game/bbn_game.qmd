@@ -43,9 +43,10 @@ bbnApp = {
     return node;
   }
   const app = window.BBNUI.createApp(bbnGridData, {
-    showUniverseButton: false,
+    showUniverseButton: true,
     showAutoButtons: true,
-    initial: {eta10: 2.0, S: 2.0, tau_n: 1000}
+    initial: {eta10: 3.0, S: 0.82, tau_n: 800},
+    footerHtml: `Вычисления основаны на пакете <a href="https://github.com/vallima/PRyMordial">PRyMordial</a>`
   });
   invalidation.then(() => {
     if (app.cleanup) app.cleanup();
