@@ -281,27 +281,43 @@ execute:
 
 ## Что означает, что Вселенная расширяется?
 
-```{=html}
-<div class="quiz-slide">
-  <div class="quiz-options">
-    <div class="quiz-option"><span><strong>А.</strong> Расстояния между галактиками увеличиваются</span></div>
-    <div class="quiz-option"><span><strong>Б.</strong> Вселенная набирает вес</span></div>
-    <div class="quiz-option"><span><strong>В.</strong> Галактики разлетаются от общего центра</span></div>
-  </div>
-</div>
-```
+::: {.quiz-slide}
+::: {.quiz-options}
+
+::: {.quiz-option}
+**А.** Расстояния между галактиками увеличиваются
+:::
+
+::: {.quiz-option}
+**Б.** Вселенная набирает вес
+:::
+
+::: {.quiz-option}
+**В.** Галактики разлетаются от общего центра
+:::
+
+:::
+:::
 
 ## Что означает, что Вселенная расширяется?
 
-```{=html}
-<div class="quiz-slide">
-  <div class="quiz-options">
-    <div class="quiz-option correct"><span><strong>А.</strong> Расстояния между галактиками увеличиваются</span></div>
-    <div class="quiz-option wrong"><span><strong>Б.</strong> Вселенная набирает вес</span></div>
-    <div class="quiz-option wrong"><span><strong>В.</strong> Галактики разлетаются от общего центра</span></div>
-  </div>
-</div>
-```
+::: {.quiz-slide}
+::: {.quiz-options}
+
+::: {.quiz-option .correct}
+**А.** Расстояния между галактиками увеличиваются
+:::
+
+::: {.quiz-option .wrong}
+**Б.** Вселенная набирает вес
+:::
+
+::: {.quiz-option .wrong}
+**В.** Галактики разлетаются от общего центра
+:::
+
+:::
+:::
 
 ## Красное и голубое смещение
 
@@ -320,9 +336,8 @@ execute:
 :::
 
 ::: {.slide-viz}
-```{=html}
-<div class="universe-viz" data-universe-viz="redBlueShift"></div>
-```
+::: {.universe-viz data-universe-viz="redBlueShift"}
+:::
 :::
 
 ::::
@@ -348,46 +363,64 @@ $$
 :::
 
 ::: {.slide-viz}
-```{=html}
-<div class="universe-viz" data-universe-viz="hubbleLaw"></div>
-```
+::: {.universe-viz data-universe-viz="hubbleLaw"}
+:::
 :::
 
 ::::
 
 ## Все галактики удаляются от нас. Мы в центре Вселенной?
 
-```{=html}
-<div class="quiz-slide">
-  <div class="quiz-options">
-    <div class="quiz-option"><span><strong>А.</strong> Да</span></div>
-    <div class="quiz-option"><span><strong>Б.</strong> Нет</span></div>
-    <div class="quiz-option"><span><strong>В.</strong> Не все так однозначно</span></div>
-  </div>
-</div>
-```
+::: {.quiz-slide}
+::: {.quiz-options}
+
+::: {.quiz-option}
+**А.** Да
+:::
+
+::: {.quiz-option}
+**Б.** Нет
+:::
+
+::: {.quiz-option}
+**В.** Не все так однозначно
+:::
+
+:::
+:::
 
 ## Все галактики удаляются от нас. Мы в центре Вселенной?
 
-```{=html}
-<div class="quiz-slide">
-  <div class="quiz-prompt">Короткий ответ: нет. Но есть важная оговорка.</div>
-  <div class="quiz-options">
-    <div class="quiz-option wrong"><span><strong>А.</strong> Да</span></div>
-    <div class="quiz-option correct"><span><strong>Б.</strong> Нет</span></div>
-    <div class="quiz-option wrong"><span><strong>В.</strong> Не все так однозначно</span></div>
-  </div>
-  <div class="quiz-note">
-    Физического центра расширения нет. Но каждый наблюдатель находится в центре своей наблюдаемой области: свет приходит к нему со всех сторон.
-  </div>
-</div>
-```
+::: {.quiz-slide}
+::: {.quiz-prompt}
+Короткий ответ: нет. Но есть важная оговорка.
+:::
+
+::: {.quiz-options}
+
+::: {.quiz-option .wrong}
+**А.** Да
+:::
+
+::: {.quiz-option .correct}
+**Б.** Нет
+:::
+
+::: {.quiz-option .wrong}
+**В.** Не все так однозначно
+:::
+
+:::
+
+::: {.quiz-note}
+Физического центра расширения нет. Но каждый наблюдатель находится в центре своей наблюдаемой области: свет приходит к нему со всех сторон.
+:::
+:::
 
 ## Что видит наблюдатель на поверхности?
 
-```{=html}
-<div class="universe-viz universe-viz-large" data-universe-viz="sphereSurface"></div>
-```
+::: {.universe-viz .universe-viz-large data-universe-viz="sphereSurface"}
+:::
 
 ## Назад во времени
 
@@ -450,51 +483,83 @@ $$
 
 ## Что случилось в самом начале?
 
-```{=html}
-<div class="quiz-slide">
-  <div class="quiz-options">
-    <div class="quiz-option"><span><strong>А.</strong> Большой Взрыв</span></div>
-    <div class="quiz-option"><span><strong>Б.</strong> Большой Хлопок</span></div>
-    <div class="quiz-option"><span><strong>В.</strong> Ничего не было</span></div>
-  </div>
-</div>
-```
+::: {.quiz-slide}
+::: {.quiz-options}
+
+::: {.quiz-option}
+**А.** Большой Взрыв
+:::
+
+::: {.quiz-option}
+**Б.** Большой Хлопок
+:::
+
+::: {.quiz-option}
+**В.** Ничего не было
+:::
+
+:::
+:::
 
 ## Что случилось в самом начале?
 
-```{=html}
-<div class="quiz-slide">
-  <div class="quiz-options">
-    <div class="quiz-option correct"><span><strong>А.</strong> Большой Взрыв</span></div>
-    <div class="quiz-option wrong"><span><strong>Б.</strong> Большой Хлопок</span></div>
-    <div class="quiz-option wrong"><span><strong>В.</strong> Ничего не было</span></div>
-  </div>
-</div>
-```
+::: {.quiz-slide}
+::: {.quiz-options}
+
+::: {.quiz-option .correct}
+**А.** Большой Взрыв
+:::
+
+::: {.quiz-option .wrong}
+**Б.** Большой Хлопок
+:::
+
+::: {.quiz-option .wrong}
+**В.** Ничего не было
+:::
+
+:::
+:::
 
 ## Сколько лет назад родилась Вселенная?
 
-```{=html}
-<div class="quiz-slide">
-  <div class="quiz-options">
-    <div class="quiz-option"><span><strong>А.</strong> 100 тысяч</span></div>
-    <div class="quiz-option"><span><strong>Б.</strong> 13.8 · 10⁹</span></div>
-    <div class="quiz-option"><span><strong>В.</strong> ∞</span></div>
-  </div>
-</div>
-```
+::: {.quiz-slide}
+::: {.quiz-options}
+
+::: {.quiz-option}
+**А.** 100 тысяч
+:::
+
+::: {.quiz-option}
+**Б.** 13.8 · 10⁹
+:::
+
+::: {.quiz-option}
+**В.** ∞
+:::
+
+:::
+:::
 
 ## Сколько лет назад родилась Вселенная?
 
-```{=html}
-<div class="quiz-slide">
-  <div class="quiz-options">
-    <div class="quiz-option wrong"><span><strong>А.</strong> 100 тысяч</span></div>
-    <div class="quiz-option correct"><span><strong>Б.</strong> 13.8 · 10⁹</span></div>
-    <div class="quiz-option wrong"><span><strong>В.</strong> ∞</span></div>
-  </div>
-</div>
-```
+::: {.quiz-slide}
+::: {.quiz-options}
+
+::: {.quiz-option .wrong}
+**А.** 100 тысяч
+:::
+
+::: {.quiz-option .correct}
+**Б.** 13.8 · 10⁹
+:::
+
+::: {.quiz-option .wrong}
+**В.** ∞
+:::
+
+:::
+:::
 
 # Глава 3. История Вселенной
 
@@ -734,7 +799,7 @@ $$
   </svg>
 
   <div class="history-floating-media history-media-light">
-    <div class="photo-frame media-frame no-sweep history-media-frame">
+    <div class="media-frame history-media-frame">
       <video data-slide-video muted playsinline loop preload="metadata" poster="assets/figures/photons-universe-poster.png">
         <source src="assets/figures/photons-universe.mp4" type="video/mp4">
       </video>
@@ -881,7 +946,7 @@ $$
   </svg>
 
   <div class="history-floating-media history-media-structure">
-    <div class="photo-frame media-frame no-sweep history-media-frame">
+    <div class="media-frame history-media-frame">
       <video data-slide-video data-video-start="4" muted playsinline loop preload="metadata" poster="assets/figures/first-stars-poster.png">
         <source src="assets/figures/first-stars.mp4" type="video/mp4">
       </video>
@@ -964,7 +1029,7 @@ $$
   </svg>
 
   <div class="history-floating-media history-media-solar">
-    <div class="photo-frame media-frame no-sweep history-media-frame">
+    <div class="media-frame history-media-frame">
       <video data-slide-video muted playsinline loop preload="metadata">
         <source src="assets/figures/proto-galaxy-disk.mp4" type="video/mp4">
       </video>
@@ -1054,7 +1119,7 @@ $$
   </svg>
 
   <div class="history-floating-media history-media-solar">
-    <div class="photo-frame media-frame no-sweep history-media-frame">
+    <div class="media-frame history-media-frame">
       <video data-slide-video muted playsinline loop preload="metadata">
         <source src="assets/figures/proto-galaxy-disk.mp4" type="video/mp4">
       </video>
@@ -1149,6 +1214,7 @@ $$
 При $n/p=1/7$ получаем
 $$
 R_\mathrm{He} \simeq 0.33.
+$$
 
 Быстрее расширение или дольше жизнь нейтрона → больше нейтронов → больше гелия.
 
@@ -1160,6 +1226,9 @@ R_\mathrm{He} \simeq 0.33.
 
 Больше барионов → реакции идут эффективнее → дейтерий быстрее сгорает в гелий:
 
+$$
+\eta \uparrow \Rightarrow \mathrm{D/H} \downarrow.
+$$
 
 :::
 
@@ -1167,21 +1236,25 @@ R_\mathrm{He} \simeq 0.33.
 
 ## Игра Синтезируй сам лёгкие элементы {.bbn-qr-slide}
 
-```{=html}
-<div class="bbn-qr-layout">
-  <div class="bbn-qr-copy">
-    <div class="kicker">аплет для телефона</div>
-    <p>Подберите плотность обычного вещества, скорость расширения и время жизни нейтрона.</p>
-    <p>Цель: провести четыре маркера через ворота для гелия-4, дейтерия, гелия-3 и лития-7.</p>
-    <a class="bbn-qr-link" href="https://neutrinohit.github.io/sciencepop/BirthAndLifeUniverse/bbn-game/bbn_applet.html">
-      neutrinohit.github.io/sciencepop/BirthAndLifeUniverse/bbn-game/bbn_applet.html
-    </a>
-  </div>
-  <figure class="bbn-qr-card">
-    <img src="assets/figures/bbn-game-qr.png" alt="QR-код для игры Синтезируй сам лёгкие элементы">
-  </figure>
-</div>
-```
+::: {.bbn-qr-layout}
+
+::: {.bbn-qr-copy}
+::: {.kicker}
+аплет для телефона
+:::
+
+Подберите плотность обычного вещества, скорость расширения и время жизни нейтрона.
+
+Цель: провести четыре маркера через ворота для гелия-4, дейтерия, гелия-3 и лития-7.
+
+[neutrinohit.github.io/sciencepop/BirthAndLifeUniverse/bbn-game/bbn_applet.html](https://neutrinohit.github.io/sciencepop/BirthAndLifeUniverse/bbn-game/bbn_applet.html){.bbn-qr-link}
+:::
+
+::: {.bbn-qr-card}
+![](assets/figures/bbn-game-qr.png){fig-alt="QR-код для игры Синтезируй сам лёгкие элементы"}
+:::
+
+:::
 
 ## {.bbn-applet-slide}
 
@@ -1216,21 +1289,25 @@ bbnLectureApp = {
 
 ## Происхождение золота {.elements-origin-section}
 
-```{=html}
-<div class="elements-origin-slide">
-  <div class="elements-origin-head">
-    <div>
-      <h2>Происхождение золота</h2>
-    </div>
-    <p>И других химических элементов</p>
-  </div>
+::: {.elements-origin-slide}
+::: {.elements-origin-head}
+::: {.elements-origin-title}
+Происхождение золота
+:::
 
-  <figure class="elements-origin-figure">
-    <img src="assets/figures/element-origin-periodic-table-ru.png" alt="Периодическая таблица химических элементов с цветовой разметкой их происхождения">
-    <figcaption>Источник исходного рисунка: Википедия</figcaption>
-  </figure>
-</div>
-```
+::: {.elements-origin-subtitle}
+И других химических элементов
+:::
+:::
+
+::: {.media-figure .elements-origin-figure style="--media-max-height: 515px; --media-caption-align: flex-start; --media-caption-size: 0.34em; --media-caption-weight: 650;"}
+![](assets/figures/element-origin-periodic-table-ru.png){fig-alt="Периодическая таблица химических элементов с цветовой разметкой их происхождения"}
+
+::: {.media-caption}
+Источник исходного рисунка: Википедия
+:::
+:::
+:::
 
 
 # Глава 5. Образование галактик
@@ -1249,14 +1326,17 @@ bbnLectureApp = {
 :::
 
 ::: {.slide-viz}
-```{=html}
-<div class="photo-frame media-frame contain no-sweep">
+::: {.media-frame .contain}
+
   <video data-slide-video muted playsinline loop preload="metadata" poster="assets/figures/galaxy-morphology-poster.png">
     <source src="assets/figures/galaxy-morphology.mp4" type="video/mp4">
   </video>
-  <div class="photo-credit">Hubble-de Vaucouleurs diagram</div>
-</div>
-```
+
+::: {.photo-credit}
+Hubble-de Vaucouleurs diagram
+:::
+
+:::
 :::
 
 ::::
@@ -1276,28 +1356,34 @@ bbnLectureApp = {
 :::
 
 ::: {.slide-viz}
-```{=html}
-<div class="photo-frame media-frame no-sweep">
+::: {.media-frame}
+
   <video data-slide-video muted playsinline loop preload="metadata" poster="assets/figures/black-hole-feedback-poster.png">
     <source src="assets/figures/black-hole-feedback.mp4" type="video/mp4">
   </video>
-  <div class="photo-credit">Иллюстрация обратной связи сверхмассивной чёрной дыры</div>
-</div>
-```
+
+::: {.photo-credit}
+Иллюстрация обратной связи сверхмассивной чёрной дыры
+:::
+
+:::
 :::
 
 ::::
 
-## Образование галактик {.galaxy-full-video-section}
+## Образование галактик {.full-slide-video-section}
 
-```{=html}
-<div class="galaxy-full-video">
+::: {.full-slide-video}
+
   <video data-slide-video muted playsinline loop preload="metadata" poster="assets/figures/illustris-poster.png">
     <source src="assets/figures/illustris-evolution.mp4" type="video/mp4">
   </video>
-  <div class="photo-credit">Illustris Simulation</div>
-</div>
-```
+
+::: {.photo-credit}
+Illustris Simulation
+:::
+
+:::
 
 ## Викторина
 
@@ -1359,29 +1445,51 @@ bbnLectureApp = {
 
 ## Викторина
 
-```{=html}
-<div class="quiz-slide">
-  <div class="quiz-prompt">Что такое темная материя?</div>
-  <div class="quiz-options">
-    <div class="quiz-option"><span><strong>А.</strong> Вид шоколада</span></div>
-    <div class="quiz-option"><span><strong>Б.</strong> Вещество, которое не светится</span></div>
-    <div class="quiz-option"><span><strong>В.</strong> Обратная сторона Луны</span></div>
-  </div>
-</div>
-```
+::: {.quiz-slide}
+::: {.quiz-prompt}
+Что такое темная материя?
+:::
+
+::: {.quiz-options}
+
+::: {.quiz-option}
+**А.** Вид шоколада
+:::
+
+::: {.quiz-option}
+**Б.** Вещество, которое не светится
+:::
+
+::: {.quiz-option}
+**В.** Обратная сторона Луны
+:::
+
+:::
+:::
 
 ## Викторина
 
-```{=html}
-<div class="quiz-slide">
-  <div class="quiz-prompt">Что такое темная материя?</div>
-  <div class="quiz-options">
-    <div class="quiz-option wrong"><span><strong>А.</strong> Вид шоколада</span></div>
-    <div class="quiz-option correct"><span><strong>Б.</strong> Вещество, которое не светится</span></div>
-    <div class="quiz-option wrong"><span><strong>В.</strong> Обратная сторона Луны</span></div>
-  </div>
-</div>
-```
+::: {.quiz-slide}
+::: {.quiz-prompt}
+Что такое темная материя?
+:::
+
+::: {.quiz-options}
+
+::: {.quiz-option .wrong}
+**А.** Вид шоколада
+:::
+
+::: {.quiz-option .correct}
+**Б.** Вещество, которое не светится
+:::
+
+::: {.quiz-option .wrong}
+**В.** Обратная сторона Луны
+:::
+
+:::
+:::
 
 ## Энергетический баланс Вселенной {.dark-matter-balance-section}
 
@@ -1426,39 +1534,43 @@ bbnLectureApp = {
 </div>
 ```
 
-## Темная материя видна гравитацией {.dark-matter-full-video-section}
+## Темная материя видна гравитацией {.full-slide-video-section}
 
-```{=html}
-<div class="dark-matter-full-video">
+::: {.full-slide-video}
+
   <video data-slide-video muted playsinline loop preload="metadata" poster="assets/figures/dark-matter-poster.png">
     <source src="assets/figures/dark-matter-observed.mp4" type="video/mp4">
   </video>
-  <div class="photo-credit">Гравитационные свидетельства тёмной материи</div>
-</div>
-```
+
+::: {.photo-credit}
+Гравитационные свидетельства тёмной материи
+:::
+
+:::
 
 # Глава 7. Темная энергия
 
-## Реликтовый свет {.dark-energy-cmb-section}
+## Реликтовый свет {.media-center-section}
 
-```{=html}
-<div class="dark-energy-cmb-slide">
-  <figure class="dark-energy-cmb-map">
-    <img src="assets/figures/cmb-map-trimmed.jpg" alt="Карта реликтового излучения по данным Планк">
-    <figcaption>Коллаборация Планк</figcaption>
-  </figure>
-</div>
-```
+::: {.media-center-slide}
+::: {.media-figure style="--media-max-height: 560px; --media-bg: #000;"}
+![](assets/figures/cmb-map-trimmed.jpg){fig-alt="Карта реликтового излучения по данным Планк"}
 
-## Реликтовый свет {.dark-energy-geometry-section}
+::: {.media-caption}
+Коллаборация Планк
+:::
+:::
+:::
 
-```{=html}
-<div class="dark-energy-geometry-slide">
-  <video class="dark-energy-geometry-video" data-slide-video muted playsinline loop preload="metadata" poster="assets/figures/wmap-shape-of-universe-poster.png">
+## Реликтовый свет {.media-center-section}
+
+::: {.media-center-slide}
+
+  <video class="slide-video" style="--media-width: min(100%, 980px); --media-max-height: 590px; --media-bg: #03050a; --media-shadow: 0 18px 46px rgba(0, 0, 0, 0.34); --media-radius: 6px;" data-slide-video muted playsinline loop preload="metadata" poster="assets/figures/wmap-shape-of-universe-poster.png">
     <source src="assets/figures/wmap-shape-of-universe.mp4" type="video/mp4">
   </video>
-</div>
-```
+
+:::
 
 ## Расширение ускоряется
 
@@ -1473,9 +1585,8 @@ bbnLectureApp = {
 :::
 
 ::: {.slide-viz}
-```{=html}
-<div class="universe-viz" data-universe-viz="darkEnergy"></div>
-```
+::: {.universe-viz data-universe-viz="darkEnergy"}
+:::
 :::
 
 ::::
@@ -1485,41 +1596,51 @@ bbnLectureApp = {
 
 ## Будущее нашей Вселенной
 
-```{=html}
-<div class="quiz-slide future-quiz-slide">
-  <div class="quiz-prompt">Возможные сценарии</div>
-  <div class="quiz-options future-quiz-options">
-    <div class="quiz-option">
-      <span><strong>А.</strong> Большое замерзание<br><small>Вселенная замерзнет</small></span>
-    </div>
-    <div class="quiz-option">
-      <span><strong>Б.</strong> Большой разрыв<br><small>Вселенную разорвет</small></span>
-    </div>
-    <div class="quiz-option">
-      <span><strong>В.</strong> Большое схлопывание<br><small>Вселенная начнет сжиматься в точку</small></span>
-    </div>
-  </div>
-</div>
-```
+::: {.quiz-slide .future-quiz-slide}
+::: {.quiz-prompt}
+Возможные сценарии
+:::
+
+::: {.quiz-options .future-quiz-options}
+
+::: {.quiz-option}
+**А.** Большое замерзание<br><small>Вселенная замерзнет</small>
+:::
+
+::: {.quiz-option}
+**Б.** Большой разрыв<br><small>Вселенную разорвет</small>
+:::
+
+::: {.quiz-option}
+**В.** Большое схлопывание<br><small>Вселенная начнет сжиматься в точку</small>
+:::
+
+:::
+:::
 
 ## Будущее нашей Вселенной
 
-```{=html}
-<div class="quiz-slide future-quiz-slide">
-  <div class="quiz-prompt">Возможные сценарии</div>
-  <div class="quiz-options future-quiz-options">
-    <div class="quiz-option correct">
-      <span><strong>А.</strong> Большое замерзание<br><small>Вселенная замерзнет</small></span>
-    </div>
-    <div class="quiz-option wrong">
-      <span><strong>Б.</strong> Большой разрыв<br><small>Вселенную разорвет</small></span>
-    </div>
-    <div class="quiz-option wrong">
-      <span><strong>В.</strong> Большое схлопывание<br><small>Вселенная начнет сжиматься в точку</small></span>
-    </div>
-  </div>
-</div>
-```
+::: {.quiz-slide .future-quiz-slide}
+::: {.quiz-prompt}
+Возможные сценарии
+:::
+
+::: {.quiz-options .future-quiz-options}
+
+::: {.quiz-option .correct}
+**А.** Большое замерзание<br><small>Вселенная замерзнет</small>
+:::
+
+::: {.quiz-option .wrong}
+**Б.** Большой разрыв<br><small>Вселенную разорвет</small>
+:::
+
+::: {.quiz-option .wrong}
+**В.** Большое схлопывание<br><small>Вселенная начнет сжиматься в точку</small>
+:::
+
+:::
+:::
 
 ## Раньше будет вот что {.solar-future-section}
 
