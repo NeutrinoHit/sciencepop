@@ -1,0 +1,6 @@
+format:
+  revealjs:
+    include-after-body:
+      text: |
+        <script src="assets/universe-lecture.js"></script>
+        <script data-external="1" data-context-home="https://neutrinohit.github.io/ru/outreach.html#birth-life-universe" data-context-home-label="Карта лекции" src="../shared/reveal/neutrinohit-reveal-footer.js"></script>

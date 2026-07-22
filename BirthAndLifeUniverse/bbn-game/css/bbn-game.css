@@ -1,0 +1,460 @@
+.reveal .bbn-game {
+  box-sizing: border-box;
+  width: min(1160px, 96vw);
+  min-height: 560px;
+  margin: 0 auto;
+  padding: 22px 28px;
+  color: #f4f7fb;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(90, 180, 255, 0.16), transparent 34%),
+    linear-gradient(140deg, #111820 0%, #10131a 46%, #181614 100%);
+  border: 1px solid rgba(210, 225, 245, 0.18);
+  border-radius: 8px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.bbn-public-page {
+  min-height: 100vh;
+  margin: 0;
+  background: #111111;
+}
+
+.bbn-public-page .page-columns,
+.bbn-public-page main,
+.bbn-public-page .content,
+.bbn-public-page .quarto-container {
+  max-width: none;
+}
+
+.bbn-public-shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 28px 16px;
+}
+
+.bbn-public-shell .bbn-game {
+  width: min(1160px, 100%);
+}
+
+.reveal .bbn-game sub,
+.reveal .bbn-game sup {
+  line-height: 0;
+  font-size: 0.68em;
+}
+
+.reveal .bbn-game sub {
+  vertical-align: sub;
+}
+
+.reveal .bbn-game sup {
+  vertical-align: super;
+}
+
+.reveal .bbn-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.reveal .bbn-kicker {
+  color: #8bd7ff;
+  font-size: 18px;
+  font-weight: 760;
+}
+
+.reveal .bbn-title {
+  margin: 0;
+  color: #ffffff;
+  font-size: 40px;
+  line-height: 1.05;
+  letter-spacing: 0;
+}
+
+.reveal .bbn-subtitle {
+  max-width: 980px;
+  margin: 12px 0 16px;
+  color: #bdc8d7;
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+.reveal .bbn-layout {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.78fr) minmax(540px, 1.22fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.reveal .bbn-controls,
+.reveal .bbn-results {
+  min-width: 0;
+  padding: 16px;
+  background: rgba(8, 14, 22, 0.74);
+  border: 1px solid rgba(210, 225, 245, 0.16);
+  border-radius: 8px;
+}
+
+.reveal .bbn-control {
+  display: block;
+  margin-bottom: 18px;
+}
+
+.reveal .bbn-control-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 6px;
+}
+
+.reveal .bbn-control-label {
+  color: #edf4ff;
+  font-size: 19px;
+  font-weight: 760;
+}
+
+.reveal .bbn-control-value {
+  flex: 0 0 auto;
+  color: #8bd7ff;
+  font-size: 19px;
+  font-weight: 760;
+  font-variant-numeric: tabular-nums;
+}
+
+.reveal .bbn-control input[type="range"] {
+  width: 100%;
+  accent-color: #75cdf5;
+}
+
+.reveal .bbn-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+.reveal .bbn-button {
+  min-height: 38px;
+  padding: 0 14px;
+  color: #f6f8fb;
+  background: #273241;
+  border: 1px solid rgba(210, 225, 245, 0.22);
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 760;
+  cursor: pointer;
+}
+
+.reveal .bbn-button:hover:not(:disabled) {
+  background: #344356;
+}
+
+.reveal .bbn-button:disabled {
+  cursor: default;
+  opacity: 0.45;
+}
+
+.reveal .bbn-button-primary {
+  color: #171410;
+  background: #ffd267;
+  border-color: #ffd267;
+}
+
+.reveal .bbn-button-primary:hover:not(:disabled) {
+  background: #ffe091;
+}
+
+.reveal .bbn-param-readout {
+  margin-top: 16px;
+  color: #aab8c8;
+  font-size: 17px;
+  font-variant-numeric: tabular-nums;
+}
+
+.reveal .bbn-scale {
+  margin-bottom: 12px;
+}
+
+.reveal .bbn-scale-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 6px;
+}
+
+.reveal .bbn-scale-title {
+  color: #f5f8fc;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.reveal .bbn-scale-range {
+  color: #9faec0;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.reveal .bbn-scale-track {
+  position: relative;
+  height: 40px;
+}
+
+.reveal .bbn-scale-track::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 14px;
+  height: 12px;
+  background: linear-gradient(90deg, #334052, #465365);
+  border-radius: 8px;
+}
+
+.reveal .bbn-target-band {
+  position: absolute;
+  top: 9px;
+  height: 22px;
+  background: rgba(255, 210, 103, 0.62);
+  border-left: 2px solid #ffe29b;
+  border-right: 2px solid #ffe29b;
+  border-radius: 6px;
+}
+
+.reveal .bbn-marker {
+  position: absolute;
+  top: 3px;
+  width: 4px;
+  height: 34px;
+  transform: translateX(-50%);
+  background: #ff8c67;
+  border-radius: 3px;
+  box-shadow: 0 0 0 5px rgba(255, 140, 103, 0.14);
+}
+
+.reveal .bbn-marker.is-hit {
+  background: #7cefbd;
+  box-shadow: 0 0 0 5px rgba(124, 239, 189, 0.14);
+}
+
+.reveal .bbn-marker-label {
+  position: absolute;
+  top: 33px;
+  transform: translateX(-50%);
+  color: #dce9f8;
+  font-size: 14px;
+  font-weight: 780;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.reveal .bbn-verdict {
+  margin-top: 4px;
+  padding: 12px 15px;
+  border-left: 5px solid #ff8c67;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.reveal .bbn-app-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 18px;
+  margin-top: 8px;
+  color: #aab8c8;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.reveal .bbn-app-footer a {
+  color: #8bd7ff;
+  text-decoration: none;
+}
+
+.reveal .bbn-app-footer a:hover {
+  text-decoration: underline;
+}
+
+.reveal .bbn-verdict.is-ok {
+  border-left-color: #7cefbd;
+}
+
+.reveal .bbn-verdict strong,
+.reveal .bbn-error-title {
+  display: block;
+  color: #ffffff;
+  font-size: 23px;
+  line-height: 1.1;
+  font-weight: 860;
+}
+
+.reveal .bbn-verdict span,
+.reveal .bbn-error-text {
+  display: block;
+  margin-top: 8px;
+  color: #c7d2df;
+  font-size: 18px;
+  line-height: 1.28;
+}
+
+.reveal .bbn-game-error {
+  min-height: 430px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.reveal .bbn-error-command {
+  margin: 18px 0 8px;
+  padding: 14px 16px;
+  overflow-x: auto;
+  color: #dff3ff;
+  background: rgba(0, 0, 0, 0.34);
+  border: 1px solid rgba(210, 225, 245, 0.16);
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 1.35;
+  white-space: pre-wrap;
+}
+
+@media (max-width: 900px) {
+  .reveal .bbn-game {
+    width: 96vw;
+    min-height: 0;
+    padding: 18px;
+  }
+
+  .reveal .bbn-header {
+    display: block;
+  }
+
+  .reveal .bbn-title {
+    margin-top: 6px;
+    font-size: 34px;
+  }
+
+  .reveal .bbn-subtitle {
+    font-size: 18px;
+  }
+
+  .reveal .bbn-layout {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+
+@media (max-height: 700px) and (min-width: 901px) {
+  .bbn-public-shell {
+    padding: 10px;
+  }
+
+  .bbn-public-shell .bbn-game {
+    width: min(1000px, 100%);
+    min-height: 0;
+    padding: 14px 18px;
+  }
+
+  .bbn-public-shell .bbn-header {
+    gap: 16px;
+  }
+
+  .bbn-public-shell .bbn-kicker {
+    font-size: 15px;
+  }
+
+  .bbn-public-shell .bbn-title {
+    font-size: 34px;
+  }
+
+  .bbn-public-shell .bbn-subtitle {
+    max-width: none;
+    margin: 8px 0 12px;
+    font-size: 17px;
+    line-height: 1.2;
+  }
+
+  .bbn-public-shell .bbn-layout {
+    grid-template-columns: minmax(270px, 0.68fr) minmax(500px, 1.32fr);
+    gap: 14px;
+  }
+
+  .bbn-public-shell .bbn-controls,
+  .bbn-public-shell .bbn-results {
+    padding: 12px;
+  }
+
+  .bbn-public-shell .bbn-control {
+    margin-bottom: 12px;
+  }
+
+  .bbn-public-shell .bbn-control-top,
+  .bbn-public-shell .bbn-scale-head {
+    margin-bottom: 3px;
+  }
+
+  .bbn-public-shell .bbn-control-label,
+  .bbn-public-shell .bbn-control-value {
+    font-size: 17px;
+  }
+
+  .bbn-public-shell .bbn-scale {
+    margin-bottom: 6px;
+  }
+
+  .bbn-public-shell .bbn-scale-title {
+    font-size: 18px;
+  }
+
+  .bbn-public-shell .bbn-scale-range {
+    font-size: 14px;
+  }
+
+  .bbn-public-shell .bbn-scale-track {
+    height: 34px;
+  }
+
+  .bbn-public-shell .bbn-scale-track::before {
+    top: 12px;
+    height: 10px;
+  }
+
+  .bbn-public-shell .bbn-target-band {
+    top: 8px;
+    height: 20px;
+  }
+
+  .bbn-public-shell .bbn-marker {
+    top: 2px;
+    height: 30px;
+  }
+
+  .bbn-public-shell .bbn-marker-label {
+    top: 29px;
+    font-size: 12px;
+  }
+
+  .bbn-public-shell .bbn-verdict {
+    margin-top: 0;
+    padding: 10px 13px;
+  }
+
+  .bbn-public-shell .bbn-verdict strong,
+  .bbn-public-shell .bbn-error-title {
+    font-size: 20px;
+  }
+
+  .bbn-public-shell .bbn-verdict span,
+  .bbn-public-shell .bbn-error-text {
+    margin-top: 4px;
+    font-size: 15px;
+  }
+
+  .bbn-public-shell .bbn-app-footer {
+    gap: 12px;
+    margin-top: 6px;
+    font-size: 12px;
+  }
+}

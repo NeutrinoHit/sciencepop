@@ -1,0 +1,674 @@
+[
+  {
+    "objectID": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#простые-но-фундаментальные-вопросы",
+    "href": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#простые-но-фундаментальные-вопросы",
+    "title": "Что такое частица в квантовой теории поля?",
+    "section": "Простые, но фундаментальные вопросы",
+    "text": "Простые, но фундаментальные вопросы\n\nЧастица — это волна или точка?\nПочему волна иногда даёт один локальный сигнал?\nГде в формулах появляется картина: сработала одна мишень, а другая нет?"
+  },
+  {
+    "objectID": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#главные-утверждения",
+    "href": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#главные-утверждения",
+    "title": "Что такое частица в квантовой теории поля?",
+    "section": "Главные утверждения",
+    "text": "Главные утверждения\n\nЧастица в КТП — квантовое состояние поля, то есть квантовая волна.\nМишень и детектор — тоже квантовые системы.\nТочечный сигнал — не исходное свойство частицы, а предельный режим взаимодействия."
+  },
+  {
+    "objectID": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#модель-которую-будем-считать",
+    "href": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#модель-которую-будем-считать",
+    "title": "Что такое частица в квантовой теории поля?",
+    "section": "Модель, которую будем считать",
+    "text": "Модель, которую будем считать\nБерём падающий пучок как плоскую волну. Две мишени — нетождественные тяжёлые фермионы, описанные волновыми пакетами.\n\\[\n|i\\rangle = |A,B;k\\rangle\n\\]\n\\[\nS = 1+iT\n\\]\n\\[\n|\\Psi_f\\rangle = iT|A,B;k\\rangle\n\\]"
+  },
+  {
+    "objectID": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#нормировка-одночастичных-состояний",
+    "href": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#нормировка-одночастичных-состояний",
+    "title": "Что такое частица в квантовой теории поля?",
+    "section": "Нормировка одночастичных состояний",
+    "text": "Нормировка одночастичных состояний\nИспользуем ковариантную нормировку.\n\\[\n\\langle p'|p\\rangle=(2\\pi)^3 2E_p\\,\\delta^{(3)}(\\mathbf p-\\mathbf p')\n\\]\n\\[\n|A\\rangle=\n\\int\\frac{d^3p_A}{(2\\pi)^3}\n\\frac{\\psi_A(\\mathbf p_A)}{\\sqrt{2E_A}}\n|p_A\\rangle\n\\]\n\\[\n\\langle A|A\\rangle=\n\\int\\frac{d^3p_A}{(2\\pi)^3}|\\psi_A(\\mathbf p_A)|^2\n\\]"
+  },
+  {
+    "objectID": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#две-нетождественные-мишени",
+    "href": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#две-нетождественные-мишени",
+    "title": "Что такое частица в квантовой теории поля?",
+    "section": "Две нетождественные мишени",
+    "text": "Две нетождественные мишени\nМишени различимы. Антисимметризации между A и B нет.\n\\[\n|A,B\\rangle=\n\\int\\frac{d^3p_A}{(2\\pi)^3}\n\\frac{d^3p_B}{(2\\pi)^3}\n\\frac{\\psi_A(\\mathbf p_A)\\psi_B(\\mathbf p_B)}{\\sqrt{2E_A\\,2E_B}}\n|p_A,p_B\\rangle\n\\]\n\\[\n|A,B;k\\rangle=|A,B\\rangle\\otimes |k\\rangle\n\\]"
+  },
+  {
+    "objectID": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#что-хотим-получить",
+    "href": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#что-хотим-получить",
+    "title": "Что такое частица в квантовой теории поля?",
+    "section": "Что хотим получить",
+    "text": "Что хотим получить\nНас интересует сектор, где падающая частица поглощена, а в финале остались две мишени.\n\\[\n|\\Psi_f\\rangle=\n\\int\\frac{d^3p'_A}{(2\\pi)^3}\n\\frac{d^3p'_B}{(2\\pi)^3}\n\\frac{\\Psi_{AB}(\\mathbf p'_A,\\mathbf p'_B)}{\\sqrt{2E'_A\\,2E'_B}}\n|p'_A,p'_B\\rangle\n\\]\n\\[\n\\Psi_{AB}(\\mathbf p'_A,\\mathbf p'_B)=\n\\frac{\\langle p'_A,p'_B;0|iT|A,B;k\\rangle}{\\sqrt{2E'_A\\,2E'_B}}\n\\]"
+  },
+  {
+    "objectID": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#локальное-взаимодействие-с-двумя-мишенями",
+    "href": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#локальное-взаимодействие-с-двумя-мишенями",
+    "title": "Что такое частица в квантовой теории поля?",
+    "section": "Локальное взаимодействие с двумя мишенями",
+    "text": "Локальное взаимодействие с двумя мишенями\nВ первом порядке взаимодействие — сумма двух независимых вкладов.\n\\[\niT^{(1)}=-i\\int d^4x\\,\\left(H_A(x)+H_B(x)\\right)\n\\]\n\\[\niT^{(1)}=iT_A+iT_B\n\\]\n\\[\nT_A\\ \\text{действует на}\\ A\\ \\text{и пучок, но не действует на}\\ B\n\\]"
+  },
+  {
+    "objectID": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#матричный-элемент-a-канала",
+    "href": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#матричный-элемент-a-канала",
+    "title": "Что такое частица в квантовой теории поля?",
+    "section": "Матричный элемент A-канала",
+    "text": "Матричный элемент A-канала\nЕсли фотон поглощается A, то B — spectator.\n\\[\n\\langle p'_A,p'_B;0|iT_A|p_A,p_B;k\\rangle\n=\nK_A(p'_A;p_A,k)\\,\\langle p'_B|p_B\\rangle\n\\]\n\\[\n\\langle p'_B|p_B\\rangle=(2\\pi)^3 2E_B\\,\\delta^{(3)}(\\mathbf p'_B-\\mathbf p_B)\n\\]\n\\[\n\\langle p'_A,p'_B;0|iT_A|p_A,p_B;k\\rangle\n=\nK_A(p'_A;p_A,k)(2\\pi)^3 2E_B\\delta^{(3)}(\\mathbf p'_B-\\mathbf p_B)\n\\]"
+  },
+  {
+    "objectID": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#матричный-элемент-b-канала",
+    "href": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#матричный-элемент-b-канала",
+    "title": "Что такое частица в квантовой теории поля?",
+    "section": "Матричный элемент B-канала",
+    "text": "Матричный элемент B-канала\nЕсли фотон поглощается B, то A — spectator.\n\\[\n\\langle p'_A,p'_B;0|iT_B|p_A,p_B;k\\rangle\n=\nK_B(p'_B;p_B,k)\\,\\langle p'_A|p_A\\rangle\n\\]\n\\[\n\\langle p'_A|p_A\\rangle=(2\\pi)^3 2E_A\\,\\delta^{(3)}(\\mathbf p'_A-\\mathbf p_A)\n\\]\n\\[\n\\langle p'_A,p'_B;0|iT_B|p_A,p_B;k\\rangle\n=\nK_B(p'_B;p_B,k)(2\\pi)^3 2E_A\\delta^{(3)}(\\mathbf p'_A-\\mathbf p_A)\n\\]"
+  },
+  {
+    "objectID": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#в-первом-порядке-нет-третьего-слагаемого",
+    "href": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#в-первом-порядке-нет-третьего-слагаемого",
+    "title": "Что такое частица в квантовой теории поля?",
+    "section": "В первом порядке нет третьего слагаемого",
+    "text": "В первом порядке нет третьего слагаемого\nConnected-вклад, в котором обе мишени реально участвуют в одном акте, не возникает из независимого первого порядка.\n\\[\niT^{(1)}=iT_A+iT_B\n\\]\n\\[\niT^{(1)}\\neq iT_A+iT_B+iT_{AB}^{\\rm conn}\n\\]\n\\[\nT_{AB}^{\\rm conn}\\ \\text{возникает в более высоком порядке или как эффективный коллективный ток}\n\\]"
+  },
+  {
+    "objectID": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#a-канал-до-использования-дельта-функции",
+    "href": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#a-канал-до-использования-дельта-функции",
+    "title": "Что такое частица в квантовой теории поля?",
+    "section": "A-канал до использования дельта-функции",
+    "text": "A-канал до использования дельта-функции\nПодставляем начальные пакеты и spectator-фактор.\n\\[\n\\Psi_{AB}^{(A)}(\\mathbf p'_A,\\mathbf p'_B)=\n\\frac{1}{\\sqrt{2E'_A\\,2E'_B}}\n\\int\\frac{d^3p_A}{(2\\pi)^3}\\frac{d^3p_B}{(2\\pi)^3}\n\\frac{\\psi_A(\\mathbf p_A)\\psi_B(\\mathbf p_B)}{\\sqrt{2E_A\\,2E_B}}\n\\]\n\\[\n\\times K_A(p'_A;p_A,k)(2\\pi)^3 2E_B\\delta^{(3)}(\\mathbf p'_B-\\mathbf p_B)\n\\]"
+  },
+  {
+    "objectID": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#a-канал-после-spectator-интеграла",
+    "href": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#a-канал-после-spectator-интеграла",
+    "title": "Что такое частица в квантовой теории поля?",
+    "section": "A-канал после spectator-интеграла",
+    "text": "A-канал после spectator-интеграла\nИнтеграл по импульсу B берётся сразу.\n\\[\n\\Psi_{AB}^{(A)}(\\mathbf p'_A,\\mathbf p'_B)=\n\\frac{\\psi_B(\\mathbf p'_B)}{\\sqrt{2E'_A}}\n\\int\\frac{d^3p_A}{(2\\pi)^3}\n\\frac{\\psi_A(\\mathbf p_A)}{\\sqrt{2E_A}}\nK_A(p'_A;p_A,k)\n\\]\n\\[\n\\Psi_{AB}^{(A)}(\\mathbf p'_A,\\mathbf p'_B)\n=\n\\Psi_A^{\\rm hit}(\\mathbf p'_A)\\,\\psi_B(\\mathbf p'_B)\n\\]"
+  },
+  {
+    "objectID": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#b-канал-после-spectator-интеграла",
+    "href": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#b-канал-после-spectator-интеграла",
+    "title": "Что такое частица в квантовой теории поля?",
+    "section": "B-канал после spectator-интеграла",
+    "text": "B-канал после spectator-интеграла\nАналогично для поглощения на B.\n\\[\n\\Psi_{AB}^{(B)}(\\mathbf p'_A,\\mathbf p'_B)=\n\\frac{\\psi_A(\\mathbf p'_A)}{\\sqrt{2E'_B}}\n\\int\\frac{d^3p_B}{(2\\pi)^3}\n\\frac{\\psi_B(\\mathbf p_B)}{\\sqrt{2E_B}}\nK_B(p'_B;p_B,k)\n\\]\n\\[\n\\Psi_{AB}^{(B)}(\\mathbf p'_A,\\mathbf p'_B)\n=\n\\psi_A(\\mathbf p'_A)\\,\\Psi_B^{\\rm hit}(\\mathbf p'_B)\n\\]"
+  },
+  {
+    "objectID": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#финальная-волновая-функция",
+    "href": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#финальная-волновая-функция",
+    "title": "Что такое частица в квантовой теории поля?",
+    "section": "Финальная волновая функция",
+    "text": "Финальная волновая функция\nВ первом порядке получаем сумму двух spectator-каналов.\n\\[\n\\Psi_{AB}^{(1)}(\\mathbf p'_A,\\mathbf p'_B)\n=\n\\Psi_A^{\\rm hit}(\\mathbf p'_A)\\psi_B(\\mathbf p'_B)\n+\n\\psi_A(\\mathbf p'_A)\\Psi_B^{\\rm hit}(\\mathbf p'_B)\n\\]\n\\[\n\\text{первое слагаемое:}\\quad A\\ \\text{изменился},\\ B\\ \\text{остался spectator}\n\\]\n\\[\n\\text{второе слагаемое:}\\quad B\\ \\text{изменился},\\ A\\ \\text{остался spectator}\n\\]"
+  },
+  {
+    "objectID": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#матричный-элемент-поглощения-на-a",
+    "href": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#матричный-элемент-поглощения-на-a",
+    "title": "Что такое частица в квантовой теории поля?",
+    "section": "Матричный элемент поглощения на A",
+    "text": "Матричный элемент поглощения на A\nТеперь раскрываем K через матричный элемент и законы сохранения.\n\\[\nK_A(p'_A;p_A,k)=\n\\langle p'_A;0|iT_A|p_A;k\\rangle\n\\]\n\\[\nK_A(p'_A;p_A,k)=\ni(2\\pi)^4\\delta^{(4)}(p_A+k-p'_A)\\mathcal{M}_A(p'_A;p_A,k)\n\\]"
+  },
+  {
+    "objectID": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#a-канал-вычисляем-интеграл",
+    "href": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#a-канал-вычисляем-интеграл",
+    "title": "Что такое частица в квантовой теории поля?",
+    "section": "A-канал: вычисляем интеграл",
+    "text": "A-канал: вычисляем интеграл\nПространственная дельта-функция даёт импульс начального пакета A.\n\\[\n\\mathbf p_A=\\mathbf p'_A-\\mathbf k\n\\]\n\\[\n\\Psi_A^{\\rm hit}(\\mathbf p'_A)=\ni(2\\pi)\n\\frac{\\psi_A(\\mathbf p'_A-\\mathbf k)}{\\sqrt{2E'_A\\,2E_A(\\mathbf p'_A-\\mathbf k)}}\n\\]\n\\[\n\\times\n\\delta\\!\\left(E_A(\\mathbf p'_A-\\mathbf k)+\\omega-E'_A(\\mathbf p'_A)\\right)\n\\mathcal{M}_A(p'_A;p'_A-k,k)\n\\]"
+  },
+  {
+    "objectID": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#b-канал-вычисляем-интеграл",
+    "href": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#b-канал-вычисляем-интеграл",
+    "title": "Что такое частица в квантовой теории поля?",
+    "section": "B-канал: вычисляем интеграл",
+    "text": "B-канал: вычисляем интеграл\nПолностью аналогично.\n\\[\n\\mathbf p_B=\\mathbf p'_B-\\mathbf k\n\\]\n\\[\n\\Psi_B^{\\rm hit}(\\mathbf p'_B)=\ni(2\\pi)\n\\frac{\\psi_B(\\mathbf p'_B-\\mathbf k)}{\\sqrt{2E'_B\\,2E_B(\\mathbf p'_B-\\mathbf k)}}\n\\]\n\\[\n\\times\n\\delta\\!\\left(E_B(\\mathbf p'_B-\\mathbf k)+\\omega-E'_B(\\mathbf p'_B)\\right)\n\\mathcal{M}_B(p'_B;p'_B-k,k)\n\\]"
+  },
+  {
+    "objectID": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#итоговая-явная-форма",
+    "href": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#итоговая-явная-форма",
+    "title": "Что такое частица в квантовой теории поля?",
+    "section": "Итоговая явная форма",
+    "text": "Итоговая явная форма\nИменно здесь видно: одно слагаемое сдвигает A, другое — B.\n\\[\n\\Psi_{AB}^{(1)}=\n\\Psi_A^{\\rm hit}(\\mathbf p'_A)\\psi_B(\\mathbf p'_B)\n+\n\\psi_A(\\mathbf p'_A)\\Psi_B^{\\rm hit}(\\mathbf p'_B)\n\\]\n\\[\n\\Psi_A^{\\rm hit}\\sim \\psi_A(\\mathbf p'_A-\\mathbf k)\n\\]\n\\[\n\\Psi_B^{\\rm hit}\\sim \\psi_B(\\mathbf p'_B-\\mathbf k)\n\\]"
+  },
+  {
+    "objectID": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#зачем-нужно-внутреннее-возбуждение",
+    "href": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#зачем-нужно-внутреннее-возбуждение",
+    "title": "Что такое частица в квантовой теории поля?",
+    "section": "Зачем нужно внутреннее возбуждение",
+    "text": "Зачем нужно внутреннее возбуждение\nСвободная тяжёлая частица не может просто поглотить реальный фотон. Детектор должен иметь внутренние степени свободы.\n\\[\nE_A(\\mathbf p)=M_A+\\frac{\\mathbf p^2}{2M_A}\n\\]\n\\[\nE'_A(\\mathbf p)=M_A+\\varepsilon_A+\\frac{\\mathbf p^2}{2M_A}\n\\]\n\\[\n\\varepsilon_A\\ \\text{кодирует ионизацию, фононы, тепло или другой внутренний отклик}\n\\]"
+  },
+  {
+    "objectID": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#энергетическая-дельта-функция",
+    "href": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#энергетическая-дельта-функция",
+    "title": "Что такое частица в квантовой теории поля?",
+    "section": "Энергетическая дельта-функция",
+    "text": "Энергетическая дельта-функция\nПодставляем тяжёлый предел в A-канал.\n\\[\nE_A(\\mathbf p'_A-\\mathbf k)+\\omega-E'_A(\\mathbf p'_A)\n=\n\\omega-\\varepsilon_A\n-\\frac{\\mathbf p'_A\\cdot\\mathbf k}{M_A}\n+\\frac{\\mathbf k^2}{2M_A}\n\\]\n\\[\n\\delta\\!\\left(E_A(\\mathbf p'_A-\\mathbf k)+\\omega-E'_A(\\mathbf p'_A)\\right)\n=\n\\delta\\!\\left(\\omega-\\varepsilon_A-\\frac{\\mathbf p'_A\\cdot\\mathbf k}{M_A}+\\frac{\\mathbf k^2}{2M_A}\\right)\n\\]"
+  },
+  {
+    "objectID": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#бесконечно-тяжёлый-предел",
+    "href": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#бесконечно-тяжёлый-предел",
+    "title": "Что такое частица в квантовой теории поля?",
+    "section": "Бесконечно тяжёлый предел",
+    "text": "Бесконечно тяжёлый предел\nЕсли отдача мала, энергетическое условие сводится к резонансу внутреннего отклика.\n\\[\nM_A\\to\\infty\n\\]\n\\[\n\\delta\\!\\left(\\omega-\\varepsilon_A-\\frac{\\mathbf p'_A\\cdot\\mathbf k}{M_A}+\\frac{\\mathbf k^2}{2M_A}\\right)\n\\to\n\\delta(\\omega-\\varepsilon_A)\n\\]\n\\[\n\\text{фотон поглощается детектором, если энергия уходит во внутреннюю степень свободы}\n\\]"
+  },
+  {
+    "objectID": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#сработал-a-но-не-b",
+    "href": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#сработал-a-но-не-b",
+    "title": "Что такое частица в квантовой теории поля?",
+    "section": "Сработал A, но не B",
+    "text": "Сработал A, но не B\nЕсли финальный пакет A сдвинут на импульс k, а B остался исходным, доминирует первый член.\n\\[\n\\Psi_{AB}^{(1)}\n=\n\\Psi_A^{\\rm hit}\\psi_B+\n\\psi_A\\Psi_B^{\\rm hit}\n\\]\n\\[\n\\Psi_A^{\\rm hit}\\sim\\psi_A(\\mathbf p'_A-\\mathbf k),\n\\qquad\n\\psi_B\\sim\\psi_B(\\mathbf p'_B)\n\\]\n\\[\n\\text{это и есть канал:}\\quad A\\ \\text{получил сигнал},\\ B\\ \\text{не изменился}\n\\]"
+  },
+  {
+    "objectID": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#сработал-b-но-не-a",
+    "href": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#сработал-b-но-не-a",
+    "title": "Что такое частица в квантовой теории поля?",
+    "section": "Сработал B, но не A",
+    "text": "Сработал B, но не A\nАналогично доминирует второй член.\n\\[\n\\Psi_{AB}^{(1)}\n=\n\\Psi_A^{\\rm hit}\\psi_B+\n\\psi_A\\Psi_B^{\\rm hit}\n\\]\n\\[\n\\Psi_B^{\\rm hit}\\sim\\psi_B(\\mathbf p'_B-\\mathbf k),\n\\qquad\n\\psi_A\\sim\\psi_A(\\mathbf p'_A)\n\\]\n\\[\n\\text{это канал:}\\quad B\\ \\text{получил сигнал},\\ A\\ \\text{не изменился}\n\\]"
+  },
+  {
+    "objectID": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#оба-сильно-сработали",
+    "href": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#оба-сильно-сработали",
+    "title": "Что такое частица в квантовой теории поля?",
+    "section": "Оба сильно сработали?",
+    "text": "Оба сильно сработали?\nВ первом порядке независимого взаимодействия такого канала нет.\n\\[\n\\Psi_{AB}^{(1)}=\n\\Psi_A^{\\rm hit}\\psi_B+\n\\psi_A\\Psi_B^{\\rm hit}\n\\]\n\\[\n\\text{нет слагаемого}\\quad \\Psi_A^{\\rm hit}\\Psi_B^{\\rm hit}\n\\]\n\\[\n\\text{сильный двойной сигнал требует connected-вклада или более высокого порядка}\n\\]"
+  },
+  {
+    "objectID": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#вектор-состояния-и-две-альтернативы",
+    "href": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#вектор-состояния-и-две-альтернативы",
+    "title": "Что такое частица в квантовой теории поля?",
+    "section": "Вектор состояния и две альтернативы",
+    "text": "Вектор состояния и две альтернативы\nПерепишем результат в компактной форме.\n\\[\n|\\Psi_f^{(1)}\\rangle\n=\n|\\chi_A\\rangle |B\\rangle\n+\n|A\\rangle |\\chi_B\\rangle\n\\]\n\\[\n|\\chi_A\\rangle=iT_A|A;k\\rangle\n\\]\n\\[\n|\\chi_B\\rangle=iT_B|B;k\\rangle\n\\]"
+  },
+  {
+    "objectID": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#вероятность-где-появляется-интерференция",
+    "href": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#вероятность-где-появляется-интерференция",
+    "title": "Что такое частица в квантовой теории поля?",
+    "section": "Вероятность: где появляется интерференция",
+    "text": "Вероятность: где появляется интерференция\nИнтерференция появляется не как новое слагаемое в состоянии, а как cross term в норме.\n\\[\n\\langle\\Psi_f^{(1)}|\\Psi_f^{(1)}\\rangle\n=\n\\langle\\chi_A|\\chi_A\\rangle\n+\n\\langle\\chi_B|\\chi_B\\rangle\n+\n2\\operatorname{Re}\\!\\left[\\langle\\chi_A|A\\rangle\\langle B|\\chi_B\\rangle\\right]\n\\]\n\\[\n\\text{если cross term исчезает,}\\quad P\\simeq P_A+P_B\n\\]\n\\[\n\\text{если cross term заметен, отклик когерентный}\n\\]"
+  },
+  {
+    "objectID": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#гауссов-пакет-мишени",
+    "href": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#гауссов-пакет-мишени",
+    "title": "Что такое частица в квантовой теории поля?",
+    "section": "Гауссов пакет мишени",
+    "text": "Гауссов пакет мишени\nДля проверки берём простой импульсный гаусс.\n\\[\n\\psi_j(\\mathbf p)=\nN\\exp\\!\\left[-\\frac{(\\mathbf p-\\bar{\\mathbf p}_j)^2}{4\\sigma_p^2}\\right]\n\\exp\\!\\left[-i\\mathbf p\\cdot\\mathbf R_j\\right]\n\\]\n\\[\n\\chi_j(\\mathbf p)\\simeq C_j\\psi_j(\\mathbf p-\\mathbf k)\n\\]"
+  },
+  {
+    "objectID": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#перекрытие-сработал-и-не-сработал",
+    "href": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#перекрытие-сработал-и-не-сработал",
+    "title": "Что такое частица в квантовой теории поля?",
+    "section": "Перекрытие «сработал» и «не сработал»",
+    "text": "Перекрытие «сработал» и «не сработал»\nДля гауссовых пакетов перекрытие вычисляется сразу.\n\\[\n\\langle j|\\chi_j\\rangle\n\\simeq\nC_j\\exp\\!\\left[-\\frac{\\mathbf k^2}{8\\sigma_p^2}\\right]\n\\exp\\!\\left[i\\mathbf k\\cdot\\mathbf R_j\\right]\n\\]\n\\[\n\\langle \\chi_j|j\\rangle\n\\simeq\nC_j^*\\exp\\!\\left[-\\frac{\\mathbf k^2}{8\\sigma_p^2}\\right]\n\\exp\\!\\left[-i\\mathbf k\\cdot\\mathbf R_j\\right]\n\\]"
+  },
+  {
+    "objectID": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#интерференционный-член",
+    "href": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#интерференционный-член",
+    "title": "Что такое частица в квантовой теории поля?",
+    "section": "Интерференционный член",
+    "text": "Интерференционный член\nПодставляем перекрытия в cross term.\n\\[\nP_{\\rm int}\n=\n2\\operatorname{Re}\\!\\left[\nC_A^*C_B\n\\exp\\!\\left(-\\frac{\\mathbf k^2}{4\\sigma_p^2}\\right)\n\\exp\\!\\left(i\\mathbf k\\cdot(\\mathbf R_B-\\mathbf R_A)\\right)\n\\right]\n\\]\n\\[\n|\\mathbf k|\\gg \\sigma_p\n\\quad\\Rightarrow\\quad\nP_{\\rm int}\\simeq 0\n\\]\n\\[\n|\\mathbf R_A-\\mathbf R_B|\\ll \\lambda\n\\quad\\Rightarrow\\quad\n\\text{фаза почти общая}\n\\]"
+  },
+  {
+    "objectID": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#что-значит-детекторы-перекрываются",
+    "href": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#что-значит-детекторы-перекрываются",
+    "title": "Что такое частица в квантовой теории поля?",
+    "section": "Что значит «детекторы перекрываются»",
+    "text": "Что значит «детекторы перекрываются»\nДля различимых мишеней это не означает, что надо отождествить A и B. Это означает, что два конечных слагаемых не являются хорошо различимыми.\n\\[\n\\langle\\chi_A|A\\rangle\\langle B|\\chi_B\\rangle\\neq 0\n\\]\n\\[\n\\Psi_A^{\\rm hit}\\psi_B\n\\quad\\text{и}\\quad\n\\psi_A\\Psi_B^{\\rm hit}\n\\quad\\text{могут интерферировать}\n\\]\n\\[\n\\text{тогда нельзя честно говорить: сработал строго A или строго B}\n\\]"
+  },
+  {
+    "objectID": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#апплет-два-слагаемых-финальной-волновой-функции",
+    "href": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#апплет-два-слагаемых-финальной-волновой-функции",
+    "title": "Что такое частица в квантовой теории поля?",
+    "section": "Апплет: два слагаемых финальной волновой функции",
+    "text": "Апплет: два слагаемых финальной волновой функции\nВ апплете ниже используется ровно та модель, которую мы вывели:\n\\[\n\\Psi(p_A,p_B)=\\chi_A(p_A)\\psi_B(p_B)+\\psi_A(p_A)\\chi_B(p_B)\n\\]\n\\[\n\\psi_R(p)=N\\exp\\left[-\\frac{p^2}{4\\sigma_p^2}\\right]e^{-ipR},\n\\qquad\n\\chi_R(p)=\\psi_R(p-k)\n\\]\nНа двумерной карте показана плотность \\(|\\Psi(p_A,p_B)|^2\\) в импульсах двух мишеней. Два естественных центра этой картины:\n\\[\nA\\ \\text{сработал:}\\quad (p_A,p_B)\\simeq(k,0),\n\\qquad\nB\\ \\text{сработал:}\\quad (p_A,p_B)\\simeq(0,k).\n\\]\nЗдесь \\(p_A,p_B\\) — финальные импульсы мишеней, то есть сокращённая запись для \\(p'_A,p'_B\\)."
+  },
+  {
+    "objectID": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#section",
+    "href": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#section",
+    "title": "Что такое частица в квантовой теории поля?",
+    "section": "",
+    "text": "viewof sigmaP = Inputs.range([0.15, 2.50], {\n  value: 0.65,\n  step: 0.01,\n  label: \"ширина пакета в импульсе σₚ\"\n})\n\nviewof separation = Inputs.range([0.0, 18.0], {\n  value: 6.0,\n  step: 0.05,\n  label: \"расстояние между мишенями L\"\n})\n\nviewof kTransfer = Inputs.range([0.0, 6.0], {\n  value: 3.0,\n  step: 0.02,\n  label: \"переданный импульс k\"\n})\n\n// Fixed numerical grid in momentum space.\nnGrid = 96\npPad = 5.0 * sigmaP\npMin = Math.min(-pPad, kTransfer - pPad)\npMax = Math.max(pPad, kTransfer + pPad)\ndp = (pMax - pMin) / (nGrid - 1)\npValues = Array.from({length: nGrid}, (_, i) =&gt; pMin + i * dp)\n\nRA = -separation / 2\nRB = +separation / 2\nsigmaX = 1 / (2 * sigmaP)\n\n// Real normalized envelope. The common normalization cancels after normalizing |Ψ|².\nfunction envelope(p, center) {\n  const z = (p - center) / sigmaP;\n  return Math.exp(-0.25 * z * z);\n}\n\n// Complex packet ψ_R(p)=g(p) exp(-ipR).\nfunction packet(p, R) {\n  const a = envelope(p, 0.0);\n  const phase = -p * R;\n  return {re: a * Math.cos(phase), im: a * Math.sin(phase)};\n}\n\n// Hit packet χ_R(p)=ψ_R(p-k)=g(p-k) exp[-i(p-k)R].\nfunction hitPacket(p, R) {\n  const pp = p - kTransfer;\n  const a = envelope(pp, 0.0);\n  const phase = -pp * R;\n  return {re: a * Math.cos(phase), im: a * Math.sin(phase)};\n}\n\nfunction cmul(a, b) {\n  return {re: a.re * b.re - a.im * b.im, im: a.re * b.im + a.im * b.re};\n}\n\nfunction cadd(a, b) {\n  return {re: a.re + b.re, im: a.im + b.im};\n}\n\nfunction abs2(a) {\n  return a.re * a.re + a.im * a.im;\n}\n\nfunction psiFinal(pA, pB) {\n  const termA = cmul(hitPacket(pA, RA), packet(pB, RB));\n  const termB = cmul(packet(pA, RA), hitPacket(pB, RB));\n  return cadd(termA, termB);\n}\n\nrhoRaw = {\n  const rows = [];\n  for (const pA of pValues) {\n    for (const pB of pValues) {\n      rows.push({pA, pB, rho: abs2(psiFinal(pA, pB))});\n    }\n  }\n  return rows;\n}\n\nZ = Math.max(1e-300, rhoRaw.reduce((s, d) =&gt; s + d.rho, 0))\nrhoMax = Math.max(1e-300, rhoRaw.reduce((m, d) =&gt; Math.max(m, d.rho), 0))\nrho = rhoRaw.map(d =&gt; ({\n  ...d,\n  prob: d.rho / Z,\n  density: d.rho / rhoMax,\n  x1: d.pA - 0.5 * dp,\n  x2: d.pA + 0.5 * dp,\n  y1: d.pB - 0.5 * dp,\n  y2: d.pB + 0.5 * dp\n}))\n\nmeanA = rho.reduce((s, d) =&gt; s + d.pA * d.prob, 0)\nmeanB = rho.reduce((s, d) =&gt; s + d.pB * d.prob, 0)\nvarA = rho.reduce((s, d) =&gt; s + (d.pA - meanA) * (d.pA - meanA) * d.prob, 0)\nvarB = rho.reduce((s, d) =&gt; s + (d.pB - meanB) * (d.pB - meanB) * d.prob, 0)\n\nmargA = pValues.map(pA =&gt; ({\n  p: pA,\n  P: rho.filter(d =&gt; Math.abs(d.pA - pA) &lt; 0.5 * dp).reduce((s, d) =&gt; s + d.prob, 0)\n}))\n\nmargB = pValues.map(pB =&gt; ({\n  p: pB,\n  P: rho.filter(d =&gt; Math.abs(d.pB - pB) &lt; 0.5 * dp).reduce((s, d) =&gt; s + d.prob, 0)\n}))\n\n// Analytic overlaps from the same Gaussian packets.\noverlapHitUnhit = Math.exp(-(kTransfer * kTransfer) / (8 * sigmaP * sigmaP))\ninterferenceRaw = 2 * overlapHitUnhit * overlapHitUnhit * Math.cos(kTransfer * separation)\nnormalizationAnalytic = 2 + interferenceRaw\n\nbranchMarkers = [\n  {pA: kTransfer, pB: 0, label: \"A получил k\", color: \"#6fffc2\"},\n  {pA: 0, pB: kTransfer, label: \"B получил k\", color: \"#ffb25e\"}\n]\n\nfunction gaussianX(x, R) {\n  const z = (x - R) / sigmaX;\n  return Math.exp(-0.5 * z * z);\n}\n\ngeometrySvg = {\n  const width = 440;\n  const height = 132;\n  const xHalfRange = 11.5;\n  const xmin = -xHalfRange;\n  const xmax = xHalfRange;\n  const xmap = x =&gt; 34 + (x - xmin) / (xmax - xmin) * (width - 68);\n  const ybase = 94;\n  const yscale = 56;\n  const xs = Array.from({length: 180}, (_, i) =&gt; xmin + (xmax - xmin) * i / 179);\n  const pathA = xs.map((x, i) =&gt; `${i === 0 ? 'M' : 'L'} ${xmap(x).toFixed(2)} ${(ybase - yscale * gaussianX(x, RA)).toFixed(2)}`).join(' ');\n  const pathB = xs.map((x, i) =&gt; `${i === 0 ? 'M' : 'L'} ${xmap(x).toFixed(2)} ${(ybase - yscale * gaussianX(x, RB)).toFixed(2)}`).join(' ');\n  const xA = xmap(RA);\n  const xB = xmap(RB);\n  return html`&lt;svg width=\"${width}\" height=\"${height}\" viewBox=\"0 0 ${width} ${height}\"&gt;\n    &lt;rect x=\"0\" y=\"0\" width=\"${width}\" height=\"${height}\" rx=\"14\" fill=\"rgba(255,255,255,0.035)\" stroke=\"rgba(220,235,255,0.14)\"/&gt;\n    &lt;line x1=\"24\" y1=\"${ybase}\" x2=\"${width-24}\" y2=\"${ybase}\" stroke=\"rgba(255,255,255,0.35)\"/&gt;\n    &lt;path d=\"${pathA}\" fill=\"none\" stroke=\"#6fffc2\" stroke-width=\"2.8\"/&gt;\n    &lt;path d=\"${pathB}\" fill=\"none\" stroke=\"#ffb25e\" stroke-width=\"2.8\"/&gt;\n    &lt;line x1=\"${xA}\" y1=\"${ybase}\" x2=\"${xA}\" y2=\"28\" stroke=\"#6fffc2\" stroke-opacity=\"0.45\" stroke-dasharray=\"5 5\"/&gt;\n    &lt;line x1=\"${xB}\" y1=\"${ybase}\" x2=\"${xB}\" y2=\"28\" stroke=\"#ffb25e\" stroke-opacity=\"0.45\" stroke-dasharray=\"5 5\"/&gt;\n    &lt;text x=\"${xA-8}\" y=\"22\" fill=\"#6fffc2\" font-size=\"13\" font-weight=\"700\"&gt;A&lt;/text&gt;\n    &lt;text x=\"${xB-8}\" y=\"22\" fill=\"#ffb25e\" font-size=\"13\" font-weight=\"700\"&gt;B&lt;/text&gt;\n    &lt;text x=\"16\" y=\"118\" fill=\"#a9b7d0\" font-size=\"11\"&gt;пространственные профили: σₓ = 1/(2σₚ) = ${sigmaX.toFixed(2)}&lt;/text&gt;\n  &lt;/svg&gt;`;\n}\n\nheatmap = Plot.plot({\n  width: 440,\n  height: 282,\n  marginLeft: 48,\n  marginBottom: 36,\n  x: {label: \"pₐ\", domain: [pMin, pMax]},\n  y: {label: \"pᵦ\", domain: [pMin, pMax]},\n  color: {type: \"sqrt\", scheme: \"magma\", domain: [0, 1], label: \"relative |Ψ|²\"},\n  marks: [\n    Plot.rect(rho, {x1: \"x1\", x2: \"x2\", y1: \"y1\", y2: \"y2\", fill: \"density\"}),\n    Plot.ruleX([meanA], {stroke: \"#8ec5ff\", strokeWidth: 2}),\n    Plot.ruleY([meanB], {stroke: \"#8ec5ff\", strokeWidth: 2}),\n    Plot.dot(branchMarkers, {x: \"pA\", y: \"pB\", fill: d =&gt; d.color, stroke: \"#ffffff\", strokeWidth: 1.3, r: 4.5}),\n    Plot.text([branchMarkers[0]], {x: \"pA\", y: \"pB\", text: \"label\", fill: d =&gt; d.color, dy: -12, fontSize: 12, fontWeight: 700}),\n    Plot.text([branchMarkers[1]], {x: \"pA\", y: \"pB\", text: \"label\", fill: d =&gt; d.color, dy: 14, fontSize: 12, fontWeight: 700}),\n    Plot.dot([{pA: meanA, pB: meanB}], {x: \"pA\", y: \"pB\", fill: \"#8ec5ff\", stroke: \"white\", r: 4})\n  ]\n})\n\nmarginals = Plot.plot({\n  width: 440,\n  height: 156,\n  marginLeft: 42,\n  marginBottom: 32,\n  x: {label: \"p\", domain: [pMin, pMax]},\n  y: {label: \"маргинальная вероятность\"},\n  grid: true,\n  marks: [\n    Plot.line(margA, {x: \"p\", y: \"P\", stroke: \"#6fffc2\", strokeWidth: 2.5}),\n    Plot.line(margB, {x: \"p\", y: \"P\", stroke: \"#ffb25e\", strokeWidth: 2.5}),\n    Plot.ruleX([meanA], {stroke: \"#6fffc2\", strokeDasharray: \"5 4\"}),\n    Plot.ruleX([meanB], {stroke: \"#ffb25e\", strokeDasharray: \"5 4\"})\n  ]\n})\n\nwidgetStyle = html`&lt;style&gt;\n.reveal .slides section.applet-slide {\n  font-size: 22px;\n}\n.reveal .slides section.applet-slide h2 {\n  font-size: 1.45em;\n  margin: 0 0 0.25rem;\n}\n.reveal .slides section.applet-slide .slide-number {\n  font-size: 0.65em !important;\n}\n.target-widget {\n  max-width: 940px;\n  margin: 0 auto;\n  font: 15px/1.2 system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif;\n}\n.target-widget,\n.target-widget * {\n  box-sizing: border-box;\n}\n.target-widget .observablehq--inspect { display: none !important; }\n.target-widget .observablehq {\n  margin: 0;\n}\n.target-widget .observablehq:has(input[type=\"range\"]) {\n  display: inline-block;\n  width: 31.7%;\n  margin: 0 1.2% 0.35rem 0;\n  vertical-align: top;\n}\n.target-widget label {\n  display: grid;\n  grid-template-columns: minmax(0, 1fr);\n  align-items: center;\n  gap: 0.24rem;\n  margin: 0;\n  color: #f2f2f2;\n  font-size: 15px;\n  line-height: 1.12;\n}\n.target-widget label &gt; span:first-child {\n  min-width: 0;\n}\n.target-widget input[type=\"range\"] {\n  width: 100% !important;\n  accent-color: #ffb347;\n}\n.target-widget input[type=\"number\"] {\n  width: 7.2rem !important;\n  min-width: 0 !important;\n  height: 1.45rem;\n  padding: 0.08rem 0.24rem;\n  border: 1px solid rgba(220,235,255,0.36);\n  border-radius: 6px;\n  background: rgba(255,255,255,0.06);\n  color: #f2f2f2;\n  font: 600 13px/1 system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif;\n}\n.target-widget .layout {\n  display: grid;\n  grid-template-columns: repeat(2, minmax(0, 1fr));\n  gap: 0.45rem;\n  align-items: start;\n  margin-top: 0.1rem;\n}\n.target-widget figure { margin: 0; }\n.target-widget .panel {\n  border: 1px solid rgba(220,235,255,0.12);\n  background: rgba(255,255,255,0.035);\n  border-radius: 12px;\n  padding: 0.38rem;\n}\n.target-widget .plot-title {\n  margin: 0 0 0.2rem;\n  color: #f2f2f2;\n  font-size: 13px;\n  font-weight: 700;\n}\n.target-widget .plot-note {\n  margin: 0.1rem 0 0;\n  color: #a9b7d0;\n  font-size: 11.5px;\n  line-height: 1.2;\n}\n.target-widget .math-inline {\n  font-family: \"Times New Roman\", Times, serif;\n  font-style: italic;\n  white-space: nowrap;\n}\n.target-widget .math-inline sub {\n  font-size: 0.72em;\n  line-height: 0;\n}\n.target-widget .numbers {\n  display: grid;\n  grid-template-columns: repeat(2, minmax(0, 1fr));\n  gap: 0.25rem;\n  margin-top: 0.28rem;\n  font-size: 12px;\n}\n.target-widget .num {\n  background: rgba(255,255,255,0.055);\n  border-radius: 8px;\n  padding: 0.28rem 0.4rem;\n}\n.target-widget .explain {\n  font-size: 13px;\n  line-height: 1.27;\n}\n.target-widget .muted { color: #a9b7d0; }\n.target-widget .green { color: #6fffc2; font-weight: 700; }\n.target-widget .orange { color: #ffb25e; font-weight: 700; }\n.target-widget .blue { color: #8ec5ff; font-weight: 700; }\n.target-widget .violet { color: #c39bff; font-weight: 700; }\n&lt;/style&gt;`\n\nhtml`${widgetStyle}\n&lt;div class=\"layout\"&gt;\n  &lt;div class=\"panel\"&gt;\n    ${geometrySvg}\n    &lt;div class=\"numbers\"&gt;\n      &lt;div class=\"num\"&gt;&lt;span class=\"muted\"&gt;⟨&lt;span class=\"math-inline\"&gt;p&lt;sub&gt;A&lt;/sub&gt;&lt;/span&gt;⟩ полного состояния&lt;/span&gt;&lt;br&gt;&lt;span class=\"green\"&gt;${meanA.toFixed(3)}&lt;/span&gt;&lt;/div&gt;\n      &lt;div class=\"num\"&gt;&lt;span class=\"muted\"&gt;⟨&lt;span class=\"math-inline\"&gt;p&lt;sub&gt;B&lt;/sub&gt;&lt;/span&gt;⟩ полного состояния&lt;/span&gt;&lt;br&gt;&lt;span class=\"orange\"&gt;${meanB.toFixed(3)}&lt;/span&gt;&lt;/div&gt;\n      &lt;div class=\"num\"&gt;&lt;span class=\"muted\"&gt;перекрытие hit/unhit&lt;/span&gt;&lt;br&gt;&lt;span class=\"blue\"&gt;${overlapHitUnhit.toFixed(4)}&lt;/span&gt;&lt;/div&gt;\n      &lt;div class=\"num\"&gt;&lt;span class=\"muted\"&gt;интерференция raw&lt;/span&gt;&lt;br&gt;&lt;span class=\"violet\"&gt;${interferenceRaw.toFixed(4)}&lt;/span&gt;&lt;/div&gt;\n      &lt;div class=\"num\"&gt;&lt;span class=\"muted\"&gt;ветвь A: (&lt;span class=\"math-inline\"&gt;p&lt;sub&gt;A&lt;/sub&gt;,p&lt;sub&gt;B&lt;/sub&gt;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=\"green\"&gt;(${kTransfer.toFixed(2)}, 0)&lt;/span&gt;&lt;/div&gt;\n      &lt;div class=\"num\"&gt;&lt;span class=\"muted\"&gt;ветвь B: (&lt;span class=\"math-inline\"&gt;p&lt;sub&gt;A&lt;/sub&gt;,p&lt;sub&gt;B&lt;/sub&gt;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=\"orange\"&gt;(0, ${kTransfer.toFixed(2)})&lt;/span&gt;&lt;/div&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n  &lt;div class=\"panel\"&gt;\n    &lt;div class=\"plot-title\"&gt;|Ψ(&lt;span class=\"math-inline\"&gt;p&lt;sub&gt;A&lt;/sub&gt;,p&lt;sub&gt;B&lt;/sub&gt;&lt;/span&gt;)|²: два канала в импульсах мишеней&lt;/div&gt;\n    ${heatmap}\n    &lt;div class=\"plot-note\"&gt;Цвет показывает относительную плотность ρ/max(ρ); вероятности и средние считаются по нормированной ρ.&lt;/div&gt;\n  &lt;/div&gt;\n  &lt;div class=\"panel\"&gt;\n    &lt;div class=\"plot-title\"&gt;маргинальные распределения по &lt;span class=\"math-inline\"&gt;p&lt;sub&gt;A&lt;/sub&gt;&lt;/span&gt; и &lt;span class=\"math-inline\"&gt;p&lt;sub&gt;B&lt;/sub&gt;&lt;/span&gt;&lt;/div&gt;\n    ${marginals}\n  &lt;/div&gt;\n  &lt;div class=\"panel explain\"&gt;\n    &lt;b&gt;Что проверять:&lt;/b&gt;&lt;br&gt;\n    1. При &lt;b&gt;k ≫ σ&lt;sub&gt;p&lt;/sub&gt;&lt;/b&gt; две области на карте отделяются: это режим «сработал A» или «сработал B».&lt;br&gt;\n    2. При малом k или большой σ&lt;sub&gt;p&lt;/sub&gt; перекрытие hit/unhit заметно, и два слагаемых интерферируют.&lt;br&gt;\n    3. Расстояние L входит только через фазу: интерференционный вклад ∝ cos(kL).&lt;br&gt;&lt;br&gt;\n    &lt;span class=\"muted\"&gt;Никаких дополнительных вероятностных правил в апплете нет: строится только |χ&lt;sub&gt;A&lt;/sub&gt;ψ&lt;sub&gt;B&lt;/sub&gt; + ψ&lt;sub&gt;A&lt;/sub&gt;χ&lt;sub&gt;B&lt;/sub&gt;|².&lt;/span&gt;\n  &lt;/div&gt;\n&lt;/div&gt;`"
+  },
+  {
+    "objectID": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#когда-возникает-обычная-картина",
+    "href": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#когда-возникает-обычная-картина",
+    "title": "Что такое частица в квантовой теории поля?",
+    "section": "Когда возникает обычная картина",
+    "text": "Когда возникает обычная картина\nЕсли сигнал сильный, состояния «сработал» и «не сработал» почти ортогональны.\n\\[\n\\langle\\chi_A|A\\rangle\\simeq0,\n\\qquad\n\\langle B|\\chi_B\\rangle\\simeq0\n\\]\n\\[\n\\langle\\Psi_f^{(1)}|\\Psi_f^{(1)}\\rangle\n\\simeq\n\\langle\\chi_A|\\chi_A\\rangle+\n\\langle\\chi_B|\\chi_B\\rangle\n\\]\n\\[\nP\\simeq P_A+P_B\n\\]"
+  },
+  {
+    "objectID": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#когда-возникает-когерентный-отклик",
+    "href": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#когда-возникает-когерентный-отклик",
+    "title": "Что такое частица в квантовой теории поля?",
+    "section": "Когда возникает когерентный отклик",
+    "text": "Когда возникает когерентный отклик\nЕсли изменения малы или мишени работают как один протяжённый объект, cross term сохраняется.\n\\[\n\\langle\\chi_A|A\\rangle\\langle B|\\chi_B\\rangle\\neq0\n\\]\n\\[\nP\\neq P_A+P_B\n\\]\n\\[\n\\text{это режим когерентного рассеяния, дифракции и интерференции}\n\\]"
+  },
+  {
+    "objectID": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#главный-урок",
+    "href": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#главный-урок",
+    "title": "Что такое частица в квантовой теории поля?",
+    "section": "Главный урок",
+    "text": "Главный урок\nТочечная картина не была заложена в начало. Она появилась как предел.\n\\[\n\\text{частица}\\neq\\text{точка}\n\\]\n\\[\n\\text{один сильный сигнал}\\Rightarrow\\text{почти ортогональные конечные состояния}\n\\]\n\\[\n\\text{волновое описание само даёт предел: сработал A или сработал B}\n\\]"
+  },
+  {
+    "objectID": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#короткое-резюме",
+    "href": "WaveOrParticle/two_targets_qft_particle_wave_with_applet.html#короткое-резюме",
+    "title": "Что такое частица в квантовой теории поля?",
+    "section": "Короткое резюме",
+    "text": "Короткое резюме\n\nВ первом порядке есть два spectator-канала: поглощение на A или поглощение на B.\nФинальная волновая функция содержит оба слагаемых.\nЕсли слагаемые не перекрываются, вероятности складываются как независимые альтернативы.\nЕсли слагаемые перекрываются, возникает когерентный отклик.\nНикакого превращения волны в точку в формулах не появилось."
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#section",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#section",
+    "title": "",
+    "section": "",
+    "text": "Рождение и жизнь одной Вселенной\n    \n      Д. В. Наумов\n      Научно-популярная лекция для горожан\n    \n  \n  \n    \n    NASA, ESA, CSA, STScI / Webb First Deep Field"
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#section-1",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#section-1",
+    "title": "",
+    "section": "",
+    "text": "вопрос\n    Почему ночью небо темное?\n    На первый взгляд ответ очевиден: Солнце за горизонтом. Но тогда остается более глубокий вопрос."
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#section-2",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#section-2",
+    "title": "",
+    "section": "",
+    "text": "модель\n    Представим вечную и статическую Вселенную\n    Звезды равномерно заполняют пространство. Наблюдатель смотрит в любую сторону."
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#section-3",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#section-3",
+    "title": "",
+    "section": "",
+    "text": "звездные оболочки\n    Чем дальше слой, тем больше в нем звезд\n    Дальние звезды слабее, но самих звезд в дальнем слое больше. В простейшей картине эти эффекты компенсируются.\n    тот же угол зрения -&gt; площадь слоя растет как r²"
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#section-4",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#section-4",
+    "title": "",
+    "section": "",
+    "text": "парадокс\n    С каждым новым слоем небо становится ярче\n    Если слоев бесконечно много, почти каждый луч зрения должен встретить поверхность какой-нибудь звезды."
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#section-5",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#section-5",
+    "title": "",
+    "section": "",
+    "text": "предел\n    Небо должно быть почти сплошной поверхностью звезды\n    Такой была бы ночь в бесконечной, вечной и неподвижной Вселенной."
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#section-6",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#section-6",
+    "title": "",
+    "section": "",
+    "text": "реальность\n    Но в реальности небо темное\n    Значит, одна из исходных догадок неверна. А на самом деле неверны сразу две: Вселенная не вечная и не статическая.\n  \n  Темная ночь говорит о биографии Вселенной"
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#section-7",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#section-7",
+    "title": "",
+    "section": "",
+    "text": "ответ\n      Ночь темная, потому что Вселенная имеет историю\n      Это уже не статическая декорация, а развивающаяся система с началом горячей плотной стадии.\n    \n    \n      \n        1\n        Конечный возрастСвет от слишком далеких областей еще не успел дойти.\n      \n      \n        2\n        РасширениеСвет растягивается, краснеет и приносит меньше энергии.\n      \n      \n        3\n        Звезды зажглись не сразуБыла темная эпоха: атомы уже были, а звезд еще не было."
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#что-означает-что-вселенная-расширяется",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#что-означает-что-вселенная-расширяется",
+    "title": "",
+    "section": "Что означает, что Вселенная расширяется?",
+    "text": "Что означает, что Вселенная расширяется?\n\n\n\nА. Расстояния между галактиками увеличиваются\n\n\nБ. Вселенная набирает вес\n\n\nВ. Галактики разлетаются от общего центра"
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#что-означает-что-вселенная-расширяется-1",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#что-означает-что-вселенная-расширяется-1",
+    "title": "",
+    "section": "Что означает, что Вселенная расширяется?",
+    "text": "Что означает, что Вселенная расширяется?\n\n\n\nА. Расстояния между галактиками увеличиваются\n\n\nБ. Вселенная набирает вес\n\n\nВ. Галактики разлетаются от общего центра"
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#красное-и-голубое-смещение",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#красное-и-голубое-смещение",
+    "title": "",
+    "section": "Красное и голубое смещение",
+    "text": "Красное и голубое смещение\n\n\nСвет от галактик раскладывают в спектр, как белый свет в радугу.\n\n\nЕсли источник удаляется, волна растягивается: линии уходят к красному.\nЕсли источник приближается, волна сжимается: линии уходят к синему.\nДля далеких галактик почти везде видим красное смещение."
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#закон-хаббла",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#закон-хаббла",
+    "title": "",
+    "section": "Закон Хаббла",
+    "text": "Закон Хаббла\n\n\nЭдвин Хаббл увидел простую закономерность: чем дальше галактика, тем быстрее растет расстояние до нее.\n\\[\nv = H_0 d\n\\]\n\n\n\\(d\\) - расстояние до галактики.\n\\(v\\) - скорость удаления по красному смещению.\n\\(H_0\\) - сегодняшняя скорость расширения Вселенной."
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#все-галактики-удаляются-от-нас.-мы-в-центре-вселенной",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#все-галактики-удаляются-от-нас.-мы-в-центре-вселенной",
+    "title": "",
+    "section": "Все галактики удаляются от нас. Мы в центре Вселенной?",
+    "text": "Все галактики удаляются от нас. Мы в центре Вселенной?\n\n\n\nА. Да\n\n\nБ. Нет\n\n\nВ. Не все так однозначно"
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#все-галактики-удаляются-от-нас.-мы-в-центре-вселенной-1",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#все-галактики-удаляются-от-нас.-мы-в-центре-вселенной-1",
+    "title": "",
+    "section": "Все галактики удаляются от нас. Мы в центре Вселенной?",
+    "text": "Все галактики удаляются от нас. Мы в центре Вселенной?\n\n\nКороткий ответ: нет. Но есть важная оговорка.\n\n\n\nА. Да\n\n\nБ. Нет\n\n\nВ. Не все так однозначно\n\n\n\nФизического центра расширения нет. Но каждый наблюдатель находится в центре своей наблюдаемой области: свет приходит к нему со всех сторон."
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#что-видит-наблюдатель-на-поверхности",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#что-видит-наблюдатель-на-поверхности",
+    "title": "",
+    "section": "Что видит наблюдатель на поверхности?",
+    "text": "Что видит наблюдатель на поверхности?"
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#назад-во-времени",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#назад-во-времени",
+    "title": "",
+    "section": "Назад во времени",
+    "text": "Назад во времени\n\n  \n    \n      \n      \n        Сегодня\n        Вселенная большая и продолжает расширяться. Вчера она была почти такой же, но чуть меньше.\n      \n    \n    \n      \n      \n        1 млрд лет назад\n        Масштаб уже был немного меньше.\n      \n    \n    \n      \n      \n        10 млрд лет назад\n        Расстояния между будущими галактиками были гораздо меньше.\n      \n    \n    \n      \n      \n        Самое начало\n        Наш наблюдаемый кусок Вселенной был сжат почти в точку.\n      \n    \n  \n\n  \n    \n      \n      сегодня\n    \n    \n      \n      раньше\n    \n    \n      \n      еще раньше\n    \n    \n      \n        \n        ?\n      \n      почти самое начало"
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#что-случилось-в-самом-начале",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#что-случилось-в-самом-начале",
+    "title": "",
+    "section": "Что случилось в самом начале?",
+    "text": "Что случилось в самом начале?\n\n\n\nА. Большой Взрыв\n\n\nБ. Большой Хлопок\n\n\nВ. Ничего не было"
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#что-случилось-в-самом-начале-1",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#что-случилось-в-самом-начале-1",
+    "title": "",
+    "section": "Что случилось в самом начале?",
+    "text": "Что случилось в самом начале?\n\n\n\nА. Большой Взрыв\n\n\nБ. Большой Хлопок\n\n\nВ. Ничего не было"
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#сколько-лет-назад-родилась-вселенная",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#сколько-лет-назад-родилась-вселенная",
+    "title": "",
+    "section": "Сколько лет назад родилась Вселенная?",
+    "text": "Сколько лет назад родилась Вселенная?\n\n\n\nА. 100 тысяч\n\n\nБ. 13.8 · 10⁹\n\n\nВ. ∞"
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#сколько-лет-назад-родилась-вселенная-1",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#сколько-лет-назад-родилась-вселенная-1",
+    "title": "",
+    "section": "Сколько лет назад родилась Вселенная?",
+    "text": "Сколько лет назад родилась Вселенная?\n\n\n\nА. 100 тысяч\n\n\nБ. 13.8 · 10⁹\n\n\nВ. ∞"
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#section-8",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#section-8",
+    "title": "",
+    "section": "",
+    "text": "Инфляция до растяжения\n    Маленький круг с красными и синими флуктуациями расположен справа вверху у ранней стадии.\n\n    \n    Время\n    Температура\n    \n    \n\n    \n      \n      Начало\n      &gt; 10³² K\n      Сгусток квантовых полей\n    \n\n    \n      \n      10⁻³⁶ - 10⁻³⁴ сек\n      10²⁸ - 10²² K\n      \n      Инфляция\n      Растягивается сам масштаб расстояний"
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#section-9",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#section-9",
+    "title": "",
+    "section": "",
+    "text": "Инфляция после растяжения\n    Тот же круг и те же флуктуации стали намного больше.\n\n    \n    Время\n    Температура\n    \n    \n\n    \n      \n      Начало\n      &gt; 10³² K\n      Сгусток квантовых полей\n    \n\n    \n      \n      10⁻³⁶ - 10⁻³⁴ сек\n      10²⁸ - 10²² K\n      \n      Инфляция: рост примерно в 10²⁶ раз\n      Микроскопические флуктуации становятся начальными неоднородностями"
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#section-10",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#section-10",
+    "title": "",
+    "section": "",
+    "text": "Рождение легких химических элементов\n    Вертикальная шкала с началом, инфляцией и синтезом легких ядер через двадцать минут.\n\n    \n    Время\n    Температура\n    \n    \n\n    \n      \n      Начало\n      &gt; 10³² K\n      Сгусток квантовых полей\n    \n\n    \n      \n      10⁻³⁶ - 10⁻³⁴ сек\n      10²⁸ - 10²² K\n      Вселенная выросла в 10²⁶ раз\n    \n\n    \n      \n      20 мин\n      10⁷ K\n      \n      20 минут: синтез легких ядер почти закончен\n      Остаются протоны, дейтерий, гелий-4 и немного лития\n      Для тяжелых элементов Вселенная уже слишком быстро остывает\n    \n    \n\n    \n      \n\n      \n        \n        протон\n      \n\n      \n        \n        \n        дейтерий\n      \n\n      \n        \n        \n        \n        гелий-3\n      \n\n      \n        \n        \n        \n        \n        гелий-4\n      \n\n      \n        \n        \n        \n        \n        \n        \n        \n        литий"
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#section-11",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#section-11",
+    "title": "",
+    "section": "",
+    "text": "Свет и вещество разделились\n    Вертикальная шкала с активной отметкой триста семьдесят тысяч лет, когда свет и вещество разделились.\n\n    \n    Время\n    Температура\n    \n    \n\n    \n      \n      Начало\n      &gt; 10³² K\n      Сгусток квантовых полей\n    \n\n    \n      \n      10⁻³⁶ - 10⁻³⁴ сек\n      10²⁸ - 10²² K\n      Вселенная выросла в 10²⁶ раз\n    \n\n    \n      \n      20 мин\n      10⁷ K\n      Завершился синтез легких ядер\n    \n\n    \n      \n      370 тыс. лет\n      4000 K\n      \n      Свет и вещество разделились\n      Вселенная стала прозрачной: фотоны больше не застревают в плазме"
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#section-12",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#section-12",
+    "title": "",
+    "section": "",
+    "text": "Темные времена\n    Вертикальная шкала с активной отметкой три миллиона лет, когда звезд еще нет, а Вселенная растет и тускнеет.\n    \n      \n        \n        \n        \n      \n    \n\n    \n    Время\n    Температура\n    \n    \n\n    \n      \n      Начало\n      &gt; 10³² K\n      Сгусток квантовых полей\n    \n\n    \n      \n      10⁻³⁶ - 10⁻³⁴ сек\n      10²⁸ - 10²² K\n      Вселенная выросла в 10²⁶ раз\n    \n\n    \n      \n      20 мин\n      10⁷ K\n      Завершился синтез легких ядер\n    \n\n    \n      \n      370 тыс. лет\n      4000 K\n      Свет и вещество разделились\n    \n\n    \n      \n      3 млн лет\n      1000 K\n      \n      Темные времена\n      Атомы уже есть, звезд еще нет; Вселенная растет и тускнеет"
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#section-13",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#section-13",
+    "title": "",
+    "section": "",
+    "text": "Формирование звезд и галактик\n    Вертикальная шкала с активной отметкой четыреста миллионов лет, когда формируются первые звезды и галактики.\n\n    \n    Время\n    Температура\n    \n    \n\n    \n      \n      Начало\n      &gt; 10³² K\n      Сгусток квантовых полей\n    \n\n    \n      \n      10⁻³⁶ - 10⁻³⁴ сек\n      10²⁸ - 10²² K\n      Вселенная выросла в 10²⁶ раз\n    \n\n    \n      \n      20 мин\n      10⁷ K\n      Завершился синтез легких ядер\n    \n\n    \n      \n      370 тыс. лет\n      4000 K\n      Свет и вещество разделились\n    \n\n    \n      \n      3 млн лет\n      1000 K\n      Темные времена\n    \n\n    \n      \n      400 млн лет\n      60 K\n      \n      Первые звезды и галактики\n      Газ собирается в узлах космической сети"
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#section-14",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#section-14",
+    "title": "",
+    "section": "",
+    "text": "Формирование солнечной системы\n    Вертикальная шкала с активной отметкой девять миллиардов лет, когда формируется Солнечная система.\n\n    \n    Время\n    Температура\n    \n    \n\n    \n      \n      Начало\n      &gt; 10³² K\n      Сгусток квантовых полей\n    \n\n    \n      \n      10⁻³⁶ - 10⁻³⁴ сек\n      10²⁸ - 10²² K\n      Вселенная выросла в 10²⁶ раз\n    \n\n    \n      \n      20 мин\n      10⁷ K\n      Завершился синтез легких ядер\n    \n\n    \n      \n      370 тыс. лет\n      4000 K\n      Свет и вещество разделились\n    \n\n    \n      \n      3 млн лет\n      1000 K\n      Темные времена\n    \n\n    \n      \n      400 млн лет\n      60 K\n      Первые звезды и галактики\n    \n\n    \n      \n      1 млрд лет\n      19 K\n      Кластеры галактик\n    \n\n    \n      \n      9 млрд лет\n      6 K\n      \n      Формирование солнечной системы"
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#section-15",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#section-15",
+    "title": "",
+    "section": "",
+    "text": "Сегодня\n    Вертикальная шкала с активной отметкой тринадцать целых восемь десятых миллиарда лет, сегодняшний этап Вселенной.\n\n    \n    Время\n    Температура\n    \n    \n\n    \n      \n      Начало\n      &gt; 10³² K\n      Сгусток квантовых полей\n    \n\n    \n      \n      10⁻³⁶ - 10⁻³⁴ сек\n      10²⁸ - 10²² K\n      Вселенная выросла в 10²⁶ раз\n    \n\n    \n      \n      20 мин\n      10⁷ K\n      Завершился синтез легких ядер\n    \n\n    \n      \n      370 тыс. лет\n      4000 K\n      Свет и вещество разделились\n    \n\n    \n      \n      3 млн лет\n      1000 K\n      Темные времена\n    \n\n    \n      \n      400 млн лет\n      60 K\n      Первые звезды и галактики\n    \n\n    \n      \n      1 млрд лет\n      19 K\n      Кластеры галактик\n    \n\n    \n      \n      9 млрд лет\n      6 K\n      Формирование солнечной системы\n    \n\n    \n      \n      13.8 млрд лет\n      2.7 K\n      \n      Сегодня"
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#легкие-химические-элементы",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#легкие-химические-элементы",
+    "title": "",
+    "section": "Легкие химические элементы",
+    "text": "Легкие химические элементы\nЧерез несколько минут после начала расширения во Вселенной уже были:\n\nсвет\nпротоны\nнейтроны\nэлектроны\nнейтрино\n\n\nНо атомов ещё не было. Были только отдельные частицы и очень горячее излучение.\nКогда стало достаточно прохладно, протоны и нейтроны начали собираться в лёгкие ядра."
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#первые-20-минут",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#первые-20-минут",
+    "title": "",
+    "section": "Первые 20 минут",
+    "text": "Первые 20 минут\n\nводород — остался главным веществом\nгелий — примерно четверть обычного вещества по массе\nнемного дейтерия\nсовсем мало лития и бериллия\n\n\nЭто важно: первые звёзды родились не из чистого водорода, а из смеси водорода и гелия.\n\n\nДейтерий стал следом первых минут: звёзды его в основном уничтожают."
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#как-начался-синтез",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#как-начался-синтез",
+    "title": "",
+    "section": "Как начался синтез?",
+    "text": "Как начался синтез?\n\n\nСначала были почти только протоны и нейтроны.\nПервый устойчивый шаг: протон + нейтрон → дейтерий.\nПока было слишком горячо, фотоны сразу разбивали дейтерий обратно.\nКогда Вселенная остыла, дейтерий начал выживать, и реакции быстро пошли дальше к гелию-4.\n\n\n\\[\np+n\\rightarrow \\mathrm{D}+\\gamma\n\\]\n\\[\n\\mathrm{D}\\rightarrow {}^3\\mathrm{He},\\,{}^3\\mathrm{H}\\rightarrow {}^4\\mathrm{He}\n\\]"
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#первичный-нуклеосинтез-окно-синтеза",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#первичный-нуклеосинтез-окно-синтеза",
+    "title": "",
+    "section": "Первичный нуклеосинтез: окно синтеза",
+    "text": "Первичный нуклеосинтез: окно синтеза"
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#от-чего-зависят-количества-лёгких-ядер",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#от-чего-зависят-количества-лёгких-ядер",
+    "title": "",
+    "section": "От чего зависят количества лёгких ядер?",
+    "text": "От чего зависят количества лёгких ядер?\n\n\nГелий-4 показывает, сколько нейтронов дожило до открытия дейтериевого горлышка:\n\\[\nR_\\mathrm{He} \\simeq \\frac{2(n/p)}{1-(n/p)}.\n\\] При \\(n/p=1/7\\) получаем \\[\nR_\\mathrm{He} \\simeq 0.33.\n\\]\nБыстрее расширение или дольше жизнь нейтрона → больше нейтронов → больше гелия.\n\n\nДейтерий сильнее всего чувствует плотность обычного вещества.\nБольше барионов → реакции идут эффективнее → дейтерий быстрее сгорает в гелий:\n\\[\n\\eta \\uparrow \\Rightarrow \\mathrm{D/H} \\downarrow.\n\\]"
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#игра-синтезируй-сам-лёгкие-элементы",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#игра-синтезируй-сам-лёгкие-элементы",
+    "title": "",
+    "section": "Игра Синтезируй сам лёгкие элементы",
+    "text": "Игра Синтезируй сам лёгкие элементы\n\n\n\nаплет для телефона\n\nПодберите плотность обычного вещества, скорость расширения и время жизни нейтрона.\nЦель: провести четыре маркера через ворота для гелия-4, дейтерия, гелия-3 и лития-7.\nneutrinohit.github.io/sciencepop/BirthAndLifeUniverse/bbn-game/bbn_applet.html"
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#section-16",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#section-16",
+    "title": "",
+    "section": "",
+    "text": "bbnLectureGrid = FileAttachment(\"bbn-game/data/bbn_grid.json\").json()\n\nbbnLectureApp = {\n  if (!window.BBNGrid || !window.BBNUI) {\n    const node = document.createElement(\"div\");\n    node.className = \"bbn-game bbn-game-error\";\n    node.innerHTML = \"&lt;div class='bbn-error-title'&gt;JS-модули не загрузились&lt;/div&gt;&lt;p class='bbn-error-text'&gt;Проверь bbn-game/js/bbn-grid.js и bbn-game/js/bbn-ui.js.&lt;/p&gt;\";\n    return node;\n  }\n  const app = window.BBNUI.createApp(bbnLectureGrid, {\n    className: \"bbn-game-slide\",\n    showUniverseButton: true,\n    showAutoButtons: true,\n    initial: {eta10: 3.0, S: 0.82, tau_n: 800},\n    footerHtml: `\n      &lt;a href=\"https://neutrinohit.github.io/sciencepop/BirthAndLifeUniverse/bbn-game/bbn_applet.html\"&gt;Открыть аплет&lt;/a&gt;\n      &lt;span&gt;Вычисления основаны на пакете &lt;a href=\"https://github.com/vallima/PRyMordial\"&gt;PRyMordial&lt;/a&gt;&lt;/span&gt;\n    `\n  });\n  invalidation.then(() =&gt; {\n    if (app.cleanup) app.cleanup();\n  });\n  return app;\n}"
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#происхождение-золота",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#происхождение-золота",
+    "title": "",
+    "section": "Происхождение золота",
+    "text": "Происхождение золота\n\n\n\nПроисхождение золота\n\n\nИ других химических элементов\n\n\n\n\n\nИсточник исходного рисунка: Википедия"
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#открытые-вопросы",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#открытые-вопросы",
+    "title": "",
+    "section": "Открытые вопросы",
+    "text": "Открытые вопросы\n\n\n\n\nКрупно-масштабные структуры галактик\nРазнообразие структур\n\n\n\n\n\n  \n\nHubble-de Vaucouleurs diagram"
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#открытые-вопросы-1",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#открытые-вопросы-1",
+    "title": "",
+    "section": "Открытые вопросы",
+    "text": "Открытые вопросы\n\n\n\n\nКрупно-масштабные структуры галактик\nРазнообразие структур\nВлияние сверхмассивных черных дыр на галактики\n\n\n\n\n\n  \n\nИллюстрация обратной связи сверхмассивной чёрной дыры"
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#образование-галактик",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#образование-галактик",
+    "title": "",
+    "section": "Образование галактик",
+    "text": "Образование галактик\n\n  \n\nIllustris Simulation"
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#викторина",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#викторина",
+    "title": "",
+    "section": "Викторина",
+    "text": "Викторина\n\n  \n    Полный вес видимой Вселенной\n    ∞\n    0\n    1053 кг\n\n    Число атомов в видимой Вселенной\n    6 · 1023\n    ∞\n    1080\n\n    Число галактик в видимой Вселенной\n    ≈ 1011\n    ≈ 1022\n    2 · 1012\n\n    Число звезд в видимой Вселенной\n    ≈ 1023\n    ≈ 1010\n    ∞\n\n    Средняя плотность числа атомов в видимой Вселенной, штук/м3\n    ≈ 0.4\n    6 · 1023\n    0"
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#викторина-1",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#викторина-1",
+    "title": "",
+    "section": "Викторина",
+    "text": "Викторина\n\n  \n    Полный вес видимой Вселенной\n    1053 кг\n\n    Число атомов в видимой Вселенной\n    1080\n\n    Число галактик в видимой Вселенной\n    ≈ 1011\n\n    Число звезд в видимой Вселенной\n    ≈ 1023\n\n    Средняя плотность числа атомов в видимой Вселенной, штук/м3\n    ≈ 0.4"
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#викторина-2",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#викторина-2",
+    "title": "",
+    "section": "Викторина",
+    "text": "Викторина\n\n\nЧто такое темная материя?\n\n\n\nА. Вид шоколада\n\n\nБ. Вещество, которое не светится\n\n\nВ. Обратная сторона Луны"
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#викторина-3",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#викторина-3",
+    "title": "",
+    "section": "Викторина",
+    "text": "Викторина\n\n\nЧто такое темная материя?\n\n\n\nА. Вид шоколада\n\n\nБ. Вещество, которое не светится\n\n\nВ. Обратная сторона Луны"
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#энергетический-баланс-вселенной",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#энергетический-баланс-вселенной",
+    "title": "",
+    "section": "Энергетический баланс Вселенной",
+    "text": "Энергетический баланс Вселенной\n\n  \n    Энергетический баланс Вселенной\n    \n      \n        Без темной материи невозможно понять галактики:\n        \n          разлетались бы вместо наблюдаемого вращения;\n          не смогли бы образоваться;\n          не двигались бы так, как движутся.\n        \n      \n      \n        Гравитационное линзирование:\n        \n          реликтового излучения;\n          наблюдаемой структуры Вселенной;\n          образования и эволюции галактик;\n          при столкновении галактик;\n          движении галактик в кластерах галактик.\n        \n      \n    \n  \n  \n    Плотность энергии во Вселенной\n    \n      72%\n      23%\n      5%\n    \n    \n      Темная материя\n      Темная энергия\n      Атомы"
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#темная-материя-видна-гравитацией",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#темная-материя-видна-гравитацией",
+    "title": "",
+    "section": "Темная материя видна гравитацией",
+    "text": "Темная материя видна гравитацией\n\n  \n\nГравитационные свидетельства тёмной материи"
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#реликтовый-свет",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#реликтовый-свет",
+    "title": "",
+    "section": "Реликтовый свет",
+    "text": "Реликтовый свет\n\n\n\n\nКоллаборация Планк"
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#реликтовый-свет-1",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#реликтовый-свет-1",
+    "title": "",
+    "section": "Реликтовый свет",
+    "text": "Реликтовый свет"
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#расширение-ускоряется",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#расширение-ускоряется",
+    "title": "",
+    "section": "Расширение ускоряется",
+    "text": "Расширение ускоряется\n\n\n\nВ конце XX века оказалось, что расширение Вселенной сейчас ускоряется.\nЭто признак наличия темной энергии во Вселенной."
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#будущее-нашей-вселенной",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#будущее-нашей-вселенной",
+    "title": "",
+    "section": "Будущее нашей Вселенной",
+    "text": "Будущее нашей Вселенной\n\n\nВозможные сценарии\n\n\n\nА. Большое замерзаниеВселенная замерзнет\n\n\nБ. Большой разрывВселенную разорвет\n\n\nВ. Большое схлопываниеВселенная начнет сжиматься в точку"
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#будущее-нашей-вселенной-1",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#будущее-нашей-вселенной-1",
+    "title": "",
+    "section": "Будущее нашей Вселенной",
+    "text": "Будущее нашей Вселенной\n\n\nВозможные сценарии\n\n\n\nА. Большое замерзаниеВселенная замерзнет\n\n\nБ. Большой разрывВселенную разорвет\n\n\nВ. Большое схлопываниеВселенная начнет сжиматься в точку"
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#раньше-будет-вот-что",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#раньше-будет-вот-что",
+    "title": "",
+    "section": "Раньше будет вот что",
+    "text": "Раньше будет вот что\n\n  \n    Раньше будет вот что\n    Большое нагревание Солнечной Системы\n  \n  Сегодня"
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#раньше-будет-вот-что-1",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#раньше-будет-вот-что-1",
+    "title": "",
+    "section": "Раньше будет вот что",
+    "text": "Раньше будет вот что\n\n  \n    Раньше будет вот что\n    Большое нагревание Солнечной Системы\n  \n  1 миллиард лет"
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#раньше-будет-вот-что-2",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#раньше-будет-вот-что-2",
+    "title": "",
+    "section": "Раньше будет вот что",
+    "text": "Раньше будет вот что\n\n  \n    Раньше будет вот что\n    Большое нагревание Солнечной Системы\n  \n  2 миллиарда лет"
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#раньше-будет-вот-что-3",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#раньше-будет-вот-что-3",
+    "title": "",
+    "section": "Раньше будет вот что",
+    "text": "Раньше будет вот что\n\n  \n    Раньше будет вот что\n    Большое нагревание Солнечной Системы\n  \n  3 миллиарда лет"
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#раньше-будет-вот-что-4",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#раньше-будет-вот-что-4",
+    "title": "",
+    "section": "Раньше будет вот что",
+    "text": "Раньше будет вот что\n\n  \n    Раньше будет вот что\n    Большое нагревание Солнечной Системы\n  \n  4 миллиарда лет"
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#раньше-будет-вот-что-5",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#раньше-будет-вот-что-5",
+    "title": "",
+    "section": "Раньше будет вот что",
+    "text": "Раньше будет вот что\n\n  \n    Раньше будет вот что\n    Большое нагревание Солнечной Системы\n  \n  5 миллиардов лет"
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#раньше-будет-вот-что-6",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#раньше-будет-вот-что-6",
+    "title": "",
+    "section": "Раньше будет вот что",
+    "text": "Раньше будет вот что\n\n  \n    Раньше будет вот что\n    Большое нагревание Солнечной Системы\n  \n  5.5 миллиардов лет"
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#раньше-будет-вот-что-7",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#раньше-будет-вот-что-7",
+    "title": "",
+    "section": "Раньше будет вот что",
+    "text": "Раньше будет вот что\n\n  \n    Раньше будет вот что\n    Большое нагревание Солнечной Системы\n  \n  6 миллиардов лет"
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#раньше-будет-вот-что-8",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#раньше-будет-вот-что-8",
+    "title": "",
+    "section": "Раньше будет вот что",
+    "text": "Раньше будет вот что\n\n  \n    Раньше будет вот что\n    Большое нагревание Солнечной Системы\n  \n  6.5 миллиардов лет"
+  },
+  {
+    "objectID": "BirthAndLifeUniverse/birth_and_life_one_universe.html#james-webb-space-telescope",
+    "href": "BirthAndLifeUniverse/birth_and_life_one_universe.html#james-webb-space-telescope",
+    "title": "",
+    "section": "James Webb Space Telescope",
+    "text": "James Webb Space Telescope\nJWST — космический телескоп, запущенный в декабре 2021 года.\n\nНайдена самая далёкая галактика: JADES-GS-z14-0:\n\nОна образовалась всего через 300 млн лет после Большого взрыва.\nмасса звёзд — порядка сотен миллионов масс Солнца.\n\nРанние галактики оказались ярче и многочисленнее, чем ожидали\n“Маленькие красные точки”:\n\nВозможно, это чёрные дыры\n\n\n\nКак так быстро возникали яркие галактики, пыль, тяжёлые элементы и массивные чёрные дыры?"
+  }
+]
