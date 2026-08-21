@@ -4,6 +4,17 @@
 *.key
 */*.pptx
 */*.pdf
+!BlackHoles/BlackHoles.pdf
+!DarkMatter/DarkMatter.pdf
+!ModernPhysics/Lecture1.pdf
+!ModernPhysics/Lecture2.pdf
+!ModernPhysics/Lecture3.pdf
+!ModernPhysics/Lecture4.pdf
+!in-a-nutshell/HowDoWeKnowAboutAtoms.pdf
+!in-a-nutshell/InsideNucleus.pdf
+!in-a-nutshell/Matter.pdf
+!in-a-nutshell/WhatIsAtom.pdf
+!neutrino-telescope-astrofest-2026/NeutrinoTelescopes.pdf
 */*.zip
 
 # Local/generated scratch files

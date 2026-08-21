@@ -2,25 +2,25 @@ const lectures = [
   {
     title: "Что такое вещество?",
     description: "Из чего состоит окружающий мир и что физики называют веществом.",
-    slides: "Matter/",
+    slides: "Matter.pdf",
     youtube: ""
   },
   {
     title: "Как узнали про атомы?",
     description: "Как наблюдения и эксперименты сделали атомы частью физической картины мира.",
-    slides: "HowDoWeKnowAboutAtoms/",
+    slides: "HowDoWeKnowAboutAtoms.pdf",
     youtube: ""
   },
   {
     title: "Что такое атом?",
     description: "Что находится внутри атома и почему привычная планетарная картинка требует уточнения.",
-    slides: "WhatIsAtom/",
+    slides: "WhatIsAtom.pdf",
     youtube: ""
   },
   {
     title: "Что находится внутри атомного ядра?",
     description: "Из чего состоит ядро и где проходит следующий уровень строения вещества.",
-    slides: "InsideNucleus/",
+    slides: "InsideNucleus.pdf",
     youtube: ""
   }
 ];
@@ -50,7 +50,7 @@ function createLecture(lecture, index) {
 
   const links = document.createElement("div");
   links.className = "links";
-  links.appendChild(createLink(lecture.slides, "Открыть слайды"));
+  links.appendChild(createLink(lecture.slides, "Открыть PDF"));
   if (lecture.youtube) links.appendChild(createLink(lecture.youtube, "YouTube"));
   body.appendChild(links);
 
