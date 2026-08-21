@@ -1,15 +1,32 @@
 project:
   type: website
+  output-dir: _site
   render:
     - "BirthAndLifeUniverse/birth_and_life_one_universe.qmd"
     - "WaveOrParticle/two_targets_qft_particle_wave_with_applet.qmd"
   resources:
+    - ".nojekyll"
+    - "index.html"
     - "shared/reveal/**"
     - "BirthAndLifeUniverse/assets/figures/**"
     - "BirthAndLifeUniverse/bbn-game/bbn_applet.html"
     - "BirthAndLifeUniverse/bbn-game/css/**"
     - "BirthAndLifeUniverse/bbn-game/data/**"
     - "BirthAndLifeUniverse/bbn-game/js/**"
+    - "BlackHoles/ЧерныеДыры/**"
+    - "DarkMatter/ТемнаяМатерия/**"
+    - "ModernPhysics/Lecture1/**"
+    - "ModernPhysics/Lecture2/**"
+    - "ModernPhysics/Lecture3/**"
+    - "ModernPhysics/Lecture4/**"
+    - "in-a-nutshell/index.html"
+    - "in-a-nutshell/catalog.js"
+    - "in-a-nutshell/HowDoWeKnowAboutAtoms/**"
+    - "in-a-nutshell/InsideNucleus/**"
+    - "in-a-nutshell/Matter/**"
+    - "in-a-nutshell/WhatIsAtom/**"
+    - "neutrino-telescope-astrofest-2026/index.html"
+    - "neutrino-telescope-astrofest-2026/NeutrinoTelescopes/**"
 
 website:
   search: false
