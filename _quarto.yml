@@ -4,6 +4,8 @@ project:
   render:
     - "BirthAndLifeUniverse/birth_and_life_one_universe.qmd"
     - "WaveOrParticle/two_targets_qft_particle_wave_with_applet.qmd"
+    - "applets/*.qmd"
+    - "!applets/_*.qmd"
   resources:
     - ".nojekyll"
     - "index.html"
@@ -26,6 +28,7 @@ project:
     - "in-a-nutshell/Matter.pdf"
     - "in-a-nutshell/WhatIsAtom.pdf"
     - "neutrino-telescope-astrofest-2026/NeutrinoTelescopes.pdf"
+    - "applets/assets/**"
 
 website:
   search: false

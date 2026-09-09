@@ -1,0 +1,296 @@
+.sphaleron-app-host {
+  width: 100%;
+}
+
+.sphaleron-app {
+  --sph-bg: #06111f;
+  --sph-ink: #eef7ff;
+  --sph-muted: #9eb1c3;
+  --sph-line: #6c8498;
+  --sph-grid: rgba(158, 177, 195, 0.16);
+  --sph-cyan: #65d4ff;
+  --sph-orange: #ffb347;
+  --sph-green: #77d7a8;
+  --sph-purple: #c7a7ff;
+  --sph-red: #ff7d8f;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  background: var(--sph-bg);
+  color: var(--sph-ink);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.sphaleron-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.65rem 1rem;
+  padding: 0.35rem 0.25rem 0.85rem;
+}
+
+.sphaleron-actions,
+.sphaleron-temperature {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  align-items: center;
+}
+
+.sphaleron-toolbar button {
+  min-width: 0;
+  min-height: 2.55rem;
+  padding: 0.52rem 0.82rem;
+  border: 1px solid rgba(158, 177, 195, 0.45);
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.045);
+  color: var(--sph-ink);
+  font: inherit;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.sphaleron-toolbar button:hover {
+  border-color: var(--sph-cyan);
+  background: rgba(101, 212, 255, 0.1);
+}
+
+.sphaleron-toolbar button:focus-visible {
+  outline: 3px solid rgba(101, 212, 255, 0.5);
+  outline-offset: 2px;
+}
+
+.sphaleron-toolbar button[aria-pressed="true"],
+.sphaleron-toolbar button[data-action="play"] {
+  border-color: rgba(101, 212, 255, 0.7);
+  background: rgba(101, 212, 255, 0.14);
+}
+
+.sphaleron-temperature-label {
+  margin-right: 0.15rem;
+  color: var(--sph-muted);
+  font-size: 0.92rem;
+}
+
+.sphaleron-live {
+  min-height: 1.6rem;
+  padding: 0 0.25rem 0.35rem;
+  color: var(--sph-muted);
+  font-size: 0.9rem;
+}
+
+.sphaleron-figure {
+  width: 100%;
+}
+
+.sphaleron-figure svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.sphaleron-figure text {
+  fill: var(--sph-ink);
+}
+
+.sphaleron-figure .sph-phase-title {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+
+.sphaleron-figure .sph-phase-subtitle,
+.sphaleron-figure .sph-axis text,
+.sphaleron-figure .sph-scheme-note,
+.sphaleron-figure .sph-marker-label,
+.sphaleron-figure .sph-minimum-label,
+.sphaleron-figure .sph-direction-label {
+  fill: var(--sph-muted);
+}
+
+.sphaleron-figure .sph-phase-subtitle {
+  font-size: 18px;
+}
+
+.sphaleron-figure .sph-axis path,
+.sphaleron-figure .sph-axis line {
+  stroke: var(--sph-line);
+}
+
+.sphaleron-figure .sph-axis text {
+  font-size: 15px;
+}
+
+.sphaleron-figure .sph-axis-title,
+.sphaleron-figure .sph-energy-label {
+  fill: var(--sph-ink);
+  font-family: "STIX Two Text", "Times New Roman", serif;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.sphaleron-figure .sph-potential {
+  fill: none;
+  stroke: var(--sph-cyan);
+  stroke-width: 4;
+}
+
+.sphaleron-figure .sph-baseline,
+.sphaleron-figure .sph-guide {
+  stroke: var(--sph-grid);
+  stroke-width: 1.5;
+}
+
+.sphaleron-figure .sph-minimum {
+  fill: var(--sph-bg);
+  stroke: var(--sph-cyan);
+  stroke-width: 3;
+}
+
+.sphaleron-figure .sph-marker-halo {
+  fill: rgba(255, 179, 71, 0.18);
+}
+
+.sphaleron-figure .sph-marker {
+  fill: var(--sph-orange);
+  stroke: var(--sph-ink);
+  stroke-width: 3;
+}
+
+.sphaleron-figure .sph-marker-label {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.sphaleron-figure .sph-sphaleron-glow {
+  fill: rgba(255, 125, 143, 0.16);
+  stroke: var(--sph-red);
+  stroke-width: 2;
+}
+
+.sphaleron-figure .sph-sphaleron-label {
+  fill: var(--sph-red);
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.sphaleron-figure .sph-sphaleron-note,
+.sphaleron-figure .sph-tunnel-label {
+  fill: var(--sph-muted);
+  font-size: 15px;
+}
+
+.sphaleron-figure .sph-tunnel {
+  fill: none;
+  stroke: var(--sph-purple);
+  stroke-width: 3;
+  stroke-dasharray: 10 10;
+}
+
+.sphaleron-figure .sph-info-title {
+  fill: var(--sph-muted);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+}
+
+.sphaleron-figure .sph-formula {
+  fill: var(--sph-ink);
+  font-family: "STIX Two Text", "Times New Roman", serif;
+  font-size: 28px;
+}
+
+.sphaleron-figure .sph-formula-emphasis {
+  fill: var(--sph-green);
+}
+
+.sphaleron-figure .sph-generations {
+  fill: var(--sph-muted);
+  font-size: 14px;
+}
+
+.sphaleron-figure .sph-direction {
+  fill: none;
+  stroke-width: 3;
+}
+
+.sphaleron-figure .sph-direction-forward {
+  stroke: var(--sph-green);
+}
+
+.sphaleron-figure .sph-direction-backward {
+  stroke: var(--sph-purple);
+}
+
+.sphaleron-figure .sph-direction-label {
+  font-size: 16px;
+  font-weight: 650;
+}
+
+.sphaleron-figure .sph-final-message {
+  fill: var(--sph-orange);
+  font-size: 19px;
+  font-weight: 650;
+}
+
+.sphaleron-figure .sph-scheme-note {
+  font-size: 13px;
+}
+
+html.is-autoplay-applet .sphaleron-toolbar,
+html.is-autoplay-applet .sphaleron-live {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .sphaleron-toolbar {
+    align-items: stretch;
+  }
+
+  .sphaleron-actions,
+  .sphaleron-temperature {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+  }
+
+  .sphaleron-actions button[data-action="scenario"],
+  .sphaleron-temperature-label {
+    grid-column: 1 / -1;
+  }
+
+  .sphaleron-toolbar button {
+    width: 100%;
+    min-height: 2.75rem;
+  }
+
+  .sphaleron-figure .sph-phase-title {
+    font-size: 27px;
+  }
+
+  .sphaleron-figure .sph-phase-subtitle,
+  .sphaleron-figure .sph-axis text,
+  .sphaleron-figure .sph-marker-label,
+  .sphaleron-figure .sph-minimum-label,
+  .sphaleron-figure .sph-direction-label,
+  .sphaleron-figure .sph-sphaleron-note,
+  .sphaleron-figure .sph-tunnel-label,
+  .sphaleron-figure .sph-generations,
+  .sphaleron-figure .sph-scheme-note {
+    font-size: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sphaleron-app *,
+  .sphaleron-app *::before,
+  .sphaleron-app *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+    animation-duration: 0.001ms !important;
+  }
+}
