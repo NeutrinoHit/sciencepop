@@ -1,0 +1,11 @@
+<script>
+(() => {
+  const params = new URLSearchParams(window.location.search);
+  if (window.self !== window.top || params.has("embed")) {
+    document.documentElement.classList.add("is-embedded-applet");
+  }
+  if (params.has("autoplay") || params.get("mode") === "autoplay") {
+    document.documentElement.classList.add("is-autoplay-applet");
+  }
+})();
+</script>

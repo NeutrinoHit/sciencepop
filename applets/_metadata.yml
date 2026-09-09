@@ -1,0 +1,13 @@
+lang: ru-RU
+
+format:
+  html:
+    css: applets.css
+    include-in-header: _applet-embed.html
+    toc: false
+    page-layout: full
+
+execute:
+  echo: false
+  warning: false
+  message: false
