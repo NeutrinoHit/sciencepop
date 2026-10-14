@@ -38,3 +38,6 @@ __pycache__/
 
 /.quarto/
 **/*.quarto_ipynb
+
+# Local working files
+/.work/
