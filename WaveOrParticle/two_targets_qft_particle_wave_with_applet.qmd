@@ -6,7 +6,6 @@ lang: ru-RU
 format:
   revealjs:
     theme: black
-    html-math-method: mathjax
     embed-resources: true
     slide-number: true
     toc: true
