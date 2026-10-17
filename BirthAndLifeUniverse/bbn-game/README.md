@@ -85,13 +85,6 @@ PRYMORDIAL_PATH=../../../external/PRyMordial python tools/precompute_prymordial_
 `61 x 41 x 41 = 102541` точку. На текущем Python без numba это долгий
 офлайн-расчёт.
 
-## Запуск слайда
-
-```bash
-cd sciencepop/BirthAndLifeUniverse/bbn-game
-quarto preview bbn_game.qmd
-```
-
 ## Физические параметры
 
 `eta10 = 10^10 eta` задаёт барион-фотонное отношение. В текущей игре диапазон
