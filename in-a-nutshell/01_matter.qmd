@@ -1,0 +1,90 @@
+---
+title: "Что такое вещество?"
+pagetitle: "Что такое вещество? — Простыми словами"
+---
+
+## Что из этого состоит из вещества?
+
+```{=html}
+<div class="nut-chips">
+  <span class="nut-chip fragment custom">Стул</span>
+  <span class="nut-chip">Магнитное поле</span>
+  <span class="nut-chip">Тень</span>
+  <span class="nut-chip fragment custom">Вода</span>
+  <span class="nut-chip fragment custom">Солнце</span>
+  <span class="nut-chip">Свет</span>
+  <span class="nut-chip fragment custom">Плазма</span>
+  <span class="nut-chip fragment custom">Облако</span>
+  <span class="nut-chip fragment custom">Дым</span>
+</div>
+```
+
+## Так что же это?
+
+::: {.nut-lead}
+Под материей обычно понимают нечто, имеющее массу и занимающее объём в пространстве.
+:::
+
+::: {.nh-box tone="success" size="lg"}
+Вещество — одна из форм материи. Обычная материя состоит из атомов и молекул.
+:::
+
+## Атомы
+
+::: {.nut-cols .wide-left}
+<div data-periodic-table aria-label="Периодическая таблица химических элементов"></div>
+
+::: {}
+Сегодня известны **118** химических элементов.
+
+Из атомов этих элементов строится всё вещество вокруг нас.
+:::
+:::
+
+## Изотопы
+
+- У одного и того же химического элемента могут быть разные изотопы: тот же заряд ядра, другая масса.
+- Полное число известных изотопов превышает **3000**.
+- Одни изотопы стабильны, другие нестабильны: они превращаются в другие, то есть распадаются.
+
+::: {.nh-text tone="muted" size="sm"}
+Известны $\alpha$-, $\beta$-, $\gamma$-распады, спонтанное деление и другие процессы.
+:::
+
+## Как устроен атом?
+
+- Объём атома занимают отрицательно заряженные электроны.
+- В центре атома — положительно заряженное атомное ядро.
+- Атомное ядро состоит из протонов (положительный заряд) и нейтронов (нулевой заряд).
+- Протоны и нейтроны состоят из кварков (дробный электрический заряд) и глюонов (нулевой заряд).
+
+## Масштабы
+
+::: {.nut-cols .wide-left}
+```{=html}
+<div class="nut-scale" aria-label="Масштабы: от кусочка вещества до протона">
+  <div class="ruler"></div>
+  <span>Кусочек сыра</span>
+  <svg viewBox="0 0 120 120" aria-hidden="true"><path d="M12 92 L108 92 L108 50 L12 70 Z" fill="#f5c542"/><path d="M12 70 L108 50 L86 28 Z" fill="#ffe08a"/><circle cx="40" cy="80" r="7" fill="#c99a1c"/><circle cx="78" cy="72" r="9" fill="#c99a1c"/><circle cx="96" cy="84" r="4" fill="#c99a1c"/></svg>
+  <span class="size">~ 1 см</span>
+  <span>Молекула</span>
+  <svg viewBox="0 0 120 120" aria-hidden="true"><line x1="60" y1="60" x2="28" y2="34" stroke="#7cc7ff" stroke-width="7"/><line x1="60" y1="60" x2="92" y2="34" stroke="#7cc7ff" stroke-width="7"/><line x1="60" y1="60" x2="60" y2="98" stroke="#7cc7ff" stroke-width="7"/><circle cx="60" cy="60" r="16" fill="#3d8bfd"/><circle cx="28" cy="34" r="11" fill="#9fd0ff"/><circle cx="92" cy="34" r="11" fill="#9fd0ff"/><circle cx="60" cy="98" r="11" fill="#9fd0ff"/></svg>
+  <span class="size">~ 10<sup>−7</sup> см</span>
+  <span>Атом</span>
+  <svg viewBox="0 0 120 120" aria-hidden="true"><g fill="none" stroke="#7cc7ff" stroke-width="4"><ellipse cx="60" cy="60" rx="48" ry="17"/><ellipse cx="60" cy="60" rx="48" ry="17" transform="rotate(60 60 60)"/><ellipse cx="60" cy="60" rx="48" ry="17" transform="rotate(-60 60 60)"/></g><circle cx="60" cy="60" r="8" fill="#e0475b"/></svg>
+  <span class="size">~ 10<sup>−8</sup> см</span>
+  <span>Ядро</span>
+  <div data-nucleus="p,n,p,n,n,p,n,p,p,n,n,p,n" style="width:120px;height:120px"></div>
+  <span class="size">~ 10<sup>−12</sup> см</span>
+  <span>Протон</span>
+  <svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="50" fill="#e0475b"/><circle cx="60" cy="38" r="12" fill="#ffd27c"/><circle cx="40" cy="74" r="12" fill="#7cc7ff"/><circle cx="80" cy="74" r="12" fill="#ffd27c"/></svg>
+  <span class="size">~ 10<sup>−13</sup> см</span>
+</div>
+```
+
+::: {.nut-lead}
+От кусочка сыра до протона — тринадцать порядков величины.
+
+Каждый уровень состоит из следующего, более мелкого.
+:::
+:::

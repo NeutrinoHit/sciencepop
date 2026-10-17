@@ -6,6 +6,8 @@ project:
     - "WaveOrParticle/two_targets_qft_particle_wave_with_applet.qmd"
     - "applets/*.qmd"
     - "!applets/_*.qmd"
+    - "in-a-nutshell/*.qmd"
+    - "!in-a-nutshell/_*.qmd"
   resources:
     - ".nojekyll"
     - "index.html"
@@ -23,6 +25,7 @@ project:
     - "ModernPhysics/Lecture4.pdf"
     - "in-a-nutshell/index.html"
     - "in-a-nutshell/catalog.js"
+    - "in-a-nutshell/assets/**"
     - "in-a-nutshell/HowDoWeKnowAboutAtoms.pdf"
     - "in-a-nutshell/InsideNucleus.pdf"
     - "in-a-nutshell/Matter.pdf"

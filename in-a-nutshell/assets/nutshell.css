@@ -1,0 +1,406 @@
+/* Shared layout for the «Простыми словами» lectures (1600×900). */
+
+.reveal {
+  --nut-proton: #e0475b;
+  --nut-neutron: #3d63cc;
+  --nut-accent: #7cc7ff;
+  --nut-warm: #ffcc8a;
+}
+
+/* Title slide */
+.reveal #title-slide {
+  text-align: left;
+  padding-top: 150px;
+}
+
+.reveal #title-slide .subtitle {
+  margin-bottom: 0.5em;
+  color: var(--nut-warm);
+  font-size: 0.9em;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.reveal #title-slide .title {
+  max-width: 1300px;
+  font-size: 2.6em;
+  line-height: 1.08;
+}
+
+.reveal #title-slide .quarto-title-author-name {
+  margin-top: 1.4em;
+  color: #c9d3da;
+  font-size: 0.8em;
+}
+
+/* Section question */
+.reveal .nut-question {
+  margin-top: 1.2em;
+  color: var(--nut-accent);
+  font-size: 1.35em;
+  font-weight: 700;
+}
+
+.reveal .nut-lead {
+  font-size: 1.12em;
+  line-height: 1.3;
+}
+
+.reveal .nut-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.reveal .nut-cols.wide-left {
+  grid-template-columns: 1.35fr 1fr;
+}
+
+.reveal .nut-cols.wide-right {
+  grid-template-columns: 1fr 1.35fr;
+}
+
+.reveal .nut-figure {
+  margin: 0;
+  text-align: center;
+}
+
+.reveal .nut-figure img,
+.reveal .nut-figure video {
+  max-width: 100%;
+  max-height: 600px;
+  margin: 0 auto;
+  border-radius: 6px;
+}
+
+.reveal .nut-credit {
+  margin-top: 8px;
+  color: #9fb0bb;
+  font-size: 0.42em;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.reveal .nut-credit a {
+  color: #9fb0bb;
+  text-decoration: underline;
+}
+
+/* Quiz chips: what is made of matter? */
+.reveal .nut-chips {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 34px 60px;
+  margin-top: 1.2em;
+}
+
+.reveal .nut-chip {
+  justify-self: start;
+  padding: 0.25em 0.8em;
+  border: 4px solid transparent;
+  border-radius: 999px;
+  font-size: 1.15em;
+}
+
+.reveal .slides section .nut-chip.fragment {
+  opacity: 1;
+  visibility: inherit;
+}
+
+.reveal .slides section .nut-chip.fragment.visible {
+  border-color: var(--nut-warm);
+}
+
+/* Periodic table drawn by nutshell.js */
+.reveal .pt {
+  display: grid;
+  grid-template-columns: repeat(18, 1fr);
+  grid-template-rows: repeat(7, 1fr) 0.35fr repeat(2, 1fr);
+  gap: 3px;
+  width: 100%;
+  aspect-ratio: 18 / 10.6;
+}
+
+.reveal .pt-cell {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  border-radius: 4px;
+  color: #10161a;
+  line-height: 1;
+  text-align: center;
+}
+
+.reveal .pt-z {
+  font-size: 0.3em;
+  opacity: 0.75;
+}
+
+.reveal .pt-s {
+  font-size: 0.5em;
+  font-weight: 700;
+}
+
+.reveal .pt-ref {
+  font-size: 0.26em;
+  font-weight: 700;
+}
+
+.reveal .pt-alkali { background: #f28b82; }
+.reveal .pt-alkaline { background: #f6b26b; }
+.reveal .pt-transition { background: #9fc5e8; }
+.reveal .pt-post { background: #b4d6a6; }
+.reveal .pt-metalloid { background: #c9c27a; }
+.reveal .pt-nonmetal { background: #ffe599; }
+.reveal .pt-halogen { background: #d5b8ea; }
+.reveal .pt-noble { background: #a8e0dd; }
+.reveal .pt-lanthanide { background: #d9c7a7; }
+.reveal .pt-actinide { background: #e6b8c9; }
+
+/* Scale ladder */
+.reveal .nut-scale {
+  display: grid;
+  grid-template-columns: 70px 240px 150px 1fr;
+  align-items: center;
+  row-gap: 18px;
+  column-gap: 28px;
+  font-size: 0.85em;
+}
+
+.reveal .nut-scale svg {
+  width: 120px;
+  height: 120px;
+}
+
+.reveal .nut-scale .size {
+  color: var(--nut-warm);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.reveal .nut-scale .ruler {
+  grid-row: 1 / span 5;
+  align-self: stretch;
+  width: 34px;
+  border-radius: 6px;
+  background:
+    repeating-linear-gradient(to bottom, #0b3d66 0 3px, transparent 3px 22px),
+    linear-gradient(#4aa3ff, #2d7fd6);
+}
+
+/* Nucleons and atoms drawn by nutshell.js */
+.reveal .nut-nucleus-svg,
+.reveal .nut-atom-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.reveal [data-nucleus],
+.reveal [data-planetary-atom] {
+  margin: 0 auto;
+}
+
+.reveal .nut-orbit {
+  fill: none;
+  stroke: rgb(255 255 255 / 55%);
+  stroke-width: 3;
+}
+
+.reveal .nut-electron {
+  fill: #f2f2e6;
+}
+
+.reveal .nut-shell {
+  transform-origin: 0 0;
+  animation-name: nut-spin;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes nut-spin {
+  to { transform: rotate(360deg); }
+}
+
+.reveal .nut-legend {
+  display: flex;
+  gap: 26px;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.reveal .nut-legend span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 0.62em;
+  font-weight: 600;
+}
+
+.reveal .nut-legend .p { background: radial-gradient(circle at 35% 30%, #ff8a95, var(--nut-proton) 55%, #7a1020); }
+.reveal .nut-legend .n { background: radial-gradient(circle at 35% 30%, #8fb0ff, var(--nut-neutron) 55%, #14286b); }
+
+/* Isotopes */
+.reveal .nut-isotopes {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 10px 40px;
+  align-items: center;
+}
+
+.reveal .nut-isotopes [data-nucleus] {
+  width: 200px;
+  height: 150px;
+}
+
+/* Dalton's oxides */
+.reveal .nut-dalton {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) 260px repeat(2, 1fr);
+  gap: 16px 26px;
+  align-items: start;
+  font-size: 0.62em;
+  text-align: center;
+}
+
+.reveal .nut-dalton img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.reveal .nut-dalton .portrait img {
+  height: 330px;
+}
+
+.reveal .nut-dalton .formula {
+  margin-top: 8px;
+  color: var(--nut-warm);
+  font-size: 1.35em;
+  font-weight: 700;
+}
+
+.reveal .nut-dalton .count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  margin-top: 8px;
+  border-radius: 50%;
+  background: var(--nut-proton);
+  color: #ffffff;
+  font-size: 1.3em;
+  font-weight: 700;
+}
+
+.reveal .nut-dalton .mass {
+  margin-top: 6px;
+  color: #dfe6ea;
+}
+
+/* Two thinkers facing each other */
+.reveal .nut-thinkers {
+  display: grid;
+  grid-template-columns: 1fr 360px 1fr;
+  gap: 40px;
+  align-items: center;
+  text-align: center;
+}
+
+.reveal .nut-thinkers img {
+  height: 400px;
+  border-radius: 6px;
+}
+
+.reveal .nut-thinkers .who {
+  margin-top: 6px;
+  color: #c9d3da;
+  font-size: 0.6em;
+}
+
+.reveal .nut-thinkers .quote {
+  margin-top: 14px;
+  font-size: 0.85em;
+  font-style: italic;
+}
+
+.reveal .nut-apple svg {
+  width: 100%;
+  height: 380px;
+}
+
+/* Forces between two protons */
+.reveal .nut-force {
+  display: flex;
+  gap: 80px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.reveal .nut-force .pair {
+  text-align: center;
+}
+
+.reveal .nut-force .pair .balls {
+  display: flex;
+  justify-content: center;
+}
+
+.reveal .nut-force .pair .balls span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 140px;
+  margin: 0 -4px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #ff8a95, var(--nut-proton) 55%, #7a1020);
+  color: #ffffff;
+  font-size: 0.55em;
+  font-weight: 600;
+}
+
+.reveal .nut-force .arrow {
+  color: var(--nut-accent);
+  font-size: 1.6em;
+  line-height: 1;
+}
+
+.reveal .nut-force .weight {
+  color: var(--nut-warm);
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.reveal .nut-force .weight strong {
+  display: block;
+  color: var(--nut-warm);
+  font-size: 1.8em;
+}
+
+/* Larger text for a general audience */
+.reveal .slides section:not(#title-slide) {
+  font-size: 1.2em;
+}
+
+.reveal #title-slide .quarto-title-authors {
+  justify-content: flex-start;
+}
+
+.reveal .nut-figure video {
+  max-height: 740px;
+}
+
+/* Keep long titles clear of the slide number */
+.reveal .slides section h2 {
+  padding-right: 90px;
+}
