@@ -69,6 +69,31 @@
       gap: 12px;
     }
 
+    .lecture-list h2 {
+      margin: 22px 0 2px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .lecture-list h2:first-child {
+      margin-top: 0;
+    }
+
+    .number {
+      display: inline-block;
+      min-width: 2em;
+      color: var(--accent);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .lecture.planned summary {
+      color: var(--muted);
+      font-weight: 600;
+    }
+
     .lecture {
       overflow: hidden;
       border: 1px solid var(--line);
@@ -137,6 +162,26 @@
       border-color: var(--accent);
       color: #16565d;
     }
+
+    .links a.primary {
+      border-color: var(--accent);
+      background: var(--accent);
+      color: #ffffff;
+    }
+
+    .links a.primary:hover {
+      background: #16565d;
+      color: #ffffff;
+    }
+
+    .tag {
+      align-self: center;
+      padding: 4px 9px;
+      border-radius: 7px;
+      background: rgba(43, 67, 91, 0.08);
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
   </style>
 </head>
 <body>
@@ -147,7 +192,7 @@
   </nav>
   <main>
     <h1>Простыми словами</h1>
-    <p class="lead">Короткие лекции по 5–10 минут. Каждый модуль отвечает на один вопрос о современной физике.</p>
+    <p class="lead">Короткие лекции по 5–10 минут. Каждый модуль отвечает на один вопрос о современной физике. Темы идут от простого к сложному: каждая опирается на предыдущие.</p>
     <section class="lecture-list" data-lecture-list aria-label="Короткие лекции"></section>
     <noscript>Для отображения каталога включите JavaScript.</noscript>
   </main>

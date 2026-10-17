@@ -26,8 +26,8 @@ _site/
 !WaveOrParticle/*.qmd
 !BirthAndLifeUniverse/*.qmd
 !BirthAndLifeUniverse/bbn-game/*.qmd
+!in-a-nutshell/*.qmd
 external/
-in-a-nutshell/assets/
 in-a-nutshell/ideas.md
 
 # Python/macOS/editor noise

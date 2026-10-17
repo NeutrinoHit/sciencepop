@@ -1,0 +1,33 @@
+lang: ru-RU
+author: "Д. В. Наумов"
+subtitle: "Серия «Простыми словами»"
+
+format:
+  revealjs:
+    theme: [black, ../shared/styles/neutrinohit-reveal.scss]
+    css: assets/nutshell.css
+    logo: ../shared/reveal/dvnlogo.png
+    width: 1600
+    height: 900
+    margin: 0.04
+    slide-number: c/t
+    slide-level: 2
+    center: false
+    transition: fade
+    background-transition: none
+    incremental: false
+    preview-links: false
+    chalkboard: false
+    toc: false
+    menu: true
+    embed-resources: false
+    include-after-body:
+      - text: |
+          <script src="assets/nutshell.js"></script>
+          <script data-external="1" data-context-home="https://neutrinohit.github.io/ru/outreach.html#in-a-nutshell" data-context-home-label="Простыми словами" src="../shared/reveal/neutrinohit-reveal-footer.js"></script>
+          <script defer src="https://neutrinohit.github.io/assets/analytics/cloudflare-web-analytics.js"></script>
+
+execute:
+  echo: false
+  warning: false
+  message: false
