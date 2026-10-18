@@ -1,0 +1,20 @@
+---
+title: "Интерактивные модели"
+description: "Научно-популярные интерактивы NeutrinoHit"
+---
+
+```{=html}
+<div class="applet-index-lead">
+  <p>Здесь собраны самостоятельные модели, с которыми можно поиграть в собственном темпе. Это качественные схемы: каждая страница отдельно объясняет, что в модели физично, а что оставлено за её пределами.</p>
+  <a class="sciencepop-back-link" href="../index.html">← К научпопу</a>
+</div>
+
+<section class="applet-card-grid" aria-label="Научно-популярные интерактивы">
+  <article class="applet-card applet-card--featured">
+    <span class="applet-card-kicker">Ранняя Вселенная · конфигурационное пространство</span>
+    <h2><a href="sphaleron-transition.html">Сфалеронный переход</a></h2>
+    <p>Почему электрослабые переходы подавлены в холодных условиях, но становятся активными при высокой температуре, меняя B и L и сохраняя B−L.</p>
+    <a class="applet-card-action" href="sphaleron-transition.html">Запустить модель →</a>
+  </article>
+</section>
+```
