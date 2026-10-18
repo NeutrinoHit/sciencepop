@@ -1,0 +1,6 @@
+```{=html}
+<nav class="applet-nav" aria-label="Навигация по интерактивам">
+  <a href="index.html">← Все интерактивы</a>
+  <a href="../index.html">К научпопу</a>
+</nav>
+```

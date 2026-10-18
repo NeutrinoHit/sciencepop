@@ -27,6 +27,7 @@ _site/
 !BirthAndLifeUniverse/*.qmd
 !BirthAndLifeUniverse/bbn-game/*.qmd
 !in-a-nutshell/*.qmd
+!applets/*.qmd
 external/
 in-a-nutshell/ideas.md
 

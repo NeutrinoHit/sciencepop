@@ -1,0 +1,54 @@
+---
+title: "Сфалеронный переход"
+description: "Интерактивная схема перехода между электрослабыми вакуумными конфигурациями"
+format:
+  html:
+    css:
+      - applets.css
+      - assets/sphaleron-transition/sphaleron.css
+    include-in-header:
+      - _applet-embed.html
+      - text: |
+          <script src="assets/sphaleron-transition/sphaleron.js"></script>
+---
+
+{{< include _applet-nav.qmd >}}
+
+Модель показывает движение в эффективной топологической координате конфигурационного пространства — не в обычном пространстве и не траекторию отдельной частицы.
+
+::: {.applet-stage}
+```{ojs}
+d3 = require("d3@7.9.0")
+
+sphaleronTransition = {
+  const host = document.createElement("div");
+  host.className = "sphaleron-app-host";
+
+  if (!window.SphaleronTransitionApp) {
+    host.innerHTML = "<p role='alert'>Не удалось загрузить модуль сфалеронного перехода.</p>";
+    return host;
+  }
+
+  const app = window.SphaleronTransitionApp.create(host, {d3});
+  invalidation.then(() => app.destroy());
+  return host;
+}
+```
+:::
+
+::: {.applet-note}
+Потенциал $E/E_{\mathrm{sph}}=\sin^2(\pi N_{\mathrm{CS}})$ — качественная схема, а не расчёт энергии электрослабого поля. Высота барьера и время условны; температурная зависимость $E_{\mathrm{sph}}(T)$ в модель не входит. При низкой ненулевой температуре возможны и туннелирование, и термоактивация, но оба процесса чрезвычайно подавлены.
+:::
+
+Завершённый переход на единицу топологической координаты меняет барионное и лептонное числа на число поколений фермионов:
+
+$$
+\Delta B=\Delta L=3\,\Delta N_{\mathrm{CS}},
+\qquad \Delta(B-L)=0.
+$$
+
+Без механизма, предпочитающего одно направление перехода, сфалеронные процессы сами не создают избыток вещества. Однако они могут перераспределять уже существующую асимметрию при сохранении $B-L$.
+
+::: {.applet-sources}
+**Для дальнейшего чтения:** M. D’Onofrio, K. Rummukainen, A. Tranberg, [*Sphaleron Rate in the Minimal Standard Model*](https://arxiv.org/abs/1404.3565); D. E. Morrissey, M. J. Ramsey-Musolf, [*Electroweak baryogenesis*](https://doi.org/10.1088/1367-2630/14/12/125003).
+:::
