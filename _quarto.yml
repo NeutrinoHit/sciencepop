@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: _site
+  post-render:
+    - _extensions/neutrinohit-media/prune.py
   render:
     - "BirthAndLifeUniverse/birth_and_life_one_universe.qmd"
     - "WaveOrParticle/two_targets_qft_particle_wave_with_applet.qmd"

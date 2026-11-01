@@ -799,9 +799,7 @@ $$
 
   <div class="history-floating-media history-media-light">
     <div class="media-frame history-media-frame">
-      <video data-slide-video muted playsinline loop preload="metadata" poster="assets/figures/photons-universe-poster.png">
-        <source src="assets/figures/photons-universe.mp4" type="video/mp4">
-      </video>
+      {{< nh-video photons-universe variant="film" data-slide-video=true muted=true playsinline=true loop=true preload="metadata" poster="assets/figures/photons-universe-poster.png" >}}
     </div>
   </div>
 </div>
@@ -946,9 +944,7 @@ $$
 
   <div class="history-floating-media history-media-structure">
     <div class="media-frame history-media-frame">
-      <video data-slide-video data-video-start="4" muted playsinline loop preload="metadata" poster="assets/figures/first-stars-poster.png">
-        <source src="assets/figures/first-stars.mp4" type="video/mp4">
-      </video>
+      {{< nh-video first-stars variant="film" data-slide-video=true data-video-start="4" muted=true playsinline=true loop=true preload="metadata" poster="assets/figures/first-stars-poster.png" >}}
     </div>
   </div>
 </div>
@@ -1029,9 +1025,7 @@ $$
 
   <div class="history-floating-media history-media-solar">
     <div class="media-frame history-media-frame">
-      <video data-slide-video muted playsinline loop preload="metadata">
-        <source src="assets/figures/proto-galaxy-disk.mp4" type="video/mp4">
-      </video>
+      {{< nh-video proto-galaxy-disk variant="film" data-slide-video=true muted=true playsinline=true loop=true preload="metadata" >}}
     </div>
   </div>
 </div>
@@ -1119,9 +1113,7 @@ $$
 
   <div class="history-floating-media history-media-solar">
     <div class="media-frame history-media-frame">
-      <video data-slide-video muted playsinline loop preload="metadata">
-        <source src="assets/figures/proto-galaxy-disk.mp4" type="video/mp4">
-      </video>
+      {{< nh-video proto-galaxy-disk variant="film" data-slide-video=true muted=true playsinline=true loop=true preload="metadata" >}}
     </div>
   </div>
 </div>
@@ -1185,18 +1177,7 @@ $$
 ## Первичный нуклеосинтез: окно синтеза {.bbn-video-slide}
 
 ```{=html}
-<video
-  class="slide-video media-width-full media-height-lg"
-  style="--media-max-height: 590px;"
-  data-slide-video
-  data-autoplay
-  muted
-  playsinline
-  loop
-  preload="metadata"
-  controls>
-  <source src="assets/figures/bbn-nucleosynthesis-manim.mp4?v=bb0fd7d" type="video/mp4">
-</video>
+{{< nh-video bbn-nucleosynthesis variant="film-manim" class="slide-video media-width-full media-height-lg" style="--media-max-height: 590px;" data-slide-video=true data-autoplay=true muted=true playsinline=true loop=true preload="metadata" controls=true >}}
 ```
 
 ## От чего зависят количества лёгких ядер?
@@ -1327,9 +1308,7 @@ bbnLectureApp = {
 ::: {.slide-viz}
 ::: {.media-frame .contain}
 
-  <video data-slide-video muted playsinline loop preload="metadata" poster="assets/figures/galaxy-morphology-poster.png">
-    <source src="assets/figures/galaxy-morphology.mp4" type="video/mp4">
-  </video>
+  {{< nh-video galaxy-morphology variant="film" data-slide-video=true muted=true playsinline=true loop=true preload="metadata" poster="assets/figures/galaxy-morphology-poster.png" >}}
 
 ::: {.photo-credit}
 Hubble-de Vaucouleurs diagram
@@ -1357,9 +1336,7 @@ Hubble-de Vaucouleurs diagram
 ::: {.slide-viz}
 ::: {.media-frame}
 
-  <video data-slide-video muted playsinline loop preload="metadata" poster="assets/figures/black-hole-feedback-poster.png">
-    <source src="assets/figures/black-hole-feedback.mp4" type="video/mp4">
-  </video>
+  {{< nh-video black-hole-feedback variant="film" data-slide-video=true muted=true playsinline=true loop=true preload="metadata" poster="assets/figures/black-hole-feedback-poster.png" >}}
 
 ::: {.photo-credit}
 Иллюстрация обратной связи сверхмассивной чёрной дыры
@@ -1374,9 +1351,7 @@ Hubble-de Vaucouleurs diagram
 
 ::: {.full-slide-video}
 
-  <video data-slide-video muted playsinline loop preload="metadata" poster="assets/figures/illustris-poster.png">
-    <source src="assets/figures/illustris-evolution.mp4" type="video/mp4">
-  </video>
+  {{< nh-video illustris-evolution variant="film" data-slide-video=true muted=true playsinline=true loop=true preload="metadata" poster="assets/figures/illustris-poster.png" >}}
 
 ::: {.photo-credit}
 Illustris Simulation
@@ -1537,9 +1512,7 @@ Illustris Simulation
 
 ::: {.full-slide-video}
 
-  <video data-slide-video muted playsinline loop preload="metadata" poster="assets/figures/dark-matter-poster.png">
-    <source src="assets/figures/dark-matter-observed.mp4" type="video/mp4">
-  </video>
+  {{< nh-video dark-matter-observed variant="film" data-slide-video=true muted=true playsinline=true loop=true preload="metadata" poster="assets/figures/dark-matter-poster.png" >}}
 
 ::: {.photo-credit}
 Гравитационные свидетельства тёмной материи
@@ -1565,9 +1538,7 @@ Illustris Simulation
 
 ::: {.media-center-slide}
 
-  <video class="slide-video" style="--media-width: min(100%, 980px); --media-max-height: 590px; --media-bg: #03050a; --media-shadow: 0 18px 46px rgba(0, 0, 0, 0.34); --media-radius: 6px;" data-slide-video muted playsinline loop preload="metadata" poster="assets/figures/wmap-shape-of-universe-poster.png">
-    <source src="assets/figures/wmap-shape-of-universe.mp4" type="video/mp4">
-  </video>
+  {{< nh-video wmap-shape-of-universe variant="film" class="slide-video" style="--media-width: min(100%, 980px); --media-max-height: 590px; --media-bg: #03050a; --media-shadow: 0 18px 46px rgba(0, 0, 0, 0.34); --media-radius: 6px;" data-slide-video=true muted=true playsinline=true loop=true preload="metadata" poster="assets/figures/wmap-shape-of-universe-poster.png" >}}
 
 :::
 

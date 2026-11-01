@@ -1,0 +1,106 @@
+{
+ "schema": 1,
+ "generated_by": "neutrinohit-map/scripts/nh_media.py lock",
+ "media": [
+  {
+   "id": "bbn-nucleosynthesis",
+   "variant": "film-manim",
+   "version": 1,
+   "url": "/media-sciencepop/bbn-nucleosynthesis/film-manim-v1.mp4",
+   "sha256": "80a451744c8e0219755a74136c394ec85aeb6ea035b59a59eb57ea3b70a8fb93",
+   "bytes": 6604191,
+   "status": "published",
+   "fallback": "BirthAndLifeUniverse/assets/figures/bbn-nucleosynthesis-manim.mp4"
+  },
+  {
+   "id": "black-hole-feedback",
+   "variant": "film",
+   "version": 1,
+   "url": "/media-sciencepop/black-hole-feedback/film-v1.mp4",
+   "sha256": "1ca5068f734cddb858abc73dbd48affa4d1051b6df7c36715728b65314437234",
+   "bytes": 9734320,
+   "status": "published",
+   "fallback": "BirthAndLifeUniverse/assets/figures/black-hole-feedback.mp4"
+  },
+  {
+   "id": "dark-matter-observed",
+   "variant": "film",
+   "version": 1,
+   "url": "/media-sciencepop/dark-matter-observed/film-v1.mp4",
+   "sha256": "dfe70914f499f58380c54b4667ce2e61a3374aa0af284ae41c460e06dadd63e5",
+   "bytes": 1964696,
+   "status": "published",
+   "fallback": "BirthAndLifeUniverse/assets/figures/dark-matter-observed.mp4"
+  },
+  {
+   "id": "first-stars",
+   "variant": "film",
+   "version": 1,
+   "url": "/media-sciencepop/first-stars/film-v1.mp4",
+   "sha256": "6db217bbf727a67ed62bf7e557b90812d1fad8c91d8d9a230aa5fa376086e14e",
+   "bytes": 3267149,
+   "status": "published",
+   "fallback": "BirthAndLifeUniverse/assets/figures/first-stars.mp4"
+  },
+  {
+   "id": "galaxy-morphology",
+   "variant": "film",
+   "version": 1,
+   "url": "/media-sciencepop/galaxy-morphology/film-v1.mp4",
+   "sha256": "1b1e00944cef46c39043d95967abdd25ee58a6d2a5bcde181b63cb7e29b46159",
+   "bytes": 4929492,
+   "status": "published",
+   "fallback": "BirthAndLifeUniverse/assets/figures/galaxy-morphology.mp4"
+  },
+  {
+   "id": "illustris-evolution",
+   "variant": "film",
+   "version": 1,
+   "url": "/media-sciencepop/illustris-evolution/film-v1.mp4",
+   "sha256": "2f684c24e1ea185cd7015dea4cd91379d1ee1560df2bb42944d9a17c1d777eff",
+   "bytes": 24992085,
+   "status": "published",
+   "fallback": "BirthAndLifeUniverse/assets/figures/illustris-evolution.mp4"
+  },
+  {
+   "id": "nucleus-shapes",
+   "variant": "film-morphs",
+   "version": 1,
+   "url": "/media-sciencepop/nucleus-shapes/film-morphs-v1.mp4",
+   "sha256": "a89b9a70cf5682d5b9f3d70cc537051ef5345e6d3ed7bb59d75958a64d8ca292",
+   "bytes": 2369279,
+   "status": "published",
+   "fallback": "in-a-nutshell/assets/inside-nucleus/nucleus-shape-morphs.mp4"
+  },
+  {
+   "id": "photons-universe",
+   "variant": "film",
+   "version": 1,
+   "url": "/media-sciencepop/photons-universe/film-v1.mp4",
+   "sha256": "4c26ed1ed3c6cf8ed256ffe2ac99b0c7fee32add44e357fd1f30a9de4b1dc44a",
+   "bytes": 37570130,
+   "status": "published",
+   "fallback": "BirthAndLifeUniverse/assets/figures/photons-universe.mp4"
+  },
+  {
+   "id": "proto-galaxy-disk",
+   "variant": "film",
+   "version": 1,
+   "url": "/media-sciencepop/proto-galaxy-disk/film-v1.mp4",
+   "sha256": "3609488b4231a9f949c75d84905cd44456db7cd473821823d6b83af758530840",
+   "bytes": 1294164,
+   "status": "published",
+   "fallback": "BirthAndLifeUniverse/assets/figures/proto-galaxy-disk.mp4"
+  },
+  {
+   "id": "wmap-shape-of-universe",
+   "variant": "film",
+   "version": 1,
+   "url": "/media-sciencepop/wmap-shape-of-universe/film-v1.mp4",
+   "sha256": "9c79fa058b8ccd3b9376553a8a4e1ef7e1a61e9507e3ac380252290c4f3bad47",
+   "bytes": 751385,
+   "status": "published",
+   "fallback": "BirthAndLifeUniverse/assets/figures/wmap-shape-of-universe.mp4"
+  }
+ ]
+}

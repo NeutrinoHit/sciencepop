@@ -51,7 +51,7 @@ pagetitle: "Что находится внутри атомного ядра? �
 ## Форма ядра
 
 ::: {.nut-figure}
-<video src="assets/inside-nucleus/nucleus-shape-morphs.mp4" autoplay loop muted playsinline style="height:720px" aria-label="Ядра бывают сферическими, вытянутыми и сплюснутыми"></video>
+{{< nh-video nucleus-shapes variant="film-morphs" autoplay=true loop=true muted=true playsinline=true style="height:720px" aria-label="Ядра бывают сферическими, вытянутыми и сплюснутыми" >}}
 :::
 
 ## Почему протоны в ядре не разлетаются?
